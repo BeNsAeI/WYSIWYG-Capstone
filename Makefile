@@ -37,6 +37,11 @@ showps: $(PSF)
 
 all: pdf
 
+git:
+	make clean
+	git add -A
+	git commit -m "Updating the tex file"
+	git push
 clean:
 	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
 
