@@ -54,6 +54,12 @@ gitmake:
 	git add -A
 	git commit -m "Updating makefile"
 	git push
+gitreadme:
+	make clean
+	git pull
+	git add -A
+	git commit -m "updating the readme file: README.md"
+	git push
 clean:
 	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
 
