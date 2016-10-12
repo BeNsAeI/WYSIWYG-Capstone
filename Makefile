@@ -38,16 +38,19 @@ showps: $(PSF)
 all: pdf
 gitall:
 	make clean
+	git pull
 	git add -A
 	git commit -m "General update: many files are updated please go through details"
 	git push
 gittex:
 	make clean
+	git pull
 	git add -A
 	git commit -m "Updating the tex file"
 	git push
 gitmake:
 	make clean
+	git pull
 	git add -A
 	git commit -m "Updating makefile"
 	git push
