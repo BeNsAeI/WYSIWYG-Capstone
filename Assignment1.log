@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  12 OCT 2016 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  12 OCT 2016 14:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -29,13 +29,18 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 -- Using 210mm x 297mm (a4) paper.
 -- Using DVI output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
--- This is a 12 point document.
+-- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
 \CLASSINFOnormalsizeunitybaselineskip=\dimen107
 \IEEEnormaljot=\dimen108
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
@@ -53,24 +58,24 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <22> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <22> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
@@ -128,40 +133,15 @@ LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 
--- Lines per column: 50 (exact).
-
-Underfull \hbox (badness 7221) in paragraph at lines 5--11
-[]\OT1/ptm/m/n/12 TensorFlow is a ma-chine learn-ing API
- []
-
-
-Underfull \hbox (badness 4621) in paragraph at lines 5--11
-\OT1/ptm/m/n/12 (Ap-pli-ca-tion Pro-gram In-ter-face) de-vel-oped by
- []
-
+-- Lines per column: 58 (exact).
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--11
 
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 12--17
-\OT1/ptm/m/n/12 de-velop a front-end de-vel-op-ment soft-ware or
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
- []
-
-
-Underfull \hbox (badness 6741) in paragraph at lines 18--22
-\OT1/ptm/m/n/12 pro-gram-ming lan-guage known as Python to
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 18--22
-\OT1/ptm/m/n/12 de-velop a soft-ware that al-low de-vel-op-ers the
  []
 
 
@@ -174,12 +154,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--22
 
 ] (./Assignment1.aux) ) 
 Here is how much of TeX's memory you used:
- 1018 strings out of 494954
- 18826 string characters out of 6181002
- 72743 words of memory out of 5000000
- 4386 multiletter control sequences out of 15000+600000
- 22603 words of font info for 50 fonts, out of 8000000 for 9000
+ 1024 strings out of 494954
+ 18909 string characters out of 6181002
+ 72738 words of memory out of 5000000
+ 4392 multiletter control sequences out of 15000+600000
+ 24710 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  26i,5n,19p,275b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Assignment1.dvi (1 page, 3128 bytes).
+Output written on Assignment1.dvi (1 page, 3040 bytes).
