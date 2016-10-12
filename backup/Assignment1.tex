@@ -1,26 +1,47 @@
-\documentclass[a4paper,12pt]{article}
-\begin{document}
+\documentclass[a4paper,10pt]{IEEETran}
+\usepackage[margin=1.0in]{geometry}
+\setlength{\parskip}{\baselineskip}
 \setlength\parindent{24pt}
 
-\noindent \textbf{Abstract} \\
-\indent TensorFlow is a machine learning API (Application Program Interface) developed by Google in order to provide an optimized machine learning toolset for developers.
- This toolset is designed to be an all-in-one machine learning solution for users who do not have the time, technical skill set or resources to produce their own methods.
- Despite TensorFlow having useful applications and a rich manual it does not have an eloquent visualization software for its users.
- To address this issue we wish to develop a product that can display data between nodes in a computational graph and be as easy as placing nodes and drawing connections between them.
- Our target audience is individuals with little to no experience with deep learning or computer programming who specialize in fields such as data analysis and mathematics.\\
+\newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
+\newcommand*\Date{October 2016}
+\newcommand*\Author{Behnam Saeedi, Connor Sedwick, Colin Dorsett}
+\newcommand*\GroupNumber{Group Number 33}
+\newcommand*\GroupName{Group Name}
+\title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
+\author{Behnam Saeedi, Connor Sedwick, Colin Dorsett}
+\date{\today}
 
-\noindent \textbf{Problem Definition}\\
-\indent TensorFlow, an API developed by Google is a developer tool that requires much technical knowledge to implement and run.
- We need to develop a front-end development software or graphical user interface that allows users the ability to access TensorFlow methods, use them to create a program and visualize its control flow.
- We need to develop an interface that is easy to navigate while also providing useful feedback to the user if there is an error in their implementation.
- It should be easy to install and support multi-layered program designs as well as different types of data input such as text or graphical data.\\
+\begin{document}
 
-\noindent \textbf{Proposed Solution}\\
-\indent To solve our problem we plan to use the programming language known as Python to develop a software that allow developers the ability to graphically visualize the control flow of their programs using a flowchart style design using the TensorFlow API.
- It will also track the values of variables and states of the program between methods to aid in debugging and output the values to the screen.
- Create a feature that will communicate to users if they are missing a specific node required in their program that is required for it to compile and run correctly.\\
+	\begin{titlepage}
+%		\maketitle
+		\vspace*{\fill}
+			\begin{center}
+				\noindent \textbf{\Huge\Title} \\
+				\large\Author \\
+				\large\Date \\
+				\large\GroupNumber \, \large\GroupName
+			\end{center}
+			\noindent \textbf{Abstract} \\
+			\indent TensorFlow is a machine learning API (Application Program Interface) developed by Google in order to provide an optimized machine learning toolset for developers.
+			 This toolset is designed to be an all-in-one machine learning solution for users who do not have the time, technical skill set or resources to produce their own methods.
+			 Despite TensorFlow having useful applications and a rich manual it does not have an eloquent visualization software for its users.
+			 To address this issue we wish to develop a product that can display data between nodes in a computational graph and be as easy as placing nodes and drawing connections between them. Our target audience is individuals with little to no experience with deep learning or computer programming who specialize in fields such as data analysis and mathematics.\\
+		\vspace*{\fill}
+	\end{titlepage}
 
-\noindent \textbf{Performance Metrics}\\
-\indent 
+	\noindent \textbf{Problem Definition}\\
+	\indent TensorFlow, an API developed by Google is a developer tool that requires much technical knowledge to implement and run.
+	 We need to develop a front-end development software or graphical user interface that allows users the ability to access TensorFlow methods, use them to create a program and visualize its control flow.
+	 We need to develop an interface that is easy to navigate while also providing useful feedback to the user if there is an error in their implementation.
+	 It should be easy to install and support multi-layered program designs as well as different types of data input such as text or graphical data.\\
+
+	\noindent \textbf{Proposed Solution}\\
+	\indent Our proposed solution is to use Python scripting language to develop a software that grants developers the ability to graphically visualize the control flow of their program using a flowchart style design backed with TensorFlow API.
+	 It will also track states of the program between methods during execution to aid monitoring and modifying run-time parameters.
+	 Furthermore, this software warns users if they are missing a specific node required in their program that is required for it to compile and run correctly.\\
+
+	\noindent \textbf{Performance Metrics}\\
+	\indent 
 \end{document}
-

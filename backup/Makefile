@@ -28,6 +28,7 @@ $(PSF):%.ps: %.dvi
 
 $(PDF): %.pdf: %.ps
 	ps2pdf $<
+	xdvi Assignment1.dvi &
 
 show: $(TRG)
 	@for i in $(TRG) ; do $(XDVI) $$i & done
@@ -54,6 +55,16 @@ gitmake:
 	git add -A
 	git commit -m "Updating makefile"
 	git push
+gitreadme:
+	make clean
+	git pull
+	git add -A
+	git commit -m "updating the readme file: README.md"
+	git push
+back-up:
+	cp Assignment1.tex backup/Assignment1.tex
+	cp Makefile backup/Makefile
+
 clean:
 	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
 

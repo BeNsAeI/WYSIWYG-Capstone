@@ -61,6 +61,10 @@ gitreadme:
 	git add -A
 	git commit -m "updating the readme file: README.md"
 	git push
+back-up:
+	cp Assignment1.tex backup/Assignment1.tex
+	cp Makefile backup/Makefile
+
 clean:
 	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
 
