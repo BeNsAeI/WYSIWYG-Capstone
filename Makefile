@@ -28,7 +28,7 @@ $(PSF):%.ps: %.dvi
 
 $(PDF): %.pdf: %.ps
 	ps2pdf $<
-	xdvi Assignment1.dvi
+	xdvi Assignment1.dvi &
 
 show: $(TRG)
 	@for i in $(TRG) ; do $(XDVI) $$i & done
