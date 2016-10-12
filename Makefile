@@ -36,11 +36,20 @@ showps: $(PSF)
 	@for i in $(PSF) ; do $(GH) $$i & done
 
 all: pdf
-
-git:
+gitall:
+	make clean
+	git add -A
+	git commit -m "General update: many files are updated please go through details"
+	git push
+gittex:
 	make clean
 	git add -A
 	git commit -m "Updating the tex file"
+	git push
+gitmake:
+	make clean
+	git add -A
+	git commit -m "Updating makefile"
 	git push
 clean:
 	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
