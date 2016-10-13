@@ -1,8 +1,5 @@
-\documentclass[a4paper,10pt]{IEEETran}
-\usepackage[margin=1.0in]{geometry}
-\usepackage{pdfpages}
-\setlength{\parskip}{\baselineskip}
-\setlength\parindent{24pt}
+\documentclass[a4paper,10pt]{IEEETran} \usepackage[margin=1.0in]{geometry} \usepackage{pdfpages} \usepackage{graphicx} 
+\graphicspath{{/home/projects/WYSIWYG-Capstone/graphics/}} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
 
 \newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
 \newcommand*\Date{October 2016}
@@ -65,7 +62,10 @@
 		\item Blocks menu window. This window contains a list of all blocks including layers, classes, methods, variables and probes.
 		\item Drag and drop functionality. The user should be able to drag and drop blocks from the block menu to the Scene.
 	\end{itemize}
-
+	\begin{minipage}{\textwidth}
+		\fbox{\includegraphics[width=0.5\textwidth,natwidth=200,natheight=110]{mocksize.png}}\\
+		\label{fig:fig1}
+	\end{minipage}
 	\noindent \textbf{Performance Metrics}\\
 	\indent We desire to create a graphical user interface that translates user input into executable code. 
 	Our software must follow a simple flowchart design where each node and line drawn represents a line of code that compiles and outputs relevant data.
