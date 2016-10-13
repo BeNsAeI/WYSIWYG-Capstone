@@ -6,8 +6,8 @@
 \newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
 \newcommand*\Date{October 2016}
 \newcommand*\Author{Behnam Saeedi, Connor Sedwick, Colin Dorsett}
-\newcommand*\GroupNumber{Group Number 33}
-\newcommand*\GroupName{Group Name}
+\newcommand*\GroupNumber{Group Number: 33}
+\newcommand*\GroupName{Group Name: Visual Flow}
 \title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
 \author{Behnam Saeedi, Connor Sedwick, Colin Dorsett}
 \date{\today}
@@ -35,13 +35,37 @@
 	\indent TensorFlow, an API developed by Google is a developer tool that requires much technical knowledge to implement and run.
 	 We need to develop a front-end development software or graphical user interface that allows users the ability to access TensorFlow methods, use them to create a program and visualize its control flow.
 	 We need to develop an interface that is easy to navigate while also providing useful feedback to the user if there is an error in their implementation.
-	 It should be easy to install and support multi-layered program designs as well as different types of data input such as text or graphical data.\\
+	 It should be easy to install and support multi-layered program designs as well as different types of data input such as text or graphical data.
+	 Furthermore, this software needs to support a simple drag, drop and connect functionality to enhance user experience.\\
 
 	\noindent \textbf{Proposed Solution}\\
 	\indent Our proposed solution is to use Python scripting language to develop a software that grants developers the ability to graphically visualize the control flow of their program using a flowchart style design backed with TensorFlow API.
 	 It will also track states of the program between methods during execution to aid monitoring and modifying run-time parameters.
 	 Furthermore, this software warns users if they are missing a specific node required in their program that is required for it to compile and run correctly.\\
+	\begin{itemize}
+		\item Display the build space in a graphical user interface. This display is called the Scene.
+		\item Represent Variable blocks. These blocks contain data.
+		\item Represent methods as blocks. These blocks can be rotated in order to help with readability. Furthermore, you can adjust the visual size of this block.
+		\item Represent class blocks. Classes can contain multiple method and variable blocks and could be abstracted away.
+		 when a class is abstracted, it is represented as a new block that hides its members.
+		\item Represent layers. Layers can contain multiple classes, however, each layer is independent of other layers. Layers could be disabled or enabled.
+		\item Represent input and output arguments as circles on method blocks
+		\item Represent Channels as lines. A channel is a connection between an input and an output that describes how data flows between method blocks.
+		\item Probe blocks that display what is being passed through channels.
+		 This probe can modify the data that is going through a channel while the program is running.
+		 Probes can also assert certain values causeing the execcution to stop if a certain assertion is violated.
+		\item Represent Output block. This block representss the final outcome.
+		 This block also ends the program execution.
+		\item Run function, compiles and executes the code in the GUI.
+		 During this operation, probes allow monitoring and modifying of the values that are passing through their channels.
+		\item Extract function outputs the coresponding python file based on the designed system.
+		\item Blocks menu window. This window contains a list of all blocks including layers, classes, methods, variablse and probes.
+		\item Drag and Drop functionality. The user should be able to drag and drop blocks from the Block menu to the scene.
+	\end{itemize}
 
 	\noindent \textbf{Performance Metrics}\\
-	\indent 
+	\indent To measure whether our solution works properly we will look at how well it communicates errors to the user.
+	 By running a suite of tests we will check that the interface catches and displays errors to the user and provides advice as to how to fix the error.
+	 Our software needs to meet the requirements which are stated in problem solutions in this document.
+	 
 \end{document}
