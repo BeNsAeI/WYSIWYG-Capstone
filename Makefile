@@ -64,6 +64,8 @@ gitreadme:
 back-up:
 	cp Assignment1.tex backup/Assignment1.tex
 	cp Makefile backup/Makefile
+view:
+	xdvi Assignment1.dvi &
 
 update:
 	git pull
