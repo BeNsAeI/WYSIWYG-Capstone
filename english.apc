@@ -1,0 +1,107 @@
+% \iffalse meta-comment
+%
+% This is file `english.apc'.
+%
+% Copyright 1994-2005 Erik Meijer and any individual authors listed
+% elsewhere in this file.  All rights reserved.
+%
+% This file is part of the `apacite' package.
+% -------------------------------------------
+%
+% It may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2003/12/01 or later.
+%
+% The list of all files belonging to the `apacite' package, with a
+% short description, is given in the file `manifest.txt'.
+%
+% \fi
+
+\ProvidesFile{english.apc}[2005/06/01]
+
+%% english.apc - dummy english version of apacite elements
+%% Written by Erik Meijer <e.meijer@eco.rug.nl>
+
+%% NOTE! NOTE! NOTE! NOTE!
+%% If you use this as a template for other languages,
+%% don't forget to uncomment the commands!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Commands for specific types of @misc entries.
+%%% These commands are recognized by apacite.bst.
+%\renewcommand{\bibmessage}{Msg}
+%\renewcommand{\bibcomputerprogram}{Computer program}
+%\renewcommand{\bibcomputerprogrammanual}{Computer program manual}
+%\renewcommand{\bibcomputerprogramandmanual}{Computer program and manual}
+%\renewcommand{\bibcomputersoftware}{Computer software}
+%\renewcommand{\bibcomputersoftwaremanual}{Computer software manual}
+%\renewcommand{\bibcomputersoftwareandmanual}{Computer software and manual}
+%\renewcommand{\bibprogramminglanguage}{Programming language}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other labels
+%\renewcommand{\bibnodate}{n.d.{}}    % ``no date''
+%\renewcommand{\BBAB}{and}            % between authors in text
+%\renewcommand{\BOthers}[1]{et al.{}} % ``others'', the argument contains a
+                                      % dot to suppress an additional one
+                                      % in the reference list
+%\renewcommand{\BOthersPeriod}[1]{et al.{}}% ``others'', the argument contains
+                                      % a dot to suppress an additional one
+                                      % in the reference list. The difference
+                                      % with \BOthers is that, if another
+                                      % string is used to define \BOthers,
+                                      % this one should always finish with a
+                                      % period and the previous one not
+                                      % necessarily (e.g., if explicit
+                                      % ``others'' is used).
+%\renewcommand{\BIP}{in press}        % used as year for in-press citations
+%\renewcommand{\BIn}{In}              % for ``In '' editor...
+%\renewcommand{\BCHAP}{chap.{}}       % chapter
+%\renewcommand{\BCHAPS}{chap.{}}      % chapters
+%\renewcommand{\BED}{Ed.{}}           % editor
+%\renewcommand{\BEDS}{Eds.{}}         % editors
+%\renewcommand{\BTRANS}{Trans.{}}     % translator
+%\renewcommand{\BTRANSS}{Trans.{}}    % translators
+%\renewcommand{\BTRANSL}{trans.{}}    % translation, for the year field
+%\renewcommand{\BCHAIR}{Chair}        % chair of symposium
+%\renewcommand{\BCHAIRS}{Chairs}      % chairs
+%\renewcommand{\BVOL}{Vol.{}}         % volume
+%\renewcommand{\BVOLS}{Vols.{}}       % volumes
+%\renewcommand{\BNUM}{No.{}}          % number
+%\renewcommand{\BNUMS}{Nos.{}}        % numbers
+%\renewcommand{\BEd}{ed.{}}           % edition
+%\renewcommand{\BPG}{p.{}}            % page
+%\renewcommand{\BPGS}{pp.{}}          % pages
+%\renewcommand{\BTR}{Tech.\ Rep.{}}   % (default) technical report type name
+%\renewcommand{\BPhD}{Doctoral dissertation}
+                                      % (default) PhD thesis type name
+%\renewcommand{\BUPhD}{Unpublished doctoral dissertation}
+                                      % (default) unpublished PhD thesis
+                                      % type name
+%\renewcommand{\BMTh}{Master's thesis}% (default) master's thesis type name
+%\renewcommand{\BUMTh}{Unpublished master's thesis}%
+                                      % (default) unpublished
+                                      % master's thesis type name
+%\renewcommand{\BOWP}{Original work published}
+%\renewcommand{\BREPR}{Reprinted from}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% The name (heading) of the Reference List
+%\renewcommand{\refname}{References}% Name of ref. list if it's a section.
+%\renewcommand{\bibname}{References}% Name of ref. list if it's a chapter.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prenote used just before the references in the reference list
+% when a meta-analysis is reported.
+%
+%\renewcommand{\APACmetaprenote}{%
+%  References marked with an asterisk indicate studies
+%  included in the meta-analysis.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% The name (heading) of the Author Index
+%\renewcommand{\authorindexname}{Author Index}

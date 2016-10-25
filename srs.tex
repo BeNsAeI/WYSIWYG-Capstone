@@ -1,0 +1,130 @@
+%%%%%% Auteur: Coppens Thierry
+%%%%%% Auteur template: Ben Maene.
+
+\documentclass[11pt,a4paper]{book}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[left=27mm,right=27mm,top=26mm,bottom=26mm]{geometry}
+\usepackage{makeidx} % required for index at end of file
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\usepackage{aeguill}
+\usepackage{pseudocode}
+\usepackage{listings} 
+
+%\lstset{extendedchars=true,
+%	tabsize=3,
+%	frameround=tttt,
+%	basicstyle=\scriptsize\ttfamily,
+%	linewidth=\textwidth,
+%	breaklines=true,
+%%	breakautoindent=true,
+%	postbreak=\space,
+%	showspaces=false,
+%	showstringspaces=false,
+%	keywordstyle=\color{blue},
+%%	commentstyle=\color{green},
+%	stringstyle=\color{gray},
+%	identifierstyle=\color{black},
+%	aboveskip=3mm,
+%	belowskip=5mm,
+%	language=Ruby
+%}
+
+\usepackage[hyper]{apacite} %for apa bibliography style
+\usepackage[bookmarks=true]{hyperref} %for hyperlinks and document meta data in pdf output
+%\hypersetup{
+%	breaklinks=true,
+%	colorlinks=true,
+%	linkcolor=black,
+%	urlcolor=blue,
+%	citecolor=black,
+%	pdfborder={0 0 0},
+%	pdfauthor = {Coppens, Thierry},
+%	pdftitle = {Software Requirements Specification}, %<-- fill in title
+%	pdfsubject = {Software Engineering}, %<-- fill in subject
+%	pdfkeywords = {SRS, Computer Science, Programming, Software Engineering, VUB}, %<-- add keywords if appropriate
+%	pdfcreator = {LaTeX},
+%	pdfproducer = {pdfLaTeX},
+%%	bookmarksopen=true
+%}
+%\hypersetup{tex4ht}
+
+\newcommand{\bibnodot}[1]{} % If the argument is a period (`.'), \BibTeX{} puts no period after it.
+
+\selectlanguage{english}
+
+%\pagestyle{headings}
+
+\title{
+	\vspace{8mm}
+	\begin{Huge} Software Requirements Specification \end{Huge}\\
+	\vspace{3mm}
+	\begin{huge} Software engineering: Group 1
+	\end{huge}
+	\vspace{5mm}
+}
+
+\author{Behnam Saeedi, Connor Sedwick, Collin Dorsett}
+
+%\date{2 oktober 2007} %use this to fake the document date ;-)
+
+%\makeindex
+
+\begin{document}
+
+%\maketitle\thispagestyle{empty}
+
+\vspace{16mm}
+
+%\newpage
+
+%\pagebreak% waarom dit hier nodig
+
+\section*{Abstract}
+ABSTRACT HERE
+\newpage
+\tableofcontents
+
+\chapter{Introduction}
+
+\include{Introduction}
+
+\newpage
+
+\chapter{Overall Description}
+
+\include{OverallDescription}
+
+\newpage
+
+\chapter{Specific Requirements}
+
+\include{SpecificRequirements}
+
+\newpage
+\chapter{References}
+
+\newpage
+\section{References}
+
+%(1) \url{}\\
+%(2) \url{}\\
+%(3) \url{}\\
+%(4) \url{}\\
+%(5) \url{}\\
+%(6) \url{}\\
+%(7) \url{}\\
+%(8) \url{}\\
+%(9) \url{}\\
+%(10) \url{}\\
+%(11) \url{}\\
+%(12) \url{}\\
+%(13) \url{}\\
+
+
+\end{document}
