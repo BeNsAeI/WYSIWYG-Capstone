@@ -1,0 +1,42 @@
+a) what is the functionality? what is the software supposed to do
+- It is supposed to create a graphical user interface in order to abstract away the tensorflow api and make using this api effortless
+- there are software requirments aswell
+
+b) External Interface;
+- Create a diagram , how does the software interact with people
+
+c) Performance: what is speed, availibility, response time, recovery time, various software fucntions
+- This GUI is generally creating a text blueprint and it needs to be very fast and responisve to operate.
+- Each part needs to be as fast as possible
+
+d)Attributes: what are the portability, correctness, maintainability, security, etc, consideration
+- it needs to be very reliable. The design should be reproducable
+- it needs to b 100% correct every time in the code level.
+- it cannot affort to have bugs
+- portable, multiplatform
+- Security is  not a concern ffor this software since it is just a cape that abstarcts away a core system that is already implemented (unless it is web based)
+
+e)Constraints: what are the constraints imposed on implementation
+- This project is very user based and the only constraints are imposed on usability of our software and the core library that we are trying to mask
+- It needs to be easily understood by the user and developer
+- It needs to be effortless to use and accurate. The results need to be reliable and dependable
+- The core system has its own limitations and our GUI is going to have same limitations.
+
+Terms:
+
+- Tensorflow
+- GUI
+- Class
+- Variable
+- channel
+- probe
+- method
+- layer
+- output
+- scene
+- run
+- stop
+- execute
+- extract
+- Abstract
+- Block-Menu 

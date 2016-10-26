@@ -64,12 +64,14 @@ gitreadme:
 back-up:
 	cp Assignment1.tex backup/Assignment1.tex
 	cp Makefile backup/Makefile
+view:
+	xdvi Assignment1.dvi &
 
 update:
 	git pull
 
 clean:
-	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
+	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg *.toc
 
 .PHONY: all show clean ps pdf showps
 
