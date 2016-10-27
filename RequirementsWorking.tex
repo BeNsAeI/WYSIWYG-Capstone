@@ -18,19 +18,78 @@
 \tableofcontents
 \newpage
 \section{Introduction}
+This section gives a scope description and overview of everything included in this SRS document. 
+The purpose for this document is described and a list of abbreviations and definitions is provided within this section.
 \subsection{Purpose}
+The purpose of this document is to give a detailed description of the requirements for the WYSIWYG Deep Learning graphical user interface software. It will illustrate the purpose and complete declaration for the development of the system. It will also explain system constraints, interface and interactions with other external applications. 
 \subsection{Scope}
+The WYSIWYG Deep Learning graphical user interface is a desktop application which helps people design and test deep learning algorithms.
+The application should be free to download and be usable on multiple operating systems.Developers will be allowed to use their own data for input.The software will be able to interface with Google's TensorFlow API. 
 \subsection{Glossary}
 \subsection{References}
+\subsection{Overview}
+
+The remainder of this document includes three chapters. 
+The second chapter provides an overview of the system functionality and system interaction with other libraries. 
+Chapter two also introduces different types of stakeholders and their interaction with the system. 
+Further, the chapter also mentions the system constraints and assumptions about the product.
+The third chapter provides the requirements specification in detailed terms and a description of the different system interfaces. 
+Different specification techniques are used in order to specify the requirements more precisely for different audiences.
+The fourth chapter deals with the prioritization of the requirements. 
+It includes a motivation for the chosen prioritization methods and discusses why other alternatives were not chosen.
+
 \newpage
 
 \section{Overall Description}
+
+This section will give an overview of the whole system. 
+The software will be explained in its context to show how the software interfaces with external libraries and introduce the basic functionality of it. 
+It will also describe what type of stakeholders that will use the system and what functionality is available for each type. 
+By the end, the constraints and assumptions for the system will be presented.
+
 \subsection{Product Perspective}
+
+The software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow API. 
+The software will need to have some way of ensuring that it has access to the TensorFlow libraries. 
+The interface will provide to the user the basic design and flow of data through their program in a flowchart visual.
+The underlying code will be stored in a file which is built and saved in the background. 
+
 \subsection{Product Functions}
+
+With the graphical user interface, users will be able to design an algorithm by placing shaped nodes in a build space and draw connections between the nodes to represent dependencies.
+Build spaces represent either individual files, classes or layers. 
+Files will be built based on the nodes and connections drawn between them in a build space.
+These files can be extracted and saved to a user-designated folder at the push of a button.
+
+Developers will be able to set probes on connections drawn between nodes to either modify values or track values as they are manipulated by their algorithm.
+Helpful alerts will let the user or developer know if there is an error with the way they have designed their algorithm.
+
 \subsection{User Characteristics}
+
+There are many types of users who will likely use this software. 
+As it stands, there is only one development layout to be used for the graphical user interface.
+All users will be using the same desktop application whether they are students, developers, or employees using deep learning for a project.
+
 \subsection{Constraints}
+
+This project is very user based and the only constraints are imposed on usability of our software and the core library that we are trying to mask.
+The graphical user interface must be easily understood by the user and developer.
+The display of results must be reliable and dependable.
+The core system has its own limitations which will limit our GUI.
+
 \subsection{Assumptions and Dependencies}
+
+One assumption we have is that not all users will have prior knowledge on software programming when using this software.
+A user may not know what a variable is or what a function is and how it relies on variables. 
+When piecing together an algorithm a user may not know the proper syntax that would be required when using a text editing software.
+
+A dependency for this software is access to Google's TensorFlow libraries from the user's memory space. 
+This will require a user to install the libraries along with TensorFlow otherwise the software will not be usable in some scenarios.
+
 \subsection{Apportioning of Requirements}
+
+In the case that the project is delayed, there are some requirements that could be transferred to the next version of the application. 
+
 \newpage
 
 \section{Specific Requirements}
