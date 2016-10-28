@@ -2,7 +2,6 @@
 \graphicspath{/graphics} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
 \usepackage[english]{babel}
 
-
 \newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
 \newcommand*\Date{October 2016}
 \newcommand*\Author{Behnam Saeedi, Connor Sedwick, Collin Dorsett}
@@ -18,13 +17,21 @@
 \tableofcontents
 \newpage
 \section{Introduction}
+
 This section gives a scope description and overview of everything included in this SRS document. 
 The purpose for this document is described and a list of abbreviations and definitions is provided within this section.
+
 \subsection{Purpose}
+
 The purpose of this document is to give a detailed description of the requirements for the WYSIWYG Deep Learning graphical user interface software. It will illustrate the purpose and complete declaration for the development of the system. It will also explain system constraints, interface and interactions with other external applications. 
+
 \subsection{Scope}
+
 The WYSIWYG Deep Learning graphical user interface is a desktop application which helps people design and test deep learning algorithms.
-The application should be free to download and be usable on multiple operating systems.Developers will be allowed to use their own data for input.The software will be able to interface with Google's TensorFlow API. 
+The application should be free to download and be usable on multiple operating systems.
+Developers will be allowed to use their own data for input.
+The software will be able to interface with Google's TensorFlow API. 
+
 \subsection{Glossary}
 \subsection{References}
 \subsection{Overview}
@@ -33,9 +40,11 @@ The remainder of this document includes three chapters.
 The second chapter provides an overview of the system functionality and system interaction with other libraries. 
 Chapter two also introduces different types of stakeholders and their interaction with the system. 
 Further, the chapter also mentions the system constraints and assumptions about the product.
-The third chapter provides the requirements specification in detailed terms and a description of the different system interfaces. 
+
+The third chapter provides the requirements specification in detailed terms and a description of the different system interfaces. 
 Different specification techniques are used in order to specify the requirements more precisely for different audiences.
-The fourth chapter deals with the prioritization of the requirements. 
+
+The fourth chapter deals with the prioritization of the requirements. 
 It includes a motivation for the chosen prioritization methods and discusses why other alternatives were not chosen.
 
 \newpage
@@ -93,17 +102,153 @@ In the case that the project is delayed, there are some requirements that could 
 \newpage
 
 \section{Specific Requirements}
+
+This section contains all of the functional and quality requirements of the WYSIWYG system. 
+It provides a detailed description of the system and all its features.
+
+
+\subsection{Interfaces}
 \subsubsection{User Interfaces}
+
+The graphical user interface will begin by displaying a menu allowing the user to "Start a new project."
+Once this is chosen, the user will be brought to the main menu screen and build space.
+From this screen the user will have the ability to choose different types of nodes for either coding or debugging purposes.
+There will be buttons that allow users to "build" their file and "run" it.
+
+Whenever a user wishes to pull the coded file of their algorithm in order to send it or apply it to other code they will have the ability to "Extract" the file.
+This will be done by pressing a button and choosing a place in memory to store it. 
+The file should be stored in the form of a .py file.
+
+\subsubsection{Software Interfaces}
+
+The graphical user interface should communicate with Google's TensorFlow API.
+It should also communicate with the personal computer in the background to write the code file and executable.
+If an error message is thrown the interface should catch and display the error to the user in a formatted message.
+
 \subsection{Functional Requirements}
+
+This section includes the requirements that specify the fundamental actions of the software system.
+
+\noindent
+\textbf{ID: FR1}\\
+TITLE: Download the application\\
+DESC: A user should be able to download the software from an application store or from GitHub. It should be free to download. 
+The software should also come with a package of TensorFlow included.\\
+RAT: In order for the user to download the software and have access to the require libraries.\\
+DEPEND: None\\
+
+\noindent
+\textbf{ID: FR2}\\
+TITLE: Flowchart build space\\
+DESC: A user should be able to open a session and place nodes on a blank build space.\\
+RAT: In order for the user to visualize the structure of their software.\\
+DEPEND: FR1\\
+
+\noindent
+\textbf{ID: FR3}\\
+TITLE: Data input\\
+DESC: The software should allow the user to include a file of their own data to be used by their software.\\
+RAT: In order for the user to test their software on their own data.\\
+DEPEND: FR2\\
+
+
+\noindent
+\textbf{ID: FR4}\\
+TITLE: Layered builds\\
+DESC: A user should be able to create multiple layers to their software by opening multiple build spaces.\\
+RAT: In order for the user to visualize the structure of their software.\\
+DEPEND: FR2\\
+
+\noindent
+\textbf{ID: FR5}\\
+TITLE: Background file creation\\
+DESC: The software should create and update user named files in the background as nodes are added to the build space.\\
+RAT: In order for the user to have a raw and formatted file of their software.\\
+DEPEND: FR2\\
+
+\noindent
+\textbf{ID: FR6}\\
+TITLE: File compilation\\
+DESC: The software should compile all files in the user's build directory at the press of a button.\\
+RAT: In order for the user to create an executable in order to run the software.\\
+DEPEND: FR4\\
+
+\noindent
+\textbf{ID: FR7}\\
+TITLE: Error handling\\
+DESC: The software should display a text box or error message to the screen letting the user know if there is an error with their build. 
+There should also be a helpful hint on what the user may do to fix their problem.\\
+RAT: In order for the user to know that there is an issue with the format of their current build of their software.\\
+DEPEND: FR4, FR5\\
+
+\noindent
+\textbf{ID: FR8}\\
+TITLE: File extraction\\
+DESC: The software should allow the user to save their current build file to a user-defined space in memory.\\
+RAT: In order for the user to have a raw and formatted file of their software in designated storage.\\
+DEPEND: FR4\\
+
+
 \subsection{Performance Requirements}
-\subsection{Design Requirements}
-\subsection{Software System Attributes}
+
+The requirements in this section provide a detailed specification of the user interaction with the software and measurements placed on the system's performance.
+
+\noindent
+\textbf{ID: QR1}\\
+TITLE: Easy installation\\
+DESC: There should be a simple downloadable package including everything required to begin using the software after installation.\\
+RAT: In order for the user to being using the software without having to worry about file dependencies.\\
+DEPEND: None\\
+
+\noindent
+\textbf{ID: QR2}\\
+TITLE: Prominent node menu\\
+DESC: The node menu for the flowchart pieces should be well-labelled and easy to understand. Nodes should be dragged and dropped onto the build space.\\
+RAT: In order for the user to navigate the menu and find nodes easily.\\
+DEPEND: None\\
+
+\noindent
+\textbf{ID: QR3}\\
+TITLE: Prominent feature buttons\\
+DESC: The buttons used to build and run the software should be well-placed and recognizable. 
+The extraction button should also indicate its purpose and be easy to find.
+Buttons should respond to a single click and act instantaneously.\\
+RAT: In order to avoid confusion when trying to build and run the program.\\
+DEPEND: None\\
+
+\noindent
+\textbf{ID: QR4}\\
+TITLE: Prominent alerts\\
+DESC: Alerts signaled by the compiler should be displayed to the screen as soon as they are sent. 
+When an error has been fixed its corresponding alert should disappear.\\
+RAT: This will cut down on confusion when rebuilding a file and trying to find issues with a solution.\\
+DEPEND: None\\
+
+\noindent
+\textbf{ID: QR5}\\
+TAG: Response time\\
+DESC: The speed at which the interface communicates with the TensorFlow libraries and displays output to the screen.\\
+SCALE: The time of a build.\\
+METER: Measurements obtained by 1000 builds during testing.\\
+MUST: No more than 3 seconds 100\% of the time.\\
+WISH: No more than 2 seconds 100\% of the time.\\
+
+%\subsection{Design Requirements}
+%\subsection{Software System Attributes}
 \newpage
 
 \section{Prioritization and Release Plan}
+
+In order to get a view of how to divide the requirements into different releases and what requirements should be included in which release, a prioritization of the requirements is required. 
+This purpose of this section is to discuss the choice of prioritization methods and provide suggestions of how the release plan for these requirements could look.
+
 \subsection{Choice of Prioritization Method}
 
 \newpage
 \section{References}
 \newpage
+
+\section{Gantt}
+
+
 \end{document}
