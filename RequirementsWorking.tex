@@ -67,15 +67,18 @@ The software will be able to interface with Google's TensorFlow API.
 		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displayes as a solid color box.
 	\item Abstract:
 		Abstract is feature of class that will turn the class from transparent to solid color in order to hide the content of the class.
+	\item Layer: 
 	\item Channel:
 		 Channels are connections between inputs and outputs that display the direction of data flow and route the data from one block to another. 
 	\item Probe:
-		  
+		Probe is a UI element that displays the content of a channel.
+		Probe can also modify the value which is being transmitted through the pobe.
+		If the value of a probe is modified, the modification will happen after the point which the probe is inserted into the channel.
+		Every value that goes though the channelbefore the probe is left unchanged. (exception would be the pointer probes)
 	\item input:
-		
+		Input is a UI element in our system which allows the user to insert data ninto their program during the run process.
 	\item Output:
-		
-	\item Layer:
+		Output is a UI element in our system which allows the user to see the final result. Outputs indicate discontinuation of a channel.
 \end{itemize}
 \subsection{References}
 \subsection{Overview}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  28 OCT 2016 14:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  28 OCT 2016 14:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -248,67 +248,67 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no „ in font cmr10!
 Missing character: There is no ¢ in font cmr10!
  [3] [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 176--183
+Underfull \hbox (badness 10000) in paragraph at lines 179--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--190
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--197
+Underfull \hbox (badness 10000) in paragraph at lines 194--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
+Underfull \hbox (badness 10000) in paragraph at lines 202--208
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 206--212
+Underfull \hbox (badness 10000) in paragraph at lines 209--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--219
+Underfull \hbox (badness 10000) in paragraph at lines 216--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--227
+Underfull \hbox (badness 10000) in paragraph at lines 223--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--234
+Underfull \hbox (badness 10000) in paragraph at lines 231--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--246
+Underfull \hbox (badness 10000) in paragraph at lines 243--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--253
+Underfull \hbox (badness 10000) in paragraph at lines 250--256
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 254--262
+Underfull \hbox (badness 10000) in paragraph at lines 257--265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--270
+Underfull \hbox (badness 10000) in paragraph at lines 266--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--279
+Underfull \hbox (badness 10000) in paragraph at lines 274--282
 
  []
 
@@ -322,4 +322,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  37i,6n,39p,367b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RequirementsWorking.dvi (12 pages, 29140 bytes).
+Output written on RequirementsWorking.dvi (12 pages, 29828 bytes).
