@@ -1,7 +1,7 @@
-\documentclass[a4paper,10pt]{article} \usepackage[margin=1.0in]{geometry} \usepackage{pdfpages} \usepackage{graphicx} 
+\documentclass[journal,10pt,onecolumn,compsoc]{IEEEtran} \usepackage[margin=1.0in]{geometry} \usepackage{pdfpages} \usepackage{graphicx} 
 \graphicspath{/graphics} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
 \usepackage[english]{babel}
-\graphicspath{/graphics} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
+%\usepackage{fullpage}
 
 \newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
 \newcommand*\Date{October 2016}
@@ -36,7 +36,7 @@ The software will be able to interface with Google's TensorFlow API.
 \subsection{Glossary}
 \begin{itemize}
 	\item Tensorflow:
-		TensorFlow™ is an open source software library for numerical computation using data flow graphs.
+		TensorFlow is an open source software library for numerical computation using data flow graphs.
 		TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within
 		Google's Machine Intelligence research organization for the purposes of conducting machine learning and 
 		deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
@@ -49,12 +49,12 @@ The software will be able to interface with Google's TensorFlow API.
 	\item Block-Menu:
 		Block-Menu is a menu that contains all of the items and functionality icons that are ready to be dragged and dropped into the scene.
 	\item Run
-		In our solution, the task of starting executing the program is refered to as Running the program.
+		In our solution, the task of starting executing the program is referred to as Running the program.
 	\item Stop
 		In our solution, stop brings the execution of the program to a halt. Resuming the process requires running the program again.
 		This functionality will reset the state of the execution.
 	\item Extract
-		The task of creating the executable version of the program which is developed by our solution is refered to as extraction of the program.
+		The task of creating the executable version of the program which is developed by our solution is referred to as extraction of the program.
 		In order for a user to have a stand-alone version of their implemented program, they need to extract their project.
 	\item Variable/Constant:
 		Variables are equivalent to programming variables. They are represented by rhombus in our graphical user interface.
@@ -64,8 +64,8 @@ The software will be able to interface with Google's TensorFlow API.
 		Methods are functions from the API that perform a specific task. They are represented by boxes.
 		The circles on the edges of a method box are inputs and outputs of that method.
 	\item Class: 
-		In our solution, class refers to an objact that contains multiple variables and methods (Public or private).
-		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displayes as a solid color box.
+		In our solution, class refers to an object that contains multiple variables and methods (Public or private).
+		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displays as a solid color box.
 	\item Abstract:
 		Abstract is feature of class that will turn the class from transparent to solid color in order to hide the content of the class.
 	\item Layer: 
@@ -73,11 +73,11 @@ The software will be able to interface with Google's TensorFlow API.
 		 Channels are connections between inputs and outputs that display the direction of data flow and route the data from one block to another. 
 	\item Probe:
 		Probe is a UI element that displays the content of a channel.
-		Probe can also modify the value which is being transmitted through the pobe.
+		Probe can also modify the value which is being transmitted through the probe.
 		If the value of a probe is modified, the modification will happen after the point which the probe is inserted into the channel.
-		Every value that goes though the channelbefore the probe is left unchanged. (exception would be the pointer probes)
+		Every value that goes though the channel before the probe is left unchanged. (exception would be the pointer probes)
 	\item input:
-		Input is a UI element in our system which allows the user to insert data ninto their program during the run process.
+		Input is a UI element in our system which allows the user to insert data into their program during the run process.
 	\item Output:
 		Output is a UI element in our system which allows the user to see the final result. Outputs indicate discontinuation of a channel.
 \end{itemize}
@@ -106,14 +106,14 @@ By the end, the constraints and assumptions for the system will be presented.
 
 \subsection{Product Perspective}
 
-The software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow API. 
+The software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow libraries. 
 The software will need to have some way of ensuring that it has access to the TensorFlow libraries. 
 The interface will provide to the user the basic design and flow of data through their program in a flowchart visual.
-The underlying code will be stored in a file which is built and saved in the background. 
+The underlying code and algorithm designed by the user will be stored in a file which is built and saved in the background. 
 
 \subsection{Product Functions}
 
-With the graphical user interface, users will be able to design an algorithm by placing shaped nodes in a build space and draw connections between the nodes to represent dependencies.
+With the graphical user interface, users will be able to design an algorithm by placing uniquely shaped nodes in a build space and drawing connections between the nodes to represent dependencies and calls.
 Build spaces represent either individual files, classes or layers. 
 Files will be built based on the nodes and connections drawn between them in a build space.
 These files can be extracted and saved to a user-designated folder at the push of a button.
@@ -125,7 +125,7 @@ Helpful alerts will let the user or developer know if there is an error with the
 
 There are many types of users who will likely use this software. 
 As it stands, there is only one development layout to be used for the graphical user interface.
-All users will be using the same desktop application whether they are students, developers, or employees using deep learning for a project.
+All users will be using the same desktop application whether they are students, developers, or employees whose project relies on deep learning software.
 
 \subsection{Constraints}
 
@@ -161,7 +161,7 @@ It provides a detailed description of the system and all its features.
 The graphical user interface will begin by displaying a menu allowing the user to "Start a new project."
 Once this is chosen, the user will be brought to the main menu screen and build space.
 From this screen the user will have the ability to choose different types of nodes for either coding or debugging purposes.
-There will be buttons that allow users to "build" their file and "run" it.
+There will be buttons that allow users to build their file and run it.
 
 Whenever a user wishes to pull the coded file of their algorithm in order to send it or apply it to other code they will have the ability to "Extract" the file.
 This will be done by pressing a button and choosing a place in memory to store it. 
@@ -170,8 +170,8 @@ The file should be stored in the form of a .py file.
 \subsubsection{Software Interfaces}
 
 The graphical user interface should communicate with Google's TensorFlow API.
-It should also communicate with the personal computer in the background to write the code file and executable.
-If an error message is thrown the interface should catch and display the error to the user in a formatted message.
+It should also communicate with the personal computer in the background to write the code file and executable file.
+If an error message is thrown the interface should catch and display the error to the user as a formatted message within the GUI.
 
 \subsection{Functional Requirements}
 
@@ -187,50 +187,94 @@ DEPEND: None\\
 
 \noindent
 \textbf{ID: FR2}\\
-TITLE: Flowchart build space\\
-DESC: A user should be able to open a session and place nodes on a blank build space.\\
-RAT: In order for the user to visualize the structure of their software.\\
+TITLE: Open the GUI and start session\\
+DESC: A user should be able to start a new session. \\
+RAT: In order for the user to open up and start a new project with a blank build space.\\
 DEPEND: FR1\\
 
 \noindent
 \textbf{ID: FR3}\\
+TITLE: Session/Project Directory\\
+DESC: The software should create a directory with a name specified by the user upon starting a new session or project.\\
+RAT: In order for the software to build and store user files related to the current project in a main directory.\\
+DEPEND: FR2\\
+
+\noindent
+\textbf{ID: FR4}\\
+TITLE: Node Menu\\
+DESC: The software should contain a node menu.\\
+RAT: In order for the user to find nodes for the building of their algorithm.\\
+DEPEND: FR2\\
+
+\noindent
+\textbf{ID: FR5}\\
+TITLE: Build Space / Scene\\
+DESC: The software should offer a blank space ox within the GUI for users to place nodes..\\
+RAT: In order for the user to find nodes for the building of their algorithm.\\
+DEPEND: FR2\\
+
+\noindent
+\textbf{ID: FR6}\\
+TITLE: Drag and drop\\
+DESC: The software should allow the user to drag nodes from the node menu and place them in a build space.\\
+RAT: In order for the user to manipulate their algorithm.\\
+DEPEND: FR3\\
+
+\noindent
+\textbf{ID: FR7}\\
+TITLE: Channel drawing\\
+DESC: The software should allow users to draw a channel between two nodes. 
+This should be done simply by selecting them by clicking on them and choosing an option to "Draw channel".\\
+RAT: In order for the user to send values between nodes.\\
+DEPEND: FR3, FR4\\
+
+\noindent
+\textbf{ID: FR8}\\
+TITLE: Node manipulation\\
+DESC: The software should allow users to enter numerical and string values into variable nodes and probes.\\
+RAT: In order for the user to write their algorithm.\\
+DEPEND: FR4\\
+
+\noindent
+\textbf{ID: FR9}\\
+TITLE: Background file creation\\
+DESC: The software should create and update user-named files in the background as nodes are added to the build space. 
+Files should be updated in a user-defined directory.\\
+RAT: In order for the user to have a raw and formatted file of their software.\\
+DEPEND: FR2, FR3, FR6, FR7, FR8\\
+
+\noindent
+\textbf{ID: FR10}\\
+TITLE: Build button\\
+DESC: The software should compile all files in the user's build directory at the single press of the build button. 
+An executable file should appear in the user's current project directory if the algorithm compiles correctly.\\
+RAT: In order for the user to create an executable in order to run the software.\\
+DEPEND: FR4\\
+
+\noindent
+\textbf{ID: FR11}\\
+TITLE: Error handling\\
+DESC: The software should display a text box or error message to the screen letting the user know if there is an error with their build. 
+There should also be a helpful hint on what the user may do to fix their problem.\\
+RAT: In order for the user to know that there is an issue with the format of their current build of their software.\\
+DEPEND: FR10\\
+
+\noindent
+\textbf{ID: FR12}\\
 TITLE: Data input\\
 DESC: The software should allow the user to include a file of their own data to be used by their software.\\
 RAT: In order for the user to test their software on their own data.\\
 DEPEND: FR2\\
 
-
 \noindent
-\textbf{ID: FR4}\\
+\textbf{ID: FR13}\\
 TITLE: Layered builds\\
 DESC: A user should be able to create multiple layers to their software by opening multiple build spaces.\\
 RAT: In order for the user to visualize the structure of their software.\\
 DEPEND: FR2\\
 
 \noindent
-\textbf{ID: FR5}\\
-TITLE: Background file creation\\
-DESC: The software should create and update user named files in the background as nodes are added to the build space.\\
-RAT: In order for the user to have a raw and formatted file of their software.\\
-DEPEND: FR2\\
-
-\noindent
-\textbf{ID: FR6}\\
-TITLE: File compilation\\
-DESC: The software should compile all files in the user's build directory at the press of a button.\\
-RAT: In order for the user to create an executable in order to run the software.\\
-DEPEND: FR4\\
-
-\noindent
-\textbf{ID: FR7}\\
-TITLE: Error handling\\
-DESC: The software should display a text box or error message to the screen letting the user know if there is an error with their build. 
-There should also be a helpful hint on what the user may do to fix their problem.\\
-RAT: In order for the user to know that there is an issue with the format of their current build of their software.\\
-DEPEND: FR4, FR5\\
-
-\noindent
-\textbf{ID: FR8}\\
+\textbf{ID: FR14}\\
 TITLE: File extraction\\
 DESC: The software should allow the user to save their current build file to a user-defined space in memory.\\
 RAT: In order for the user to have a raw and formatted file of their software in designated storage.\\
@@ -244,23 +288,24 @@ The requirements in this section provide a detailed specification of the user in
 \noindent
 \textbf{ID: QR1}\\
 TITLE: Easy installation\\
-DESC: There should be a simple downloadable package including everything required to begin using the software after installation.\\
+DESC: There should be a simple downloadable package including everything required to begin using the software after installation.
+There should be a different installation package depending on the operating system being used.\\
 RAT: In order for the user to being using the software without having to worry about file dependencies.\\
 DEPEND: None\\
 
 \noindent
 \textbf{ID: QR2}\\
 TITLE: Prominent node menu\\
-DESC: The node menu for the flowchart pieces should be well-labelled and easy to understand. Nodes should be dragged and dropped onto the build space.\\
+DESC: The node menu for the flowchart pieces should contain labelled nodes and be legible.\\
 RAT: In order for the user to navigate the menu and find nodes easily.\\
 DEPEND: None\\
 
 \noindent
 \textbf{ID: QR3}\\
 TITLE: Prominent feature buttons\\
-DESC: The buttons used to build and run the software should be well-placed and recognizable. 
-The extraction button should also indicate its purpose and be easy to find.
-Buttons should respond to a single click and act instantaneously.\\
+DESC: The buttons used to build and run the software should be easy to distinguish between each other. 
+The extraction button should be indicated by as a button labelled "Extract".
+Buttons should respond to a single click and respond within less than a second of the user clicking them.\\
 RAT: In order to avoid confusion when trying to build and run the program.\\
 DEPEND: None\\
 
@@ -268,7 +313,8 @@ DEPEND: None\\
 \textbf{ID: QR4}\\
 TITLE: Prominent alerts\\
 DESC: Alerts signaled by the compiler should be displayed to the screen as soon as they are sent. 
-When an error has been fixed its corresponding alert should disappear.\\
+When an error has been fixed its corresponding alert should disappear.
+Alerts should appear in colored text boxes: red boxes for fatal errors, yellow boxes for warnings.\\
 RAT: This will cut down on confusion when rebuilding a file and trying to find issues with a solution.\\
 DEPEND: None\\
 
@@ -285,12 +331,6 @@ WISH: No more than 2 seconds 100\% of the time.\\
 %\subsection{Software System Attributes}
 \newpage
 
-\section{Prioritization and Release Plan}
-
-In order to get a view of how to divide the requirements into different releases and what requirements should be included in which release, a prioritization of the requirements is required. 
-This purpose of this section is to discuss the choice of prioritization methods and provide suggestions of how the release plan for these requirements could look.
-
-\subsection{Choice of Prioritization Method}
 
 \newpage
 \section{References}
