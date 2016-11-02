@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  1 NOV 2016 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  2 NOV 2016 12:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -350,117 +350,122 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
- [3] [4] [5] [6]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 159.
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 209--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--261
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 262--268
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 269--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 276--282
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--311
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--320
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 321--329
-
- []
-
-[10] [11]
+ [3] [4] [5]
 File: graphics/Gantt-Chart.eps Graphic file (type eps)
  <graphics/Gantt-Chart.eps>
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 342--345
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 148--151
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--345
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 
  []
 
-[12] (./RequirementsWorking.aux) ) 
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 147--152
+[]$[]$ 
+ []
+
+[6]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 163.
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--212
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 213--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--265
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--324
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 325--333
+
+ []
+
+[10] [11] (./RequirementsWorking.aux) ) 
 Here is how much of TeX's memory you used:
  3834 strings out of 493015
  59297 string characters out of 6133377
@@ -468,6 +473,6 @@ Here is how much of TeX's memory you used:
  7343 multiletter control sequences out of 15000+600000
  28862 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,386b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,386b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RequirementsWorking.dvi (12 pages, 30288 bytes).
+Output written on RequirementsWorking.dvi (11 pages, 29876 bytes).

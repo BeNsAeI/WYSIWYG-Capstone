@@ -5,11 +5,11 @@
 
 \newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
 \newcommand*\Date{October 2016}
-\newcommand*\Author{Behnam Saeedi, Connor Sedwick, Collin Dorsett}
+\newcommand*\Author{Connor Sedwick, Behnam Saeedi, Collin Dorsett}
 \newcommand*\GroupNumber{Group Number: 33}
 \newcommand*\GroupName{Group Name: Visual Flow}
 \title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
-\author{Behnam Saeedi, Connor Sedwick, Collin Dorsett}
+\author{Connor Sedwick, Behnam Saeedi,  Collin Dorsett}
 \date{\today}
 
 \begin{document}
@@ -35,65 +35,62 @@ The software will be able to interface with Google's TensorFlow API.
 
 \subsection{Glossary}
 \begin{itemize}
-	\item Tensorflow:
+	\item \textbf{Tensorflow:}
 		TensorFlow is an open source software library for numerical computation using data flow graphs.
 		TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within
 		Google's Machine Intelligence research organization for the purposes of conducting machine learning and 
 		deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
-	\item GUI:
+	\item \textbf{GUI:}
 		GUI or Graphical User Interface, Is an interface that allows users to interact with a given system through graphical icons and representation of tasks as oposed to a text base representation.
-	\item Scene
+	\item \textbf{Scene:}
 		In our solution, Scene is the work space where user can place different elements of their program.
-	\item Block:
+	\item \textbf{Block:}
 		A block is a a GUI feature for the user to serve a specific purpose. A block could be variable/Constant, Method, class, probe input or output.
-	\item Block-Menu:
+	\item \textbf{Block-Menu:}
 		Block-Menu is a menu that contains all of the items and functionality icons that are ready to be dragged and dropped into the scene.
-	\item Run
+	\item \textbf{Run:}
 		In our solution, the task of starting executing the program is referred to as Running the program.
-	\item Stop
+	\item \textbf{Stop:}
 		In our solution, stop brings the execution of the program to a halt. Resuming the process requires running the program again.
 		This functionality will reset the state of the execution.
-	\item Extract
+	\item \textbf{Extract:}
 		The task of creating the executable version of the program which is developed by our solution is referred to as extraction of the program.
 		In order for a user to have a stand-alone version of their implemented program, they need to extract their project.
-	\item Variable/Constant:
+	\item \textbf{Variable/Constant:}
 		Variables are equivalent to programming variables. They are represented by rhombus in our graphical user interface.
 		Constants are similar to  variables, however, these values could not be changed while running the program.
 		Constants are too represented by rhombus.
-	\item Method:
+	\item \textbf{Method:}
 		Methods are functions from the API that perform a specific task. They are represented by boxes.
 		The circles on the edges of a method box are inputs and outputs of that method.
-	\item Class: 
+	\item \textbf{Class:} 
 		In our solution, class refers to an object that contains multiple variables and methods (Public or private).
 		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displays as a solid color box.
-	\item Abstract:
+	\item \textbf{Abstract:}
 		Abstract is feature of class that will turn the class from transparent to solid color in order to hide the content of the class.
-	\item Layer: 
-	\item Channel:
+	\item \textbf{Layer:} 
+	\item \textbf{Channel:}
 		 Channels are connections between inputs and outputs that display the direction of data flow and route the data from one block to another. 
-	\item Probe:
+	\item \textbf{Probe:}
 		Probe is a UI element that displays the content of a channel.
 		Probe can also modify the value which is being transmitted through the probe.
 		If the value of a probe is modified, the modification will happen after the point which the probe is inserted into the channel.
 		Every value that goes though the channel before the probe is left unchanged. (exception would be the pointer probes)
-	\item input:
+	\item \textbf{Input:}
 		Input is a UI element in our system which allows the user to insert data into their program during the run process.
-	\item Output:
+	\item \textbf{Output:}
 		Output is a UI element in our system which allows the user to see the final result. Outputs indicate discontinuation of a channel.
 \end{itemize}
 \subsection{References}
 \subsection{Overview}
 
-The remainder of this document includes three chapters. 
+The remainder of this document includes two chapters. 
 The second chapter provides an overview of the system functionality and system interaction with other libraries. 
 Chapter two also introduces different types of stakeholders and their interaction with the system. 
 Further, the chapter also mentions the system constraints and assumptions about the product.
 
 The third chapter provides the requirements specification in detailed terms and a description of the different system interfaces. 
 Different specification techniques are used in order to specify the requirements more precisely for different audiences.
-
-The fourth chapter deals with the prioritization of the requirements. 
-It includes a motivation for the chosen prioritization methods and discusses why other alternatives were not chosen.
 
 \newpage
 
@@ -146,6 +143,13 @@ This will require a user to install the libraries along with TensorFlow otherwis
 \subsection{Apportioning of Requirements}
 
 In the case that the project is delayed, there are some requirements that could be transferred to the next version of the application. 
+
+\begin{minipage}{\textwidth}
+		\fbox{\includegraphics[width=1.0\textwidth]{graphics/Gantt-Chart.eps}}\\
+%		\label{fig:fig1}
+%		\caption{A proposed layout of the menu and build space.}
+	\end{minipage}
+
 
 \newpage
 
@@ -334,15 +338,15 @@ WISH: No more than 2 seconds 100\% of the time.\\
 
 \newpage
 \section{References}
-\newpage
+%\newpage
 
-\section{Gantt}
+%\section{Gantt}
 %\begin{figure}
-	\begin{minipage}{\textwidth}
-		\fbox{\includegraphics[width=1.0\textwidth]{graphics/Gantt-Chart.eps}}\\
+%	\begin{minipage}{\textwidth}
+%		\fbox{\includegraphics[width=1.0\textwidth]{graphics/Gantt-Chart.eps}}\\
 %		\label{fig:fig1}
 %		\caption{A proposed layout of the menu and build space.}
-	\end{minipage}
+%	\end{minipage}
 %	\end{figure}
 
 \end{document}
