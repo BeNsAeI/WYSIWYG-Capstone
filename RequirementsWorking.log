@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  3 NOV 2016 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  3 NOV 2016 13:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -318,6 +318,13 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 16.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
+LaTeX Font Info:    Calculating math sizes for size <24.09> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24.09> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <16.86292> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12.045> on input line 16.
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 16
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -352,129 +359,226 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
- [3] [4] [5]
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <6.6749> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 41.
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--60
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+[4] [5]
 File: graphics/Gantt-Chart.eps Graphic file (type eps)
  <graphics/Gantt-Chart.eps>
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 156--159
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 161--164
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--159
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
 
  []
 
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 155--160
+Overfull \hbox (24.0pt too wide) in paragraph at lines 160--165
 []$[]$ 
  []
 
 [6]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 171.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 176.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--209
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--217
+Underfull \hbox (badness 10000) in paragraph at lines 208--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--222
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 218--224
+Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--231
+Underfull \hbox (badness 10000) in paragraph at lines 230--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--238
+Underfull \hbox (badness 10000) in paragraph at lines 237--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--246
+Underfull \hbox (badness 10000) in paragraph at lines 244--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--253
+Underfull \hbox (badness 10000) in paragraph at lines 252--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--261
+Underfull \hbox (badness 10000) in paragraph at lines 259--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--269
+Underfull \hbox (badness 10000) in paragraph at lines 267--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--277
+Underfull \hbox (badness 10000) in paragraph at lines 275--282
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 278--285
+Underfull \hbox (badness 10000) in paragraph at lines 283--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--292
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--299
+Underfull \hbox (badness 10000) in paragraph at lines 298--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 310--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--319
+Underfull \hbox (badness 10000) in paragraph at lines 318--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--328
+Underfull \hbox (badness 10000) in paragraph at lines 325--333
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 329--337
+Underfull \hbox (badness 10000) in paragraph at lines 334--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
+Underfull \hbox (badness 10000) in paragraph at lines 343--351
 
  []
 
 [10] [11] (./RequirementsWorking.aux) ) 
 Here is how much of TeX's memory you used:
- 3824 strings out of 494954
- 58750 string characters out of 6181002
+ 3854 strings out of 494954
+ 59244 string characters out of 6181002
  131211 words of memory out of 5000000
- 7076 multiletter control sequences out of 15000+600000
- 28862 words of font info for 74 fonts, out of 8000000 for 9000
+ 7103 multiletter control sequences out of 15000+600000
+ 33016 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,8n,39p,386b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,386b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RequirementsWorking.dvi (11 pages, 31932 bytes).
+Output written on RequirementsWorking.dvi (11 pages, 32660 bytes).

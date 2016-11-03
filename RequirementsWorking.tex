@@ -3,12 +3,12 @@
 \usepackage[english]{babel}
 %\usepackage{fullpage}
 
-\newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
+\newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow\texttrademark Deep Learning API}
 \newcommand*\Date{October 2016}
 \newcommand*\Author{Connor Sedwick, Behnam Saeedi, Collin Dorsett}
 \newcommand*\GroupNumber{Group Number: 33}
 \newcommand*\GroupName{Group Name: Visual Flow}
-\title{WYSIWYG Approach to GUI for TensorFlow Deep Learning API}
+\title{WYSIWYG Approach to GUI for TensorFlow\texttrademark Deep Learning API}
 \author{Connor Sedwick, Behnam Saeedi,  Collin Dorsett}
 \date{\today}
 
@@ -28,63 +28,68 @@ The purpose of this document is to give a detailed description of the requiremen
 
 \subsection{Scope}
 
-The WYSIWYG Deep Learning graphical user interface is a desktop application which helps users design and test deep learning algorithms.
-This tool will be developed to comply with Google's Deep learning API called "TensorFlow".
-This solution allows developers to use their implementation alongside their data in order to create deep learning applications.
+The WYSIWYG Deep Learning graphical user interface is an application which helps users design and test deep learning algorithms.
+This tool will be developed to comply with Google's Deep learning API called "TensorFlow\texttrademark".
+This solution allows developers to use their implementation alongside their data in order create their deep learning applications.
 
 \subsection{Glossary}
 \begin{itemize}
 	\item \textbf{WYSIWYG:}
 		This word is an abbreviation for "What You See Is What You Get".
-		Microsoft PowerPoint and LibreOfice Impress are two good examples of such system. 
-		In this system, the end result is very similar to user's preview of the output during the devlopment.
-	\item \textbf{Tensorflow:}
-		TensorFlow is an open source software library for numerical computation using data flow graphs.
-		TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within
+		Microsoft PowerPoint and LibreOffice Impress are two good examples of such system. 
+		In this system, the end result is very similar to user's preview of the output during the devlopment.\\
+	\item \textbf{Tensorflow\texttrademark:}
+		TensorFlow\texttrademark is an open source software library for numerical computation using data flow graphs.
+		TensorFlow\texttrademark was originally developed by researchers and engineers working on the Google Brain Team within
 		Google's Machine Intelligence research organization for the purposes of conducting machine learning and 
-		deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
+		deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.\\
 	\item \textbf{GUI:}
-		GUI or Graphical User Interface, Is an interface that allows users to interact with a given system through graphical icons and representation of tasks as oposed to a text base representation.
+		GUI or Graphical User Interface, Is an interface that allows users to interact with a given system through graphical icons and representation of tasks as oposed to a text base representation.\\
 	\item \textbf{Scene:}
 		In our solution, Scene is the work space where user can place different elements of their program.
+		This feature is also refered to as build\\
 	\item \textbf{Block:}
-		A block is a a GUI feature for the user to serve a specific purpose. A block could be variable/Constant, Method, class, probe input or output.
+		A block is a GUI feature for the user to serve a specific purpose. A block could be variable/Constant, Method, class, probe, input or output.\\
 	\item \textbf{Block-Menu:}
-		Block-Menu is a menu that contains all of the items and functionality icons that are ready to be dragged and dropped into the scene.
+		Block-Menu is a menu that contains all of the items and functionality icons that are ready to be dragged and dropped into the scene.\\
 	\item \textbf{Run:}
-		In our solution, the task of starting executing the program is referred to as Running the program.
+		In our solution, the task of starting executing the program is referred to as Running the program.\\
 	\item \textbf{Stop:}
 		In our solution, stop brings the execution of the program to a halt. Resuming the process requires running the program again.
-		This functionality will reset the state of the execution.
+		This functionality will reset the state of the execution.\\
 	\item \textbf{Extract:}
 		The task of creating the executable version of the program which is developed by our solution is referred to as extraction of the program.
-		In order for a user to have a stand-alone version of their implemented program, they need to extract their project.
+		In order for a user to have a stand-alone version of their implemented program, they need to extract their project.\\
 	\item \textbf{Variable/Constant:}
 		Variables are equivalent to programming variables. They are represented by rhombus in our graphical user interface.
 		Constants are similar to  variables, however, these values could not be changed while running the program.
-		Constants are too represented by rhombus.
+		Constants are too represented by rhombus.\\
 	\item \textbf{Method:}
 		Methods are functions from the API that perform a specific task. They are represented by boxes.
-		The circles on the edges of a method box are inputs and outputs of that method.
+		The circles on the edges of a method box are inputs and outputs of that method.\\
 	\item \textbf{Class:} 
 		In our solution, class refers to an object that contains multiple variables and methods (Public or private).
-		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displays as a solid color box.
+		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displays as a solid color box.\\
 	\item \textbf{Abstract:}
-		Abstract is feature of class that will turn the class from transparent to solid color in order to hide the content of the class.
+		Abstract is feature of class that will turn the class from transparent to solid color in order to hide the content of the class.\\
 	\item \textbf{Layer:} 
+		Layers are different instances of the Scene. 
+		These instances could be independent implementations that are functional individually though they might not serve the complete intended purpose of the application.
+		Layers could be run indovidually and they will generate data.\\
 	\item \textbf{Channel:}
-		 Channels are connections between inputs and outputs that display the direction of data flow and route the data from one block to another. 
+		 Channels are connections between inputs and outputs that display the direction of data flow and route the data from one block to another.\\
 	\item \textbf{Probe:}
 		Probe is a UI element that displays the content of a channel.
 		Probe can also modify the value which is being transmitted through the probe.
 		If the value of a probe is modified, the modification will happen after the point which the probe is inserted into the channel.
-		Every value that goes though the channel before the probe is left unchanged. (exception would be the pointer probes)
+		Every value that goes though the channel before the probe is left unchanged. (exception would be the pointer probes).\\
 	\item \textbf{Input:}
-		Input is a UI element in our system which allows the user to insert data into their program during the run process.
+		Input is a UI element in our system which allows the user to insert data into their program during the run process.\\
 	\item \textbf{Output:}
-		Output is a UI element in our system which allows the user to see the final result. Outputs indicate discontinuation of a channel.
+		Output is a UI element in our system which allows the user to see the final result. Outputs indicate discontinuation of a channel.\\
 \end{itemize}
 \subsection{References}
+- some text \\
 \subsection{Overview}
 
 The following chapters provide an overview of the system functionality and system interaction with other libraries and user custom functions. 
@@ -98,15 +103,15 @@ Different specification techniques are used in order to specify the requirements
 
 \section{Overall Description}
 
-This section will give an overview of the TensorFlow WYSIWYG system. 
+This section will give an overview of the TensorFlow\texttrademark WYSIWYG system. 
 The software will be explained in its context to show how the software interfaces with external libraries and introduce the basic functionality of it. 
 It will also describe types of users  and functionalities that are available for each type of user based on their needs. 
 By the end, the constraints and assumptions for the system will be presented.
 
 \subsection{Product Perspective}
 
-This software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow libraries. 
-This software requires access to the TensorFlow libraries for the duration of development, execution and extraction. 
+This software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow\texttrademark libraries. 
+This software requires access to the TensorFlow\texttrademark libraries for the duration of development, execution and extraction. 
 The interface will provide basic design and flow of data through user's program in a flowchart-like visual representation (WYSIWYG).
 The underlying code and algorithm designed by the user will be assembled in a file which is built and saved in the background. 
 
@@ -117,7 +122,7 @@ Furthermore, in WYSIWYG GUI, drawing connections between the blocks represents d
 Build space represent files, classes or layers that are required to perform user's designated task.
 Files will be built based on the blocks and connections drawn between them in a build space.
 These files can be extracted and saved to a user-designated folder at the push of a button.
-The exctracted files are human readable and in the base language of Google's TensorFlow API (Python).
+The exctracted files are human readable and in the base language of Google's TensorFlow\texttrademark API (Python).
 
 Developers will be able to set probes on connections drawn between blocks to either modify values or track values as they are manipulated by their algorithm.
 Helpful python compliant errors, warnings and alerts will let the user know if there is an error with the way they have designed their algorithm or execution errors with thir custom blocks.
@@ -133,7 +138,7 @@ However, WYSIWYG solution does support custom blcoks for users who are capable o
 \subsection{Constraints}
 
 This project is very user based and the only constraints are imposed on usability of our software and the core library that we are trying to mask. 
-This naturally prohibits users from modifying and tampering with the code provided by Google's TensorFlow API since it forces the tool set to recreate all the GUI elements.
+This naturally prohibits users from modifying and tampering with the code provided by Google's TensorFlow\texttrademark API since it forces the tool set to recreate all the GUI elements.
 The graphical user interface must be easily understood by the user and developer.
 The display of results must be reliable and dependable.
 The core system has its own limitations which will limit our GUI.
@@ -144,8 +149,8 @@ One assumption we have is that not all users will have prior knowledge on softwa
 A user may not know what a variable is or what a function is and how it relies on variables. 
 When piecing together an algorithm a user may not know the proper syntax that would be required when using a text editing software.
 
-A dependency for this software is access to Google's TensorFlow libraries from the user's memory space. 
-This will require a user to install the libraries along with TensorFlow otherwise the software will not be usable in some scenarios.
+A dependency for this software is access to Google's TensorFlow\texttrademark libraries from the user's memory space. 
+This will require a user to install the libraries along with TensorFlow\texttrademark otherwise the software will not be usable in some scenarios.
 
 \subsection{Apportioning of Requirements}
 
@@ -196,7 +201,7 @@ Furthermore, it describes the neccessary outcomes that are expected by the clien
 \textbf{ID: FR1}\\
 TITLE: Download the application\\
 DESC: A user should be able to download the software from an application store, GitHub or some online repository. 
-The software should support TensorFlow's pre-implemented methods from their library. \\
+The software should support TensorFlow\texttrademark's pre-implemented methods from their library. \\
 RAT: In order for the user to download the software and have access to the require libraries.\\
 DEPEND: None\\
 
@@ -338,7 +343,7 @@ DEPEND: None\\
 \noindent
 \textbf{ID: QR5}\\
 TAG: Response time\\
-DESC: The speed at which the interface communicates with the TensorFlow libraries and displays output to the screen.\\
+DESC: The speed at which the interface communicates with the TensorFlow\texttrademark libraries and displays output to the screen.\\
 SCALE: The time of a build.\\
 METER: Measurements obtained by 1000 builds during testing.\\
 MUST: No more than 3 seconds 100\% of the time.\\
