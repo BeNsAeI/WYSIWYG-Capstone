@@ -133,7 +133,7 @@ However, WYSIWYG solution does support custom blcoks for users who are capable o
 \subsection{Constraints}
 
 This project is very user based and the only constraints are imposed on usability of our software and the core library that we are trying to mask. 
-This naturally prohibits users from modifying and tampering with the code provided by Google's TensorFlow API since it forces the toolset to recreate all the GUI elements.
+This naturally prohibits users from modifying and tampering with the code provided by Google's TensorFlow API since it forces the tool set to recreate all the GUI elements.
 The graphical user interface must be easily understood by the user and developer.
 The display of results must be reliable and dependable.
 The core system has its own limitations which will limit our GUI.
@@ -150,6 +150,7 @@ This will require a user to install the libraries along with TensorFlow otherwis
 \subsection{Apportioning of Requirements}
 
 In the case that the project is delayed, there are some requirements that could be transferred to the next version of the application. 
+This flexibility allows user to use features that are already available without worrying about how new features might affect their system.
 
 \begin{minipage}{\textwidth}
 		\fbox{\includegraphics[width=1.0\textwidth]{graphics/Gantt-Chart.eps}}\\
@@ -162,21 +163,22 @@ In the case that the project is delayed, there are some requirements that could 
 
 \section{Specific Requirements}
 
-This section contains all of the functional and quality requirements of the WYSIWYG system. 
-It provides a detailed description of the system and all its features.
+This section contains all of the functional and quality requirements of this solution to the WYSIWYG system. 
+It provides a detailed description of the system and all its features in core.
 
 
 \subsection{Interfaces}
 \subsubsection{User Interfaces}
 
 The graphical user interface will begin by displaying a menu allowing the user to "Start a new project."
-Once this is chosen, the user will be brought to the main menu screen and build space.
-From this screen the user will have the ability to choose different types of nodes for either coding or debugging purposes.
+Once this is chosen, "Scene" is created and the user will be brought to the main menu screen and build space.
+From this screen the user will have the ability to choose different types of locks for either coding or debugging purposes.
 There will be buttons that allow users to build their file and run it.
 
-Whenever a user wishes to pull the coded file of their algorithm in order to send it or apply it to other code they will have the ability to "Extract" the file.
-This will be done by pressing a button and choosing a place in memory to store it. 
-The file should be stored in the form of a .py file.
+User has the ability to "Import" or "Export" code.
+This feature allows user to turn their code into a block to use with WYSIWYG GUI or export their system into code.
+This will be done by pressing a button and choosing a place in memory to load or store the code. 
+The file should be loaded from or stored in the form of a .py file.
 
 \subsubsection{Software Interfaces}
 
