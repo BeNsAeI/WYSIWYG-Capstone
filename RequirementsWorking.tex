@@ -178,23 +178,25 @@ There will be buttons that allow users to build their file and run it.
 User has the ability to "Import" or "Export" code.
 This feature allows user to turn their code into a block to use with WYSIWYG GUI or export their system into code.
 This will be done by pressing a button and choosing a place in memory to load or store the code. 
-The file should be loaded from or stored in the form of a .py file.
+The file should be loaded from or stored in a file with .py extention.
 
 \subsubsection{Software Interfaces}
 
-The graphical user interface should communicate with Google's TensorFlow API.
-It should also communicate with the personal computer in the background to write the code file and executable file.
+The graphical user interface masks away the core of the solution which its job is to programatically assemble the python code in form of a text.
+Furthermore, the GUI directly interacts with the pre-installed python server on the OS.
 If an error message is thrown the interface should catch and display the error to the user as a formatted message within the GUI.
+This message is generate by the Python interprater.
 
 \subsection{Functional Requirements}
 
 This section includes the requirements that specify the fundamental actions of the software system.
+Furthermore, it describes the neccessary outcomes that are expected by the client.
 
 \noindent
 \textbf{ID: FR1}\\
 TITLE: Download the application\\
-DESC: A user should be able to download the software from an application store or from GitHub. It should be free to download. 
-The software should also come with a package of TensorFlow included.\\
+DESC: A user should be able to download the software from an application store, GitHub or some online repository. 
+The software should support TensorFlow's pre-implemented methods from their library. \\
 RAT: In order for the user to download the software and have access to the require libraries.\\
 DEPEND: None\\
 
@@ -208,50 +210,51 @@ DEPEND: FR1\\
 \noindent
 \textbf{ID: FR3}\\
 TITLE: Session/Project Directory\\
-DESC: The software should create a directory with a name specified by the user upon starting a new session or project.\\
+DESC: The software should create a directory with a name specified by the user upon starting a new session or project.
+This task is handed to the operating system. This means the permissions for the folders depend on user that uses the GUI. \\
 RAT: In order for the software to build and store user files related to the current project in a main directory.\\
 DEPEND: FR2\\
 
 \noindent
 \textbf{ID: FR4}\\
-TITLE: Node Menu\\
-DESC: The software should contain a node menu.\\
-RAT: In order for the user to find nodes for the building of their algorithm.\\
+TITLE: Block Menu\\
+DESC: The software should contain a block menu.\\
+RAT: In order for the user to find blocks for the building of their algorithm.\\
 DEPEND: FR2\\
 
 \noindent
 \textbf{ID: FR5}\\
 TITLE: Build Space / Scene\\
-DESC: The software should offer a blank space ox within the GUI for users to place nodes..\\
-RAT: In order for the user to find nodes for the building of their algorithm.\\
+DESC: The software should offer a blank space box within the GUI for users to place blocks.\\
+RAT: In order for the user to find blocks for the building of their algorithm.\\
 DEPEND: FR2\\
 
 \noindent
 \textbf{ID: FR6}\\
 TITLE: Drag and drop\\
-DESC: The software should allow the user to drag nodes from the node menu and place them in a build space.\\
+DESC: The software should allow the user to drag blocks from the block menu and place them in a build space.\\
 RAT: In order for the user to manipulate their algorithm.\\
 DEPEND: FR3\\
 
 \noindent
 \textbf{ID: FR7}\\
 TITLE: Channel drawing\\
-DESC: The software should allow users to draw a channel between two nodes. 
+DESC: The software should allow users to draw a channel between two blocks. 
 This should be done simply by selecting them by clicking on them and choosing an option to "Draw channel".\\
-RAT: In order for the user to send values between nodes.\\
+RAT: In order for the user to send values between blocks.\\
 DEPEND: FR3, FR4\\
 
 \noindent
 \textbf{ID: FR8}\\
-TITLE: Node manipulation\\
-DESC: The software should allow users to enter numerical and string values into variable nodes and probes.\\
+TITLE: Blocks manipulation\\
+DESC: The software should allow users to enter numerical and string values into variable blocks and probes.\\
 RAT: In order for the user to write their algorithm.\\
 DEPEND: FR4\\
 
 \noindent
 \textbf{ID: FR9}\\
 TITLE: Background file creation\\
-DESC: The software should create and update user-named files in the background as nodes are added to the build space. 
+DESC: The software should create and update user files every time user choses to save their scene. 
 Files should be updated in a user-defined directory.\\
 RAT: In order for the user to have a raw and formatted file of their software.\\
 DEPEND: FR2, FR3, FR6, FR7, FR8\\
@@ -259,23 +262,24 @@ DEPEND: FR2, FR3, FR6, FR7, FR8\\
 \noindent
 \textbf{ID: FR10}\\
 TITLE: Build button\\
-DESC: The software should compile all files in the user's build directory at the single press of the build button. 
-An executable file should appear in the user's current project directory if the algorithm compiles correctly.\\
-RAT: In order for the user to create an executable in order to run the software.\\
+DESC: The software should create all files in the user's build directory at a single press of the build button. 
+A python compatible file should appear in the user's current project directory if the implementation is python compliant.\\
+RAT: In order for the user to create a python compliant file in order to run the software.\\
 DEPEND: FR4\\
 
 \noindent
 \textbf{ID: FR11}\\
 TITLE: Error handling\\
 DESC: The software should display a text box or error message to the screen letting the user know if there is an error with their build. 
-There should also be a helpful hint on what the user may do to fix their problem.\\
-RAT: In order for the user to know that there is an issue with the format of their current build of their software.\\
+There should also be a helpful hint on what the user may do to fix their problem if the issue is caused by misuse of the GUI.\\
+RAT: In order for the user to know that there is an issue with the formatting of the current build of their software implementation.\\
 DEPEND: FR10\\
 
 \noindent
 \textbf{ID: FR12}\\
 TITLE: Data input\\
-DESC: The software should allow the user to include a file of their own data to be used by their software.\\
+DESC: The software should allow the user to include a file of their own data to be used by their software.
+This feature is defined by the input feature.\\
 RAT: In order for the user to test their software on their own data.\\
 DEPEND: FR2\\
 
@@ -308,9 +312,9 @@ DEPEND: None\\
 
 \noindent
 \textbf{ID: QR2}\\
-TITLE: Prominent node menu\\
-DESC: The node menu for the flowchart pieces should contain labelled nodes and be legible.\\
-RAT: In order for the user to navigate the menu and find nodes easily.\\
+TITLE: Prominent block menu\\
+DESC: The block menu for the flowchart pieces should contain labelled blocks and be legible.\\
+RAT: In order for the user to navigate the menu and find blocks easily.\\
 DEPEND: None\\
 
 \noindent
