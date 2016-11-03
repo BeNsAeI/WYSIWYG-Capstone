@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  3 NOV 2016 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  3 NOV 2016 13:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -452,133 +452,154 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--90
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Overfull \hbox (18.52985pt too wide) in paragraph at lines 98--100
+[]\OT1/ppl/m/n/9.53561 [3]"Cite a Web-site - Cite This For Me", Ten-sor-flow.or
+g, 2016. [On-line]. Avail-able: https://www.tensorflow.org/.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[4] [5]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.03> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.62097> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.015> on input line 103.
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no “ in font pplr7t!
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 114.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [4] [5] [6]
 File: graphics/Gantt-Chart.eps Graphic file (type eps)
- <graphics/Gantt-Chart.eps>
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 161--164
+
+<graphics/Gantt-Chart.eps>
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 185--188
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
 
  []
 
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 160--165
+Overfull \hbox (24.0pt too wide) in paragraph at lines 184--189
 []$[]$ 
  []
 
-[6]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 176.
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--222
-
- []
-
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 223--229
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--236
+Underfull \hbox (badness 10000) in paragraph at lines 232--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 259--266
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--282
+Underfull \hbox (badness 10000) in paragraph at lines 239--246
 
  []
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 247--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--282
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 283--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 291--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--317
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 318--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--333
+Underfull \hbox (badness 10000) in paragraph at lines 299--306
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
+Underfull \hbox (badness 10000) in paragraph at lines 307--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--351
+Underfull \hbox (badness 10000) in paragraph at lines 315--321
 
  []
 
-[10] [11] (./RequirementsWorking.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--357
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 358--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--375
+
+ []
+
+[11] [12] (./RequirementsWorking.aux) ) 
 Here is how much of TeX's memory you used:
- 3854 strings out of 494954
- 59244 string characters out of 6181002
+ 3905 strings out of 494954
+ 60022 string characters out of 6181002
  131211 words of memory out of 5000000
- 7103 multiletter control sequences out of 15000+600000
- 33016 words of font info for 86 fonts, out of 8000000 for 9000
+ 7150 multiletter control sequences out of 15000+600000
+ 33641 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,8n,39p,386b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,386b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RequirementsWorking.dvi (11 pages, 32660 bytes).
+Output written on RequirementsWorking.dvi (12 pages, 34340 bytes).
