@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  3 NOV 2016 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  4 NOV 2016 10:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -330,10 +330,10 @@ LaTeX Font Info:    Try loading font information for U+pzd on input line 16.
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 ) [1]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 18.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 18.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 34.
 
 (./RequirementsWorking.toc
 LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 3.
@@ -349,187 +349,177 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 41.
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <6.6749> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 42.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 58.
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--62
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--82
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
+Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
+Underfull \hbox (badness 10000) in paragraph at lines 90--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 96--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
 
-Overfull \hbox (18.52985pt too wide) in paragraph at lines 97--103
+Overfull \hbox (18.52985pt too wide) in paragraph at lines 113--119
 []\OT1/ppl/m/n/9.53561 [3]"Cite a Web-site - Cite This For Me", Ten-sor-flow.or
 g, 2016. [On-line]. Avail-able: https://www.tensorflow.org/.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--103
+Underfull \hbox (badness 10000) in paragraph at lines 113--119
 
  []
 
 [4] [5] [6]
 File: graphics/Gantt-Chart.eps Graphic file (type eps)
  <graphics/Gantt-Chart.eps>
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 183--186
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 199--202
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+Underfull \hbox (badness 10000) in paragraph at lines 199--202
 
  []
 
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 182--187
+Overfull \hbox (24.0pt too wide) in paragraph at lines 198--203
 []$[]$ 
  []
 
 [7]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 198.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 214.
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--236
+Underfull \hbox (badness 10000) in paragraph at lines 238--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--260
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 245--251
+Underfull \hbox (badness 10000) in paragraph at lines 261--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--258
+Underfull \hbox (badness 10000) in paragraph at lines 268--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--265
+Underfull \hbox (badness 10000) in paragraph at lines 275--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--273
+Underfull \hbox (badness 10000) in paragraph at lines 282--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--280
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--288
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 290--296
 
  []
 
@@ -538,43 +528,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--304
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 305--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--319
+Underfull \hbox (badness 10000) in paragraph at lines 313--320
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 321--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--326
+Underfull \hbox (badness 10000) in paragraph at lines 329--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--339
+Underfull \hbox (badness 10000) in paragraph at lines 336--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--346
+Underfull \hbox (badness 10000) in paragraph at lines 348--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--355
+Underfull \hbox (badness 10000) in paragraph at lines 356--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--371
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 356--364
+Underfull \hbox (badness 10000) in paragraph at lines 372--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--373
+Underfull \hbox (badness 10000) in paragraph at lines 381--389
 
  []
 
@@ -586,6 +586,6 @@ Here is how much of TeX's memory you used:
  7347 multiletter control sequences out of 15000+600000
  29669 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,386b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,386b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RequirementsWorking.dvi (11 pages, 32836 bytes).
+Output written on RequirementsWorking.dvi (11 pages, 34508 bytes).
