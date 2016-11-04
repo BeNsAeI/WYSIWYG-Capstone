@@ -3,12 +3,12 @@
 \usepackage[english]{babel}
 %\usepackage{fullpage}
 
-\newcommand*\Title{WYSIWYG Approach to GUI for TensorFlow\texttrademark Deep Learning API}
-\newcommand*\Date{October 2016}
+\newcommand*\Title{Requirements Document for VisualFlow}
+\newcommand*\Date{November 2016}
 \newcommand*\Author{Connor Sedwick, Behnam Saeedi, Collin Dorsett}
 \newcommand*\GroupNumber{Group Number: 33}
 \newcommand*\GroupName{Group Name: Visual Flow}
-\title{WYSIWYG Approach to GUI for TensorFlow\texttrademark Deep Learning API}
+\title{Requirements Document for VisualFlow}
 \author{Connor Sedwick, Behnam Saeedi,  Collin Dorsett}
 \date{\today}
 
@@ -20,11 +20,12 @@
 \section{Introduction}
 
 This section gives a scope description and overview of everything included in this SRS document. 
-The purpose for this document is described and a list of abbreviations and definitions is provided within this section.
+The purpose for this document is described here and a list of abbreviations and definitions is provided within this section.
 
 \subsection{Purpose}
 
-The purpose of this document is to give a detailed description of the requirements for the WYSIWYG Deep Learning graphical user interface software. It will illustrate the purpose and complete declaration for the development of the system. It will also explain system constraints, interface and interactions with other external applications. 
+The purpose of this document is to give a detailed description of the requirements for the WYSIWYG Deep Learning graphical user interface software. It will illustrate the purpose and complete declaration for the development of the system. 
+It will also explain system constraints, interface and interactions with other external applications. 
 
 \subsection{Scope}
 
@@ -35,92 +36,89 @@ This solution allows developers to use their implementation alongside their data
 \subsection{Glossary}
 \begin{itemize}
 	\item \textbf{WYSIWYG:}
-		This word is an abbreviation for "What You See Is What You Get".
+		This is an abbreviation for "What You See Is What You Get".
 		Microsoft PowerPoint and LibreOffice Impress are two good examples of such system. 
-		In this system, the end result is very similar to user's preview of the output during the devlopment.\\
+		In this system, the end result is very similar to user's preview of the output during the development.\\
 	\item \textbf{Tensorflow\texttrademark:}
 		TensorFlow\texttrademark is an open source software library for numerical computation using data flow graphs.
-		TensorFlow\texttrademark was originally developed by researchers and engineers working on the Google Brain Team within
-		Google's Machine Intelligence research organization for the purposes of conducting machine learning and 
-		deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.\\
+		TensorFlow\texttrademark was originally developed by researchers and engineers working on the Google Brain Team within Google's Machine Intelligence research organization for the purposes of 
+		conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.\\
 	\item \textbf{GUI:}
-		GUI or Graphical User Interface, Is an interface that allows users to interact with a given system through graphical icons and representation of tasks as oposed to a text base representation.\\
+		GUI or Graphical User Interface, is an interface that allows users to interact with a given system through graphical icons as opposed to a text based, command-line representation.\\
 	\item \textbf{Scene:}
-		In our solution, Scene is the work space where user can place different elements of their program.
-		This feature is also refered to as build\\
+		The work space where user can place different elements of their program.\\
 	\item \textbf{Block:}
-		A block is a GUI feature for the user to serve a specific purpose. A block could be variable/Constant, Method, class, probe, input or output.\\
+		A block is a GUI feature that represents a data structure or line of code. A block could be a variable, a constant, a method, a class, a probe, input or output.\\
 	\item \textbf{Block-Menu:}
-		Block-Menu is a menu that contains all of the items and functionality icons that are ready to be dragged and dropped into the scene.\\
+		A menu that contains all of the items and functionality icons that are ready to be dragged and dropped into the scene.\\
 	\item \textbf{Run:}
-		In our solution, the task of starting executing the program is referred to as Running the program.\\
+		The task of starting the execution of a program.\\
 	\item \textbf{Stop:}
-		In our solution, stop brings the execution of the program to a halt. Resuming the process requires running the program again.
+		Brings the execution of the program to a halt. Resuming the process requires running the program again.
 		This functionality will reset the state of the execution.\\
 	\item \textbf{Extract:}
-		The task of creating the executable version of the program which is developed by our solution is referred to as extraction of the program.
+		A command that allows the user to pull the current version of their solution and save the file in a user-chosen space in memory.
 		In order for a user to have a stand-alone version of their implemented program, they need to extract their project.\\
 	\item \textbf{Variable/Constant:}
-		Variables are equivalent to programming variables. They are represented by rhombus in our graphical user interface.
-		Constants are similar to  variables, however, these values could not be changed while running the program.
-		Constants are too represented by rhombus.\\
+		Variables are equivalent to programming variables. They are represented by rhombuses in our graphical user interface.
+		Constants are similar to  variables, however, these values can not be changed while running the program.
+		Constants are also represented by rhombuses.\\
 	\item \textbf{Method:}
-		Methods are functions from the API that perform a specific task. They are represented by boxes.
+		A function from the API that perform a specific task. They are represented by boxes.
 		The circles on the edges of a method box are inputs and outputs of that method.\\
 	\item \textbf{Class:} 
-		In our solution, class refers to an object that contains multiple variables and methods (Public or private).
-		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displays as a solid color box.\\
+		An object that contains multiple variables and methods (public or private).
+		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displayed as a solid color box.\\
 	\item \textbf{Abstract:}
-		Abstract is feature of class that will turn the class from transparent to solid color in order to hide the content of the class.\\
+		A feature of a class that will turn the class from transparent to solid color in order to hide the content of the class.\\
 	\item \textbf{Layer:} 
-		Layers are different instances of the Scene. 
-		These instances could be independent implementations that are functional individually though they might not serve the complete intended purpose of the application.
-		Layers could be run indovidually and they will generate data.\\
+		An instance of a Scene. 
+		These instances could be independently implemented so that they function individually.
+		Layers can be run individually and they will generate data from input.\\
 	\item \textbf{Channel:}
-		 Channels are connections between inputs and outputs that display the direction of data flow and route the data from one block to another.\\
+		 A connection between inputs and outputs that display the direction of data flow and route the data from one Block to another.\\
 	\item \textbf{Probe:}
-		Probe is a UI element that displays the content of a channel.
-		Probe can also modify the value which is being transmitted through the probe.
-		If the value of a probe is modified, the modification will happen after the point which the probe is inserted into the channel.
-		Every value that goes though the channel before the probe is left unchanged. (exception would be the pointer probes).\\
+		A Block type that displays the content of a channel.
+		Can modify the value which is being transmitted through the Channel it is placed on.
+		If the value of a Probe is modified, the modification will happen after the point which the probe is inserted into the Channel.
+		Every value that goes though the Channel before the probe is left unchanged with the exception of pointer Probes.\\
 	\item \textbf{Input:}
-		Input is a UI element in our system which allows the user to insert data into their program during the run process.\\
+		A Block type which allows the user to insert data into their program during the run process.\\
 	\item \textbf{Output:}
-		Output is a UI element in our system which allows the user to see the final result. Outputs indicate discontinuation of a channel.\\
+		A Block type which allows the user to see the final result. Outputs indicate discontinuation of a Channel.\\
 \end{itemize}
 \subsection{References}
 References
 
-[1]"WYSIWYG - definition of WYSIWYG in English | Oxford Dictionaries", Oxford Dictionaries | English, 2016. [Online]. Available: https://en.oxforddictionaries.com/definition/WYSIWYG. [Accessed: 03- Nov- 2016].
+[1]"WYSIWYG - definition of WYSIWYG in English | Oxford Dictionaries", Oxford Dictionaries | English, 2016. [Online]. Available: https://en.oxforddictionaries.com/definition/WYSIWYG. [Accessed: 03- Nov- 2016].\\
 
-[2]"What is graphical user interface (GUI)? definition and meaning", BusinessDictionary.com, 2016. [Online]. Available: http://www.businessdictionary.com/definition/graphical-user-interface-GUI.html. [Accessed: 03- Nov- 2016].
+[2]"What is graphical user interface (GUI)? definition and meaning", BusinessDictionary.com, 2016. [Online]. Available: http://www.businessdictionary.com/definition/graphical-user-interface-GUI.html. [Accessed: 03- Nov- 2016].\\
 
-[3]"Cite a Website - Cite This For Me", Tensorflow.org, 2016. [Online]. Available: https://www.tensorflow.org/. [Accessed: 03- Nov- 2016].
-- some text \\
-\begin{thebibliography}{7}
-	\bibitem{latexcompanion} 
-	potato face 1, potato face 2, potato face 3. 
-	\textit{The \LaTeX\ Companion}. 
-	Addison-Wesley, Reading, Massachusetts, 1993.
+[3]"Cite a Website - Cite This For Me", Tensorflow.org, 2016. [Online]. Available: https://www.tensorflow.org/. [Accessed: 03- Nov- 2016]. \\
+%\begin{thebibliography}{7}
+%	\bibitem{latexcompanion} 
+%	potato face 1, potato face 2, potato face 3. 
+%	\textit{The \LaTeX\ Companion}. 
+%	Addison-Wesley, Reading, Massachusetts, 1993.
  
-	\bibitem{einstein} 
-	Albert Einstein. 
-	\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
-	[\textit{On the electrodynamics of moving bodies}]. 
-	Annalen der Physik, 322(10):891–921, 1905.
+%	\bibitem{einstein} 
+%	Albert Einstein. 
+%	\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
+%	[\textit{On the electrodynamics of moving bodies}]. 
+%	Annalen der Physik, 322(10):891–921, 1905.
  
-	\bibitem{knuthwebsite} 
-	Knuth: Computers and Typesetting,
-	\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
-\end{thebibliography}
+%	\bibitem{knuthwebsite} 
+%	Knuth: Computers and Typesetting,
+%	\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+%\end{thebibliography}
 
 \subsection{Overview}
 
-The following chapters provide an overview of the system functionality and system interaction with other libraries and user custom functions. 
+The following sections provide an overview of the system functionality and system interaction with other libraries and user custom functions. 
 Chapter two introduces different types of users and their interaction with the system. 
 Furthermore, it also mentions the system constraints and assumptions.
 
-The third chapter provides the requirement specifications in detailed terms and a description of the different system interfaces. 
+\noindent The third chapter provides the requirement specifications in detailed terms and a description of the different system interfaces. 
 Different specification techniques are used in order to specify the requirements more precisely for different audiences.
 
 \newpage
@@ -134,34 +132,34 @@ By the end, the constraints and assumptions for the system will be presented.
 
 \subsection{Product Perspective}
 
-This software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow\texttrademark libraries. 
-This software requires access to the TensorFlow\texttrademark libraries for the duration of development, execution and extraction. 
+This software will consist primarily of the graphical user interface which will communicate with Google's TensorFlow\texttrademark library. 
+This software requires access to the TensorFlow\texttrademark library for the duration of development, execution and extraction. 
 The interface will provide basic design and flow of data through user's program in a flowchart-like visual representation (WYSIWYG).
 The underlying code and algorithm designed by the user will be assembled in a file which is built and saved in the background. 
 
 \subsection{Product Functions}
 
 With WYSIWYG graphical user interface, users will be able to design an algorithm by placing and connecting uniquely shaped blocks in a build space.
-Furthermore, in WYSIWYG GUI, drawing connections between the blocks represents dependencies, calls and flow of the data in the system.
-Build space represent files, classes or layers that are required to perform user's designated task.
-Files will be built based on the blocks and connections drawn between them in a build space.
+Furthermore, in the WYSIWYG GUI, drawing connections between the Blocks represents dependencies, calls and flow of the data in the system.
+Build spaces represent files, classes or layers that are required to perform user's designated task.
+Files will be built based on the Blocks and connections drawn between them in a build space.
 These files can be extracted and saved to a user-designated folder at the push of a button.
-The exctracted files are human readable and in the base language of Google's TensorFlow\texttrademark API (Python).
+The extracted files are human readable and in the base language of Google's TensorFlow\texttrademark API (Python).
 
-Developers will be able to set probes on connections drawn between blocks to either modify values or track values as they are manipulated by their algorithm.
-Helpful python compliant errors, warnings and alerts will let the user know if there is an error with the way they have designed their algorithm or execution errors with thir custom blocks.
+\noindent Developers will be able to set Probes on connections drawn between Blocks to either modify values or track values as they are manipulated by their algorithm.
+Helpful Python compliant errors, warnings and alerts will let the user know if there is an error with the way they have designed their algorithm or execution errors with their custom Blocks.
 
 \subsection{User Characteristics}
 
 There are many types of users who will likely use this software. 
-The target users of this tool includes but not limited to people who need to practice high level programming solutions such as machine learning techniques and lack the technical skills that are required to implement them.
+The target users of this tool includes but is not limited to people who need to practice high level programming solutions such as machine learning techniques and lack the technical skills that are required to implement them.
 As it stands, there is only one development layout to be used for the graphical user interface.
 All users will be using the same interface whether they are students, developers, or employees whose project relies on deep learning software. 
-However, WYSIWYG solution does support custom blcoks for users who are capable of implementing their own functions.
+However, WYSIWYG solution does support custom Blocks for users who are capable of implementing their own functions.
 
 \subsection{Constraints}
 
-This project is very user based and the only constraints are imposed on usability of our software and the core library that we are trying to mask. 
+This project is very user based and constraints are only imposed on usability of our software and the core library that we are trying to mask. 
 This naturally prohibits users from modifying and tampering with the code provided by Google's TensorFlow\texttrademark API since it forces the tool set to recreate all the GUI elements.
 The graphical user interface must be easily understood by the user and developer.
 The display of results must be reliable and dependable.
@@ -173,8 +171,8 @@ One assumption we have is that not all users will have prior knowledge on softwa
 A user may not know what a variable is or what a function is and how it relies on variables. 
 When piecing together an algorithm a user may not know the proper syntax that would be required when using a text editing software.
 
-A dependency for this software is access to Google's TensorFlow\texttrademark libraries from the user's memory space. 
-This will require a user to install the libraries along with TensorFlow\texttrademark otherwise the software will not be usable in some scenarios.
+\noindent A dependency for this software is access to Google's TensorFlow\texttrademark library from the user's memory space. 
+This will require a user to install the the software along with TensorFlow\texttrademark otherwise the software will not be usable in some scenarios.
 
 \subsection{Apportioning of Requirements}
 
@@ -193,7 +191,7 @@ This flexibility allows user to use features that are already available without 
 \section{Specific Requirements}
 
 This section contains all of the functional and quality requirements of this solution to the WYSIWYG system. 
-It provides a detailed description of the system and all its features in core.
+It provides a detailed description of the system and all its core features.
 
 
 \subsection{Interfaces}
@@ -201,32 +199,32 @@ It provides a detailed description of the system and all its features in core.
 
 The graphical user interface will begin by displaying a menu allowing the user to "Start a new project."
 Once this is chosen, "Scene" is created and the user will be brought to the main menu screen and build space.
-From this screen the user will have the ability to choose different types of locks for either coding or debugging purposes.
-There will be buttons that allow users to build their file and run it.
+From this screen the user will have the ability to choose different types of Blocks for either coding or debugging purposes.
+There will be buttons that allow users to build their file and Run it.
 
-User has the ability to "Import" or "Export" code.
+\noindent User has the ability to "Import" or "Export" code.
 This feature allows user to turn their code into a block to use with WYSIWYG GUI or export their system into code.
 This will be done by pressing a button and choosing a place in memory to load or store the code. 
-The file should be loaded from or stored in a file with .py extention.
+The file should be loaded from or stored in a file with a ".py" extension.
 
 \subsubsection{Software Interfaces}
 
-The graphical user interface masks away the core of the solution which its job is to programatically assemble the python code in form of a text.
-Furthermore, the GUI directly interacts with the pre-installed python server on the OS.
+The graphical user interface masks away the core of the solution. Its job is to systematically assemble the Python code as text interpreted from the flowchart.
+Furthermore, the GUI directly interacts with the pre-installed Python server on the operating system.
 If an error message is thrown the interface should catch and display the error to the user as a formatted message within the GUI.
-This message is generate by the Python interprater.
+This message is generated by the Python interpreter.
 
 \subsection{Functional Requirements}
 
 This section includes the requirements that specify the fundamental actions of the software system.
-Furthermore, it describes the neccessary outcomes that are expected by the client.
+Furthermore, it describes the necessary outcomes that are expected by the client.
 
 \noindent
 \textbf{ID: FR1}\\
 TITLE: Download the application\\
 DESC: A user should be able to download the software from an application store, GitHub or some online repository. 
 The software should support TensorFlow\texttrademark's pre-implemented methods from their library. \\
-RAT: In order for the user to download the software and have access to the require libraries.\\
+RAT: In order for the user to download the software and have access to the required libraries.\\
 DEPEND: None\\
 
 \noindent
@@ -246,37 +244,37 @@ DEPEND: FR2\\
 
 \noindent
 \textbf{ID: FR4}\\
-TITLE: Block Menu\\
-DESC: The software should contain a block menu.\\
-RAT: In order for the user to find blocks for the building of their algorithm.\\
+TITLE: Block-Menu\\
+DESC: The software should contain a Block menu.\\
+RAT: In order for the user to find Blocks for the building of their algorithm.\\
 DEPEND: FR2\\
 
 \noindent
 \textbf{ID: FR5}\\
 TITLE: Build Space / Scene\\
-DESC: The software should offer a blank space box within the GUI for users to place blocks.\\
-RAT: In order for the user to find blocks for the building of their algorithm.\\
+DESC: The software should offer a blank space box within the GUI for users to place Blocks.\\
+RAT: In order for the user to find Blocks for the building of their algorithm.\\
 DEPEND: FR2\\
 
 \noindent
 \textbf{ID: FR6}\\
 TITLE: Drag and drop\\
-DESC: The software should allow the user to drag blocks from the block menu and place them in a build space.\\
+DESC: The software should allow the user to drag Blocks from the Block Menu and place them in a build space.\\
 RAT: In order for the user to manipulate their algorithm.\\
 DEPEND: FR3\\
 
 \noindent
 \textbf{ID: FR7}\\
 TITLE: Channel drawing\\
-DESC: The software should allow users to draw a channel between two blocks. 
+DESC: The software should allow users to draw a Channel between two Blocks. 
 This should be done simply by selecting them by clicking on them and choosing an option to "Draw channel".\\
-RAT: In order for the user to send values between blocks.\\
+RAT: In order for the user to send values between Blocks.\\
 DEPEND: FR3, FR4\\
 
 \noindent
 \textbf{ID: FR8}\\
 TITLE: Blocks manipulation\\
-DESC: The software should allow users to enter numerical and string values into variable blocks and probes.\\
+DESC: The software should allow users to enter numerical and string values into variable Blocks and Probes.\\
 RAT: In order for the user to write their algorithm.\\
 DEPEND: FR4\\
 
@@ -291,9 +289,9 @@ DEPEND: FR2, FR3, FR6, FR7, FR8\\
 \noindent
 \textbf{ID: FR10}\\
 TITLE: Build button\\
-DESC: The software should create all files in the user's build directory at a single press of the build button. 
-A python compatible file should appear in the user's current project directory if the implementation is python compliant.\\
-RAT: In order for the user to create a python compliant file in order to run the software.\\
+DESC: The software should create all files in the user's build directory at a single press of the Build button. 
+A Python-compatible file should appear in the user's current project directory if the implementation is Python-compliant.\\
+RAT: In order for the user to create a Python-compliant file in order to run the software.\\
 DEPEND: FR4\\
 
 \noindent
@@ -322,7 +320,7 @@ DEPEND: FR2\\
 \noindent
 \textbf{ID: FR14}\\
 TITLE: File extraction\\
-DESC: The software should allow the user to save their current build file to a user-defined space in memory.\\
+DESC: The software should allow the user to save their current build file to a user-chosen space in memory.\\
 RAT: In order for the user to have a raw and formatted file of their software in designated storage.\\
 DEPEND: FR4\\
 
@@ -341,16 +339,16 @@ DEPEND: None\\
 
 \noindent
 \textbf{ID: QR2}\\
-TITLE: Prominent block menu\\
-DESC: The block menu for the flowchart pieces should contain labelled blocks and be legible.\\
-RAT: In order for the user to navigate the menu and find blocks easily.\\
+TITLE: Prominent Block Menu\\
+DESC: The Block Menu for the flowchart pieces should contain labelled Blocks and be legible.\\
+RAT: In order for the user to navigate the menu and find specific Block types easily.\\
 DEPEND: None\\
 
 \noindent
 \textbf{ID: QR3}\\
 TITLE: Prominent feature buttons\\
 DESC: The buttons used to build and run the software should be easy to distinguish between each other. 
-The extraction button should be indicated by as a button labelled "Extract".
+For example, the extraction button should be indicated by as a button labelled "Extract".
 Buttons should respond to a single click and respond within less than a second of the user clicking them.\\
 RAT: In order to avoid confusion when trying to build and run the program.\\
 DEPEND: None\\
@@ -367,7 +365,7 @@ DEPEND: None\\
 \noindent
 \textbf{ID: QR5}\\
 TAG: Response time\\
-DESC: The speed at which the interface communicates with the TensorFlow\texttrademark libraries and displays output to the screen.\\
+DESC: The speed at which the interface communicates with the TensorFlow\texttrademark library and displays output to the screen.\\
 SCALE: The time of a build.\\
 METER: Measurements obtained by 1000 builds during testing.\\
 MUST: No more than 3 seconds 100\% of the time.\\
@@ -375,11 +373,11 @@ WISH: No more than 2 seconds 100\% of the time.\\
 
 %\subsection{Design Requirements}
 %\subsection{Software System Attributes}
-\newpage
+%\newpage
 
 
-\newpage
-\section{References}
+%\newpage
+%\section{References}
 %\newpage
 
 %\section{Gantt}
