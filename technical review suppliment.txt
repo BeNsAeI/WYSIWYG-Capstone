@@ -10,23 +10,23 @@ items:
 - the interaction modes you will support
 ________________________________________________________
 topics:
-1- Python vs xml
+1- Python vs xml (Ben)
 --------------------------------------------------------
-2- Channels vs  list
+2- Channels vs  list (Connor)
 --------------------------------------------------------
-3- probe vs print text
+3- probe vs print text (Collin)
 ________________________________________________________
-4- layers vs single massive program
+4- layers vs single massive program (Ben)
 --------------------------------------------------------
-5- Icon vs text buttons
+5- Icon vs text buttons (Connor)
 --------------------------------------------------------
-6- Abstract functionality for Classes vs displaying the content
+6- Abstract functionality for Classes vs displaying the content (Connor)
 ________________________________________________________
-7- Comment blocks vs datasheet refrence (like a Manpage)
+7- Comment blocks vs datasheet refrence (like a Manpage) (Collin)
 --------------------------------------------------------
-8- allow custom functions vs all built-in functions (Pre-packaged libraries)
+8- allow custom functions vs all built-in functions (Pre-packaged libraries) (Collin)
 --------------------------------------------------------
-9- having a code output vs an executable output
+9- having a code output vs an executable output (Ben)
 --------------------------------------------------------
 ________________________________________________________
 ToDo:
