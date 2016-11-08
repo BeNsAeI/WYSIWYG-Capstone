@@ -40,3 +40,8 @@ Terms:
 - extract
 - Abstract
 - Block-Menu 
+
+_____________________________________________________________
+- Language
+- puzzling together step
+- 
