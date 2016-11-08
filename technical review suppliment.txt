@@ -9,7 +9,6 @@ items:
 - the toolkit you will use to generate the UI
 - the interaction modes you will support
 ________________________________________________________
-
 topics:
 1- Python vs xml
 --------------------------------------------------------
@@ -29,3 +28,46 @@ ________________________________________________________
 --------------------------------------------------------
 9- having a code output vs an executable output
 --------------------------------------------------------
+________________________________________________________
+ToDo:
+______________
+1- Your team number and project name
+______________
+2- Your role in the project
+______________
+3- What you are trying to accomplish (at a very high level) -- this is likely largely similar to what you already submitted, but is focused on the specific
+   sub-pieces you are working on.
+______________
+4- Three possible technologies that could be used to accomplish the different pieces you selected to examine in more detail.
+______________
+5- After conducting research and analyzing trade-offs, identify which technology you have selected for each, and why. Convince the reader your analysis is unbiased
+   and well-considered.
+________________________________________________________
+
+Formatting:
+
+- Spacing: single
+
+- Font: 10 pt serif (computer modern or similar)
+
+- Geometry: Letter paper, 0.75" margins
+
+- Title page: required. Include name, class, title, term, abstract (at minimum)
+
+- Abstract: required on title page
+
+- Style: IEEETran
+
+- Columns: 1 (use draftclsnofoot,onecolumn options to document class)
+
+- Document type: TeX or variant + makefile
+
+- Captions: required on all figures, must be meaningful
+
+- Code listings: using either pygments or listings package. Use color for syntax highlighting.
+
+- Word count: 1500 minumum
+
+- Citations: in text as [x], with x being numerical order in works cited.
+
+- Bibliography: IEEEtran style
