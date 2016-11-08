@@ -14,5 +14,5 @@ Removing:
 
 # Version change:
 # x.y (example: 1.9)
-- if it is a mjor change the major number changes (x) (1.9 => 2.0)
-- if it is a minor change the minor value changes (y) (1.9 => 1.10)
+- if it is a major change the major number changes (x) (1.9 => 2.0)
+- if it is a minor change the minor number changes (y) (1.9 => 1.10)
