@@ -1,18 +1,41 @@
-items: - the generation or capture of the data - the storage or handling of the data - the processing of the data to make it suitable for visualization - the 
-mapping of the data onto a display model - the visualization tool kit you use to display the data in a meaningful way - the UI interaction model that embeds the 
-visualizations of the data - the organization of the UI - the toolkit you will use to generate the UI - the interaction modes you will support 
-________________________________________________________ topics: 1- Python vs xml vs openGL (Ben) -------------------------------------------------------- 2- 
-Channels vs list vs "sharing name of variable" (Connor) -------------------------------------------------------- 3- probe vs print text vs none (Collin) 
-________________________________________________________ 4- layers vs single massive program vs completely independent project (Ben) 
--------------------------------------------------------- 5- Icon vs text buttons vs text(Connor) -------------------------------------------------------- 6- 
-Abstract/unabstract switch for Classes vs displaying the content vs display a block for class (completely abstract) (Connor) 
-________________________________________________________ 7- Comment blocks vs datasheet refrence(like a Manpage) vs text comment in blocks (Collin) 
--------------------------------------------------------- 8- allow custom functions vs all built-in functions vs function package files (Pre-packaged libraries) 
-(Collin) -------------------------------------------------------- 9- having a code output vs an executable output vs result data output with our unique 
-formatting (Ben) ________________________________________________________ ToDo: ______________ 1- Your team number and project name ______________ 2- Your role 
-in the project ______________ 3- What you are trying to accomplish (at a very high level) -- this is likely largely similar to what you already submitted, but is 
-focused on the specific
-   sub-pieces you are working on.
+items: 
+- the generation or capture of the data 
+- the storage or handling of the data 
+- the processing of the data to make it suitable for visualization 
+- the mapping of the data onto a display model 
+- the visualization tool kit you use to display the data in a meaningful way 
+- the UI interaction model that embeds the visualizations of the data 
+- the organization of the UI 
+- the toolkit you will use to generate the UI 
+- the interaction modes you will support 
+________________________________________________________ 
+topics: 
+1- platform choice: Python vs xml vs openGL (Ben)
+--------------------------------------------------------
+2- variable handling: Channels vs list vs "sharing name of variable" (Connor)
+-------------------------------------------------------- 
+3- debug options: probe vs print text vs none (Collin) 
+________________________________________________________ 
+4- multi stage programs: layers vs single massive program vs completely independent project (Ben) 
+--------------------------------------------------------
+5- GUI representation: Icon vs text buttons vs text(Connor) 
+-------------------------------------------------------- 
+6- Abstraction: Abstract/unabstract switch for Classes vs displaying the content vs display a block for class (completely abstract) (Connor) 
+________________________________________________________ 
+7- Code commenting and intext guides: Comment blocks vs datasheet refrence(like a Manpage) vs text comment in blocks (Collin) 
+-------------------------------------------------------- 
+8- Flexibility: allow custom functions vs all built-in functions vs function package files (Pre-packaged libraries) (Collin) 
+-------------------------------------------------------- 
+9- Product release: having a code output vs an executable output vs result data output with our unique formatting (Ben) 
+________________________________________________________ 
+ToDo: 
+______________ 
+1- Your team number and project name 
+______________ 
+2- Your role in the project 
+______________ 
+3- What you are trying to accomplish (at a very high level) 
+ - this is likely largely similar to what you already submitted, but is focused on the specific sub-pieces you are working on.
 ______________
 4- Three possible technologies that could be used to accomplish the different pieces you selected to examine in more detail.
 ______________
