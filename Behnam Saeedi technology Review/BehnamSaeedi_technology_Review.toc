@@ -14,8 +14,8 @@
 \contentsline {subsection}{\numberline {3.5}Conclusion}{5}
 \contentsline {section}{\numberline {4}Result Representation}{6}
 \contentsline {subsection}{\numberline {4.1}introduction}{6}
-\contentsline {subsection}{\numberline {4.2}Section1}{6}
-\contentsline {subsection}{\numberline {4.3}Section2}{6}
-\contentsline {subsection}{\numberline {4.4}Section3}{6}
+\contentsline {subsection}{\numberline {4.2}GUI Representation of Data}{6}
+\contentsline {subsection}{\numberline {4.3}Generating Executables}{6}
+\contentsline {subsection}{\numberline {4.4}Python Script}{6}
 \contentsline {subsection}{\numberline {4.5}Conclusion}{6}
-\contentsline {section}{\numberline {5}Conclusion}{7}
+\contentsline {section}{\numberline {5}Conclusion}{8}
