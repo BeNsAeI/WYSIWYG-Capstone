@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  14 NOV 2016 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  14 NOV 2016 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**BehnamSaeedi_technology_Review.tex
+**BehnamSaeedi_technology_Review
 (./BehnamSaeedi_technology_Review.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
@@ -402,13 +402,13 @@ Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
 
 
-LaTeX Warning: Citation `xml1' on page 5 undefined on input line 81.
+LaTeX Warning: Citation `xmlf' on page 5 undefined on input line 81.
 
 
-LaTeX Warning: Citation `xml2' on page 5 undefined on input line 86.
+LaTeX Warning: Citation `xmls' on page 5 undefined on input line 86.
 
 
-LaTeX Warning: Citation `xml3' on page 5 undefined on input line 92.
+LaTeX Warning: Citation `opengl' on page 5 undefined on input line 92.
 
 [5]
 Missing character: There is no â in font pplr7t!
@@ -441,20 +441,19 @@ Missing character: There is no ™ in font pplr7t!
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
- [6] [7] [8]
-No file BehnamSaeedi_technology_Review.bbl.
+ [6] [7] [8] (./BehnamSaeedi_technology_Review.bbl)
 (./BehnamSaeedi_technology_Review.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5029 strings out of 494954
- 76746 string characters out of 6181002
+ 5031 strings out of 494954
+ 76818 string characters out of 6181002
  149976 words of memory out of 5000000
  8270 multiletter control sequences out of 15000+600000
  29335 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,6n,39p,397b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,39p,393b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on BehnamSaeedi_technology_Review.dvi (8 pages, 23768 bytes).

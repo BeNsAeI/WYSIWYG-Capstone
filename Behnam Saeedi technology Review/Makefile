@@ -1,4 +1,4 @@
-filename=BehnamSaeedi_technology_Review.tex
+filename=BehnamSaeedi_technology_Review
 
 pdf: ps
 	ps2pdf ${filename}.ps
