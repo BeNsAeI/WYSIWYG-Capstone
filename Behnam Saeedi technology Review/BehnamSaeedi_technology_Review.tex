@@ -1,0 +1,103 @@
+\documentclass[journal,10pt,onecolumn,compsoc]{IEEEtran} \usepackage[margin=1.0in]{geometry} \usepackage{pdfpages} \usepackage{graphicx} 
+\usepackage{listings}
+\usepackage{verbatim}
+\graphicspath{/graphics} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
+\usepackage[english]{babel}
+%\usepackage{fullpage}
+
+\title{VisualFlow Tech Review}
+\author{Group 33: Behnam Saeedi}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+The purpose of this document is to compare and contrast technologies that may be implemented in the development of our graphical user-interface system. 
+The technologies reviewed range from basic programming languages to third-party APIs developed to aid in GUI design and development.
+Technologies are reviewed and selected based on how well they fit with the design of our graphical user-interface system.
+\end{abstract}
+\newpage
+\tableofcontents
+\newpage
+\section{Introduction}
+This document explains some of the reasosns to decisions made by Visual Flow team in order to create the WYSIWYG TensorFlow graphical user interface.
+The topics which this document will go through are handling multi-staged programs with multiple executables, 
+development environemnt for graphical user interface and lastly methods of result representation.
+This document will explain the underlying pros and cons to each proposed solution for these 3 problems.
+
+\section{Handling Multi-staged Programs with Multiple Executables}
+\subsection{introduction}
+There are many ways to implement a large project. 
+Large projects usually have many different parts that work together in order to create the desired result. 
+Some of these parts could be independent to prevent complete failure of software. 
+Some developers on the other hand prefer to have one executable in order to generate results. 
+This review will explain what approach is best fit for the purpose of multi-stage programs that rely on complex data handling. 
+One of the requirements for the WYSIWYG project was a support for large multi staged projects. 
+Our client was looking for a way to handle large Machine learning projects that require multiple parts. 
+Three solutions were proposed to address this problem and each have their own advantages and disadvantages.
+
+\subsection{Integrated Large System}
+One of the approaches is to integrate all of the functionalities into one single project. 
+This forces the project to be handled at once when the project is interpreted. 
+There are many advantages and disadvantages to this approach. 
+This approach is very simplistic and makes the project easy to move. 
+On the other hand, the project will not be reusable, difficult to debug, patch, read or understand. 
+Furthermore, it is much easier to create multiple small programs that work together than to create one single average program that is large. 
+This decreases the flexibility of the program too since it is make it difficult to modify. 
+Finally, in programming, when the code grows large, there is a point in which after that a bug cannot be correctly addressed without introducing “one plus epsilon” error to the code. 
+At that point the program cannot be corrected without rewriting it.
+
+\subsection{Indovidual Project generation}
+Another approach to this problem is to create different projects using our solution for each stage of the system. 
+These independent projects are treated as if each one of those is a complete project. 
+This means that each project is going to have its own project folder with all of it’s necessary files in the folder. 
+This approach helps with reusability, ease of updating and flexibility of the program. On the other hand it is difficult, to keep track of all of the related programs in the same project. 
+Another issue with this approach is version control. 
+
+\subsection{Onion Approach}
+Our solution to this problem is designed to reduce the disadvantages of both of these systems while maintaining the advantages. 
+Our solution is introduction of concept of layers. 
+Each layer is independent of others and occurs in the same project. 
+This will help with easier version control while keeping it reusable and easy to update. 
+Some of the limitations to this solution is the complexity and management of project files. 
+
+\subsection{Conclusion}
+In conclusion, our proposal to this problem is designed to improve user experience in creating large complex multi staged projects. 
+This solution allows users to take advantage of our tool to improve their program and make their projects easily updatable and reusable while keeping it managed through version control systems such as SVN and Git.
+\newpage
+
+\section{Development Environemnt for Graphical User Interface}
+\subsection{introduction}
+Intro here.
+\subsection{Section1}
+Subsection here.
+\subsection{Section2}
+Subsection here.
+\subsection{Section3}
+Subsection here.
+\subsection{Conclusion}
+Conclusion here.
+
+\newpage
+
+\section{Result Representation}
+\subsection{introduction}
+Intro here.
+\subsection{Section1}
+Subsection here.
+\subsection{Section2}
+Subsection here.
+\subsection{Section3}
+Subsection here.
+\subsection{Conclusion}
+Conclusion here.
+
+\newpage
+
+\section{Conclusion}
+Section goes here.
+\newpage
+
+\bibliographystyle{IEEEtran}
+\bibliography{sources}
+\end{document}
