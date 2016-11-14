@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  14 NOV 2016 10:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2016.10.10)  14 NOV 2016 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,7 +396,11 @@ Missing character: There is no ù in font pplr7t!
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
- [3] [4] [5] [6] [7]
+ [3] [4]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+ [5] [6] [7]
 No file BehnamSaeedi_technology_Review.bbl.
 (./BehnamSaeedi_technology_Review.aux) ) 
 Here is how much of TeX's memory you used:
@@ -408,4 +412,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  37i,6n,39p,397b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on BehnamSaeedi_technology_Review.dvi (7 pages, 15696 bytes).
+Output written on BehnamSaeedi_technology_Review.dvi (7 pages, 18504 bytes).

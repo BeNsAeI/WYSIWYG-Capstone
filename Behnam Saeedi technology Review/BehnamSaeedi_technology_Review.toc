@@ -8,9 +8,9 @@
 \contentsline {subsection}{\numberline {2.5}Conclusion}{4}
 \contentsline {section}{\numberline {3}Development Environemnt for Graphical User Interface}{5}
 \contentsline {subsection}{\numberline {3.1}introduction}{5}
-\contentsline {subsection}{\numberline {3.2}Section1}{5}
-\contentsline {subsection}{\numberline {3.3}Section2}{5}
-\contentsline {subsection}{\numberline {3.4}Section3}{5}
+\contentsline {subsection}{\numberline {3.2}Extensible Markup Language}{5}
+\contentsline {subsection}{\numberline {3.3}C++ Open Graphics Library}{5}
+\contentsline {subsection}{\numberline {3.4}Python Graphical User Interface}{5}
 \contentsline {subsection}{\numberline {3.5}Conclusion}{5}
 \contentsline {section}{\numberline {4}Result Representation}{6}
 \contentsline {subsection}{\numberline {4.1}introduction}{6}
