@@ -3,7 +3,6 @@
 \usepackage{verbatim}
 \graphicspath{/graphics} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
 \usepackage[english]{babel}
-%\usepackage{fullpage}
 
 \title{VisualFlow Tech Review}
 \author{Group 33: Behnam Saeedi}
@@ -29,7 +28,7 @@ This document will explain the underlying pros and cons to each proposed solutio
 \subsection{introduction}
 There are many ways to implement a large project. 
 Large projects usually have many different parts that work together in order to create the desired result. 
-Some of these parts could be independent to prevent complete failure of software. 
+Some of these parts could be independent to prevent complete failure of software. \cite{streamprocessing}
 Some developers on the other hand prefer to have one executable in order to generate results. 
 This review will explain what approach is best fit for the purpose of multi-stage programs that rely on complex data handling. 
 One of the requirements for the WYSIWYG project was a support for large multi staged projects. 
@@ -44,7 +43,7 @@ This approach is very simplistic and makes the project easy to move.
 On the other hand, the project will not be reusable, difficult to debug, patch, read or understand. 
 Furthermore, it is much easier to create multiple small programs that work together than to create one single average program that is large. 
 This decreases the flexibility of the program too since it is make it difficult to modify. 
-Finally, in programming, when the code grows large, there is a point in which after that a bug cannot be correctly addressed without introducing “one plus epsilon” error to the code. 
+Finally, in programming, when the code grows large, there is a point in which after that a bug cannot be correctly addressed without introducing “one plus epsilon” error to the code. \cite{criticalmass}
 At that point the program cannot be corrected without rewriting it.
 
 \subsection{Indovidual Project generation}
@@ -91,7 +90,7 @@ That functionality is to run the current project for debugging purposes.
 \subsection{C++ Open Graphics Library}
 OpenGL is an API for creating 2 dimensional and 3 dimensional vector graphics images. \cite{opengl}. 
 This tool allows creation of 2D and 3D shape rendering and UI creation. 
-OpenGL has few benefits over XML including the c++ code base, object orientation and C syntax. 
+OpenGL has few benefits over XML including the c++ code base, object orientation and C syntax. \cite{oop}
 Furthermore, C supports system calls . 
 System calls make it possible to execute and run anything that the underlying OS supports. 
 However, it still does not completely address the complexity of communicating with the underlying Tensorflow python api. 
