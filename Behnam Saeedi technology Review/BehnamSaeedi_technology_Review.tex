@@ -138,15 +138,32 @@ On the other hand, in this approach users with high level of programming skills 
 Another issue that is unique to this solution is the fact that the compiled result might not function on other platforms with different processors or operating systems.
 
 \subsection{Python Script}
-Our final solution to this problem is to output a script. For this solution the graphical user interface provides a python script file with “.py” extension. This python script file will contain the python code version of the project that user created. In order to solve this problem, it is important to understand and exploit some of the properties of python programming language. Python does not compile the python script stored in “.py” files, but rather interpret them. This means that a python script file can be provided by a simple makefile to be executed. Therefore, python script is still easy to execute for users with low python experience. Also, more experienced programmers, now can modify the output python script even after the project is created and finished. Since python is an interpreter the “.py” files will still be portable between different systems with different processors and operating systems. This solution still has few disadvantages. The graphical user interface now needs to follow restrict organizations that are human readable and human understandable with proper commenting. Finally, the user needs to install python interpreter in order to be able to execute their final project.
+Our final solution to this problem is to output a script. 
+For this solution the graphical user interface provides a python script file with “.py” extension. 
+This python script file will contain the python code version of the project that user created. 
+In order to solve this problem, it is important to understand and exploit some of the properties of python programming language. 
+Python does not compile the python script stored in “.py” files, but rather interpret them. 
+This means that a python script file can be provided by a simple makefile to be executed. 
+Therefore, python script is still easy to execute for users with low python experience. 
+Also, more experienced programmers, now can modify the output python script even after the project is created and finished. 
+Since python is an interpreter the “.py” files will still be portable between different systems with different processors and operating systems. 
+This solution still has few disadvantages. 
+The graphical user interface now needs to follow restrict organizations that are human readable and human understandable with proper commenting. 
+Finally, the user needs to install python interpreter in order to be able to execute their final project.
 
 \subsection{Conclusion}
-In conclusion, in order to solve this problem, we decided to generate a file that contains user’s project in form of a python script. This solution will take advantage of the fact that python interprets it’s script rather than compiling it. Furthermore, if we chose that it is important to give the option of generating an executable rather than a script file to the user, it would be a simple addition to our graphical user interface.
+In conclusion, in order to solve this problem, we decided to generate a file that contains user’s project in form of a python script. 
+This solution will take advantage of the fact that python interprets it’s script rather than compiling it. Furthermore, if we chose that it is important to give the option of generating an executable rather than a script file to the user, it would be a simple addition to our graphical user interface.
 
 \newpage
 
 \section{Conclusion}
-Section goes here.
+In conclusion there were 3 main dicisions discussed in this document. The three issues were handling multi-staged programs with multiple executables,
+development environemnt for graphical user interface and lastly methods of result representation.
+These problems were througly analyized by the Visual flow team many possible solutions were generated for each problem.
+Based on the group's analysis, for handling Multi-staged projects we introduced the concept of layers.
+Furthermore, for the graphical user interface development environment we selected python.
+Lastly our group decided to generate python script files as output for extraction of the project.
 \newpage
 
 \bibliographystyle{IEEEtran}
