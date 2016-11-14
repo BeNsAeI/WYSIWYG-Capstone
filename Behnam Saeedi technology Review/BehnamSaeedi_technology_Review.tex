@@ -19,9 +19,9 @@ Technologies are reviewed and selected based on how well they fit with the desig
 \tableofcontents
 \newpage
 \section{Introduction}
-This document explains some of the reasosns to decisions made by Visual Flow team in order to create the WYSIWYG TensorFlow graphical user interface.
+This document explains some of the reasons to decisions made by Visual Flow team in order to create the WYSIWYG TensorFlow graphical user interface.
 The topics which this document will go through are handling multi-staged programs with multiple executables, 
-development environemnt for graphical user interface and lastly methods of result representation.
+development environment for graphical user interface and lastly methods of result representation.
 This document will explain the underlying pros and cons to each proposed solution for these 3 problems.
 
 \section{Handling Multi-staged Programs with Multiple Executables}
@@ -43,13 +43,13 @@ This approach is very simplistic and makes the project easy to move.
 On the other hand, the project will not be reusable, difficult to debug, patch, read or understand. 
 Furthermore, it is much easier to create multiple small programs that work together than to create one single average program that is large. 
 This decreases the flexibility of the program too since it is make it difficult to modify. 
-Finally, in programming, when the code grows large, there is a point in which after that a bug cannot be correctly addressed without introducing ‚Äúone plus epsilon‚Äù error to the code. \cite{criticalmass}
+Finally, in programming, when the code grows large, there is a point in which after that a bug cannot be correctly addressed without introducing one plus epsilonÄù error to the code. \cite{criticalmass}
 At that point the program cannot be corrected without rewriting it.
 
-\subsection{Indovidual Project generation}
+\subsection{Individual Project generation}
 Another approach to this problem is to create different projects using our solution for each stage of the system. 
 These independent projects are treated as if each one of those is a complete project. 
-This means that each project is going to have its own project folder with all of it‚Äôs necessary files in the folder. 
+This means that each project is going to have its own project folder with all of its necessary files in the folder. 
 This approach helps with reusability, ease of updating and flexibility of the program. On the other hand it is difficult, to keep track of all of the related programs in the same project. 
 Another issue with this approach is version control. 
 
@@ -65,14 +65,14 @@ In conclusion, our proposal to this problem is designed to improve user experien
 This solution allows users to take advantage of our tool to improve their program and make their projects easily updatable and reusable while keeping it managed through version control systems such as SVN and Git.
 \newpage
 
-\section{Development Environemnt for Graphical User Interface}
+\section{Development Environment for Graphical User Interface}
 \subsection{introduction}
 Our project is to create a WYSIWYG interface for machine learning. 
 WYSIWYG (What you see is what you get) is a graphical user interface that helps user accurately visualize how their final project looks like. 
 This task is not possible without an elegant graphical user interface. 
 This user interface needs to be easy to develop. 
 Furthermore, our graphical user interface needs to support the underlying library. 
-The backend of the graphical user interface is in python since the Tensorflow library is released for python language. 
+The backend of the graphical user interface is in python since the TensorFlow library is released for python language. 
 In our solution, Extensible Markup Language, C++‚Äôs Open Graphics Library and Python are few of our options in addressing this problem.
 
 \subsection{Extensible Markup Language}
@@ -93,13 +93,13 @@ This tool allows creation of 2D and 3D shape rendering and UI creation.
 OpenGL has few benefits over XML including the c++ code base, object orientation and C syntax. \cite{oop}
 Furthermore, C supports system calls . 
 System calls make it possible to execute and run anything that the underlying OS supports. 
-However, it still does not completely address the complexity of communicating with the underlying Tensorflow python api. 
+However, it still does not completely address the complexity of communicating with the underlying TensorFlow python api. 
 Furthermore, the system calls are not platform independent and change based on the OS.
 
 \subsection{Python Graphical User Interface}
 The last solution to GUI for WYSIWYG was picked in order to address the  weakness of the first two solutions. 
 Python provides a rich platform for creating graphical user interfaces. 
-Python allows the handling and testing of the Tensorflow api. 
+Python allows the handling and testing of the TensorFlow api. 
 Furthermore, it is full programming language similarly to C++.
 
 \subsection{Conclusion}
@@ -111,8 +111,8 @@ To handle this important part of our project we picked Python. This makes creati
 \section{Result Representation}
 \subsection{introduction}
 Our project WYSIWYG, needs to be able to perform a unique task. 
-It needs to provide a graphical user interface for generating machine learning applications in python using the google‚Äôs tensorflow library for python. 
-Our graphical user interface will mask away the underlying python code in order to make the development seemless for the user. 
+It needs to provide a graphical user interface for generating machine learning applications in python using the google'Äôs TensorFlow library for python. 
+Our graphical user interface will mask away the underlying python code in order to make the development seamless for the user. 
 Our users programming skill ranges from low (math and statistic majors) to high (software developers). 
 The problem that we face is to how to represent the result of our project to the user and maximize their benefit from the projects they create using our GUI. 
 To solve this problem we proposed 3 possible solutions. Our proposed solutions are displaying results in a log file, create executables or output scrip.
@@ -127,7 +127,7 @@ Likewise, moving the project from one platform or computer to another requires m
 This problem makes the code virtually non distributable.
 
 \subsection{Generating Executables}
-Our second solution is to create an executable for user‚Äôs finished project. 
+Our second solution is to create an executable for user'Äôs finished project. 
 This approach has many similar advantages to the previous solution. 
 This makes the experience easy for users that have little understanding of python programming. 
 Likewise, the GUI will have a lot of control over the code organization since the underlying code is still masked away from the user. 
@@ -138,28 +138,28 @@ Another issue that is unique to this solution is the fact that the compiled resu
 
 \subsection{Python Script}
 Our final solution to this problem is to output a script. 
-For this solution the graphical user interface provides a python script file with ‚Äú.py‚Äù extension. 
+For this solution the graphical user interface provides a python script file with .pyÄù extension. 
 This python script file will contain the python code version of the project that user created. 
 In order to solve this problem, it is important to understand and exploit some of the properties of python programming language. 
-Python does not compile the python script stored in ‚Äú.py‚Äù files, but rather interpret them. 
+Python does not compile the python script stored in Äú.py files, but rather interpret them. 
 This means that a python script file can be provided by a simple makefile to be executed. 
 Therefore, python script is still easy to execute for users with low python experience. 
 Also, more experienced programmers, now can modify the output python script even after the project is created and finished. 
-Since python is an interpreter the ‚Äú.py‚Äù files will still be portable between different systems with different processors and operating systems. 
+Since python is an interpreter the .pyÄù files will still be portable between different systems with different processors and operating systems. 
 This solution still has few disadvantages. 
 The graphical user interface now needs to follow restrict organizations that are human readable and human understandable with proper commenting. 
 Finally, the user needs to install python interpreter in order to be able to execute their final project.
 
 \subsection{Conclusion}
-In conclusion, in order to solve this problem, we decided to generate a file that contains user‚Äôs project in form of a python script. 
-This solution will take advantage of the fact that python interprets it‚Äôs script rather than compiling it. Furthermore, if we chose that it is important to give the option of generating an executable rather than a script file to the user, it would be a simple addition to our graphical user interface.
+In conclusion, in order to solve this problem, we decided to generate a file that contains user's project in form of a python script. 
+This solution will take advantage of the fact that python interprets its script rather than compiling it. Furthermore, if we chose that it is important to give the option of generating an executable rather than a script file to the user, it would be a simple addition to our graphical user interface.
 
 \newpage
 
 \section{Conclusion}
-In conclusion there were 3 main dicisions discussed in this document. The three issues were handling multi-staged programs with multiple executables,
-development environemnt for graphical user interface and lastly methods of result representation.
-These problems were througly analyized by the Visual flow team many possible solutions were generated for each problem.
+In conclusion there were 3 main decisions discussed in this document. The three issues were handling multi-staged programs with multiple executables,
+development environment for graphical user interface and lastly methods of result representation.
+These problems were thoroughly analyzed by the Visual flow team many possible solutions were generated for each problem.
 Based on the group's analysis, for handling Multi-staged projects we introduced the concept of layers.
 Furthermore, for the graphical user interface development environment we selected python.
 Lastly our group decided to generate python script files as output for extraction of the project.
