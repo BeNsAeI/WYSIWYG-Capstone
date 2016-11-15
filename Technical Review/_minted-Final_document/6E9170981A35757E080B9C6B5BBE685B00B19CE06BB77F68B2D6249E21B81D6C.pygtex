@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{c+c1}{//C++}
+	\PYG{n}{class} \PYG{n}{Line} \PYG{p}{\PYGZob{}}
+		\PYG{n+nl}{public}\PYG{p}{:}
+			\PYG{k+kt}{void} \PYG{n}{setLength}\PYG{p}{(} \PYG{k+kt}{double} \PYG{n}{len} \PYG{p}{);}
+			\PYG{k+kt}{double} \PYG{n+nf}{getLength}\PYG{p}{(} \PYG{k+kt}{void} \PYG{p}{);}
+			\PYG{n}{Line}\PYG{p}{();}  \PYG{c+c1}{// This is the constructor}
+
+		\PYG{n+nl}{private}\PYG{p}{:}
+			\PYG{k+kt}{double} \PYG{n}{length}\PYG{p}{;}
+		\PYG{p}{\PYGZcb{};}
+
+	\PYG{n}{Line}\PYG{o}{::}\PYG{n}{Line}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)\PYGZob{}}
+	\PYG{n}{length} \PYG{o}{=} \PYG{l+m+mi}{20}\PYG{p}{;}
+	\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Object is being created\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+	\PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{Line}\PYG{o}{::}\PYG{n}{getlength}\PYG{p}{(} \PYG{k+kt}{void} \PYG{p}{)\PYGZob{}}
+	\PYG{k}{return} \PYG{n}{length}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{main}\PYG{p}{()\PYGZob{}}
+	\PYG{n}{Line} \PYG{n}{myLine}\PYG{p}{;}
+	\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Length is \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{myLine}\PYG{p}{.}\PYG{n}{getlength}\PYG{p}{()} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

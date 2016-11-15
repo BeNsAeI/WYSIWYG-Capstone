@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{c+c1}{// C/C++ supports multiple variable types}
+
+	\PYG{c+c1}{// To create a variable in C, you must define its type like so:}
+
+	\PYG{k+kt}{int} \PYG{n}{integerVariable}\PYG{p}{;}
+	\PYG{n}{integerVariable} \PYG{o}{=} \PYG{l+m+mi}{4}\PYG{p}{;}
+
+	\PYG{k+kt}{char} \PYG{n}{characterVariable}\PYG{p}{;}
+	\PYG{n}{characterVariable} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{;}
+
+	\PYG{k+kt}{float} \PYG{n}{floatingPointVariable}\PYG{p}{;}
+	\PYG{n}{floatingPointVariable} \PYG{o}{=} \PYG{l+m+mf}{4.5}\PYG{p}{;}
+
+	\PYG{k+kt}{double} \PYG{n}{veryLargeNumber}\PYG{p}{;}
+    	\PYG{n}{veryLargeNumber} \PYG{o}{=} \PYG{l+m+mi}{10000000}\PYG{p}{;}
+
+	\PYG{n}{String} \PYG{n}{stringVariable}\PYG{p}{;} \PYG{c+c1}{//This one is only supported in later versions of C.}
+	\PYG{n}{stringVariable} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Hello World\PYGZdq{}}\PYG{p}{;}
+
+	\PYG{c+c1}{//Example of passing variable to function}
+
+	\PYG{k+kt}{int} \PYG{n+nf}{functionEx}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{temp}\PYG{p}{,} \PYG{k+kt}{char} \PYG{n}{temp2}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{temp3}\PYG{p}{);}
+	\PYG{n}{functionEx}\PYG{p}{(}\PYG{n}{integerVariable}\PYG{p}{,} \PYG{n}{characterVariable}\PYG{p}{,} \PYG{n}{floatingPointVariable}\PYG{p}{);}
+\end{Verbatim}

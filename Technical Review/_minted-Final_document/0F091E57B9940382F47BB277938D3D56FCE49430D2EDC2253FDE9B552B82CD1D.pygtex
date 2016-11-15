@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{c+c1}{// Java is similar to C/C++ when it comes to defining variables}
+
+	\PYG{c+c1}{// To create a variable in Java, you must define its type like so:}
+
+	\PYG{k+kt}{int} \PYG{n}{integerVariable} \PYG{o}{=} \PYG{l+m+mi}{11}\PYG{o}{;}
+
+	\PYG{k+kt}{char} \PYG{n}{characterVariable} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}c\PYGZsq{}}\PYG{o}{;}
+
+	\PYG{c+c1}{//To use floats in Java, they must be type\PYGZhy{}cast.}
+	\PYG{k+kt}{float} \PYG{n}{floatingPointVariable} \PYG{o}{=} \PYG{o}{(}\PYG{k+kt}{float}\PYG{o}{)}\PYG{l+m+mf}{4.5}\PYG{o}{;}
+
+	\PYG{c+c1}{//Double also acts as a floating point number.}
+	\PYG{k+kt}{double} \PYG{n}{veryLargeNumber} \PYG{o}{=} \PYG{l+m+mf}{3.4}\PYG{o}{;}
+
+	\PYG{n}{String} \PYG{n}{stringVariable} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Hello world\PYGZdq{}}\PYG{o}{;}
+
+	\PYG{c+c1}{//Java also supports boolean values}
+	\PYG{n}{bool} \PYG{n}{qualifier} \PYG{o}{=} \PYG{k+kc}{true}\PYG{o}{;}
+	\PYG{n}{bool} \PYG{n}{disqualifier} \PYG{o}{=} \PYG{k+kc}{false}\PYG{o}{;}
+
+	\PYG{k+kd}{class} \PYG{n+nc}{Fun\PYGZus{}example}\PYG{o}{\PYGZob{}}
+    	\PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{exampleFunc}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{o}{);}
+	\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

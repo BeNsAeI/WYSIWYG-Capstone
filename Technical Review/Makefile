@@ -11,16 +11,16 @@ text: html
 
 html:
 	@#latex2html -split +0 -info "" -no_navigation ${filename}
-	htlatex ${filename}
+	htlatex ${filename} -shell-escape
 
 ps:	dvi
 	dvips -t letter ${filename}.dvi
 
 dvi:
-	latex ${filename}
+	latex -shell-escape ${filename}
 	bibtex ${filename}||true
-	latex ${filename}
-	latex ${filename}
+	latex -shell-escape ${filename}
+	latex -shell-escape ${filename}
 
 read:
 	evince ${filename}.pdf &

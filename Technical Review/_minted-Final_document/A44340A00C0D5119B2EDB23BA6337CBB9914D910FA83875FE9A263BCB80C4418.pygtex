@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{integerVariable} \PYG{o}{=} \PYG{l+m+mi}{11}
+
+	\PYG{n}{characterVariable} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}
+
+	\PYG{n}{floatingPointVariable} \PYG{o}{=} \PYG{l+m+mf}{4.5}
+
+	\PYG{n}{stringVariable} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Hello world\PYGZdq{}}
+
+	\PYG{n}{qualifier} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{;}
+
+	\PYG{n}{disqualifier} \PYG{o}{=} \PYG{n+nb+bp}{False}\PYG{p}{;}
+
+	\PYG{c+c1}{\PYGZsh{}function definition}
+	\PYG{k}{def} \PYG{n+nf}{printinfo}\PYG{p}{(} \PYG{n}{name}\PYG{p}{,} \PYG{n}{age} \PYG{p}{):}
+		\PYG{l+s+s2}{\PYGZdq{}This prints a passed info into this function\PYGZdq{}}
+		\PYG{k}{print} \PYG{l+s+s2}{\PYGZdq{}Name: \PYGZdq{}}\PYG{p}{,} \PYG{n}{name}
+		\PYG{k}{print} \PYG{l+s+s2}{\PYGZdq{}Age \PYGZdq{}}\PYG{p}{,} \PYG{n}{age}
+		\PYG{k}{return}\PYG{p}{;}
+
+	\PYG{c+c1}{\PYGZsh{}call printinfo function}
+	\PYG{n}{printinfo}\PYG{p}{(} \PYG{n}{age}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}miki\PYGZdq{}} \PYG{p}{)}
+\end{Verbatim}

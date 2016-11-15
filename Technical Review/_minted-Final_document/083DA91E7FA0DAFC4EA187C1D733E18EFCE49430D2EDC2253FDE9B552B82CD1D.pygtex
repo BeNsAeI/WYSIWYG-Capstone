@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{c+c1}{//Java}
+	\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{Bicycle}\PYG{o}{\PYGZob{}}
+
+        \PYG{k+kt}{int} \PYG{n}{gear}\PYG{o}{;}
+        \PYG{k+kt}{int} \PYG{n}{cadence}\PYG{o}{;}
+        \PYG{k+kt}{int} \PYG{n}{speed}\PYG{o}{;}
+
+		\PYG{k+kd}{public} \PYG{n+nf}{Bicycle}\PYG{o}{()} \PYG{o}{\PYGZob{}}
+			\PYG{n}{gear} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;}
+			\PYG{n}{cadence} \PYG{o}{=} \PYG{l+m+mi}{10}\PYG{o}{;}
+			\PYG{n}{speed} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+		\PYG{o}{\PYGZcb{}}
+
+		\PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{showParts}\PYG{o}{()\PYGZob{}}
+			\PYG{n}{System}\PYG{o}{.}\PYG{n+na}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}Gear = \PYGZdq{}} \PYG{o}{+} \PYG{n}{gear}\PYG{o}{);}
+			\PYG{n}{System}\PYG{o}{.}\PYG{n+na}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}Cadence = \PYGZdq{}} \PYG{o}{+} \PYG{n}{cadence}\PYG{o}{);}
+			\PYG{n}{System}\PYG{o}{.}\PYG{n+na}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}Speed = \PYGZdq{}} \PYG{o}{+} \PYG{n}{speed}\PYG{o}{);}
+		\PYG{o}{\PYGZcb{}}
+	\PYG{o}{\PYGZcb{}}
+
+	\PYG{n}{Bicycle} \PYG{n}{mybike} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Bicycle}\PYG{o}{();}
+	\PYG{n}{mybike}\PYG{o}{.}\PYG{n+na}{showParts}\PYG{o}{();}
+\end{Verbatim}
