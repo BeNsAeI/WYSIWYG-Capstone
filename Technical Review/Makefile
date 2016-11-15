@@ -27,7 +27,8 @@ read:
 
 aread:
 	acroread ${filename}.pdf
-
+installPeg:
+	sudo apt-get install python-pygments
 clean:
 	rm -f ${filename}.{ps,pdf,log,aux,out,dvi,bbl,blg}
 all: pdf
