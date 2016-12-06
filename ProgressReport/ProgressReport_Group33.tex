@@ -1,0 +1,208 @@
+\documentclass[journal,10pt,onecolumn,compsoc]{IEEEtran} \usepackage[margin=1.0in]{geometry} \usepackage{pdfpages} 
+\usepackage{caption,graphicx,float} 
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{nameref}
+\graphicspath{/graphics} \setlength{\parskip}{\baselineskip} \setlength\parindent{24pt}
+\usepackage[english]{babel}
+%\usepackage{fullpage}
+
+\title{TensorFlow\texttrademark WYSIWYG GUI Progress Report}
+\author{Group 33: Connor Sedwick, Behnam Saeedi, Collin Dorsett}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{centering}
+Fall 2016
+\begin{abstract}
+The purpose of this document is to discuss and outline the progress made on the  TensorFlow\texttrademark WYSIWYG Graphical User Interface system. 
+Included is a discussion of project goals, current status, obstacles, and an overall retrospective of the past ten weeks.
+\end{abstract}
+\end{centering}
+\newpage
+\tableofcontents
+\newpage
+\section{Purpose and Goals:}
+\subsection{Purpose}
+The main purpose of our project is to work closely with our stakeholder to research and develop a software that can aid in developing and visualizing deep learning algorithms.
+We are also treating the project as a learning experience for best design practices.
+\subsection{Goals}
+Our goals for this term were to properly research applicable technologies for our project and document the preliminary design of our Graphical User Interface.
+Looking forward, one of our sub-goals is to be able to have our project tested during Winter term by our stakeholder's students to aid us in development.
+To do so means we will likely be testing individual features of our software throughout development.
+\newpage
+\section{Past Weekly Events:}
+%------------------------------------------------------------------------------
+\subsection{Week 3}
+\subsubsection{Activities}
+For this week, we we were required to contact our stakeholder, Prof. Fuxin Li, and schedule a meeting with him to introduce ourselves and discuss the project.
+Dr. Li, made it very clear the project is a WYSIWYG GUI meant for programming with Google's TensorFlow\texttrademark API, but he did give us freedom to choose by saying we did not have to strictly use that library.
+Based on what he had to say, the project seems mostly up to us as to what language and machine learning libraries we want to support with our GUI.
+
+\noindent We were also assigned the task of meeting with our assigned Teaching Assistant to set a weekly meeting time.
+We decided on Friday at 2:30pm as the meeting time.
+
+\subsubsection{Problems and Solutions}
+We did not receive a prompt reply from our stakeholder even though we sent an email requesting a meeting earlier that week after being assigned to his project. We decided to visit his office near the end of the week to have an impromptu meeting.
+%------------------------------------------------------------------------------
+\subsection{Week 4}
+\subsubsection{Activities}
+For this week, we were assigned the tasks of developing and completing a Problem Statement document, creating a GitHub wiki page, completing an Abstract Analysis, creating a group name, meeting with our Teaching Assistant, Jon Dodge, and scheduling a meeting with our stakeholder.
+
+\noindent The Abstract Analysis that we completed in class helped us better understand the type of material that we should cover in our Problem Statement document.
+
+\noindent Creating a group name took some time, but we ended up basing our group name off of two technologies that our project is supporting or based on. 
+We decided on VisualFlow\texttrademark as the team name.
+
+\subsubsection{Problems and Solutions}
+Similar to the previous week, we had some difficulties meeting with our stakeholder. 
+We needed our Problem Statement signed, so we had to get a digital signature from Dr. Li.
+Meeting time was pushed back a week.
+
+\noindent Had some issues with including images on the Problem Statement. 
+After some research we found out it is much easier in LaTeX(\LaTeX) to use EPS than  to use any other image format .
+%------------------------------------------------------------------------------
+\subsection{Week 5}
+\subsubsection{Activities}
+Activities for this week included: setting up a meeting up with our stakeholder, updating our Abstract for our Requirements document, completing a rough draft of our Requirements document, meeting with our TA, and granting the instructors access to our GitHub page.
+
+\subsubsection{Problems and Solutions}
+Our meeting was yet again postponed with our stakeholder due to illness. 
+
+\noindent Due to confusion on the formatting of the Requirements document, we decided to meet with our TA to discuss the material included in it. 
+
+\noindent Having trouble with communication between team members. To fix this, Connor advised the use of Slack.
+%------------------------------------------------------------------------------
+\subsection{Week 6}
+\subsubsection{Activities}
+Activities for this week consisted of meeting with our stakeholder, dividing up components of the project among group members, and finalizing our Requirements document, and deciding on a group leader to organize deadlines and goals better.
+
+\noindent After discussing with past groups and our TA about team organization, we decided on assigning one member as the head of the group to manage communication with the stakeholder and ensure work is completed on time. 
+We elected Connor Sedwick for this position.
+
+\noindent We were finally able to meet with Prof. Fuxin Li to catch-up on the current state of the project. 
+Dr. Li supports the design on Behnam's user interface mock-ups.
+Some concerns brought up was the gap in our Gantt chart which took up the Winter break and the time frame set for testing.
+We decided it would be best to begin development over the break and research components more for our project during that time. 
+Dr. Li voiced that he would also like intermittent testing as we develop instead of trying to complete large chunks before tests.
+
+\subsubsection{Problems and Solutions}
+No issues to report.
+%------------------------------------------------------------------------------
+\subsection{Week 7}
+\subsubsection{Activities}
+Activities included assigning components to team members to work on for our Tech Review document, meeting with our TA to discuss what type of material to cover in the Tech Review, and submitting a completed Requirements document. 
+\label{Apportioning}
+\noindent For the Tech Review, each member had the following responsibilities assigned:
+
+\noindent Connor:
+\begin{itemize}
+\item Variable Handling
+\item GUI Representation
+\item Abstraction
+\end{itemize}
+
+\noindent Behnam:
+\begin{itemize}
+\item Platform Choice
+\item Layering/Multi Staging
+\item File output
+\end{itemize}
+
+\noindent Collin:
+\begin{itemize}
+\item Debugging features
+\item Code documentation feature
+\item Function flexibility (User defined functions and included library functions.)
+\end{itemize}
+
+\subsubsection{Problems and Solutions}
+When assigned the Tech Review we had some confusion about whether we write about specific libraries used for our software or if we discuss different designs and methods used for our project. After meeting with Jon we decided to focus more on the reasoning behind our choice of programming language, and what sorts of APIs we could apply to our project to meet our design goals.
+%------------------------------------------------------------------------------
+\subsection{Week 8}
+\subsubsection{Activities}
+The goals and activities slated for this week included meeting with Dr. Li to discuss the graphics package we would be implementing for the button icons used in our GUI as well as completing and submitting our Tech Review document.
+
+\noindent During our meeting with Prof. Fuxin Li, we discussed the actual implementation of our Layering system. 
+Prior to the meeting we believed that Layers would represent independent files and they would be connected by creating output files of data to send to each Layer following it.
+Fuxin made it clear that this would not work as he data output would be very large from file to file so he recommended that Layers only represent chunks of code and that we do not create individual files.
+As it turns out, one of our requirements may need to be changed or redacted as it is difficult to compile and run machine learning code in under a few seconds.
+
+\noindent During this week, Behnam had finalized a mock-up video of how the GUI would interact from a user's perspective.
+\subsubsection{Problems and Solutions}
+When exporting our Tech Review document, we ran into an issue with certain parts not rendering.
+To fix this we included packages in the GitHub repository.
+%------------------------------------------------------------------------------
+\subsection{Week 9}
+\subsubsection{Activities}
+This week was set aside for the Thanksgiving holiday break.
+Behnam completed mock-ups of the GUI for the Design Document and Progress Report presentation.
+Members all updated their weekly logs up to current week.
+Design Document formatting began.
+
+\subsubsection{Problems and Solutions}
+No issues to report.
+%------------------------------------------------------------------------------
+\subsection{Week 10}
+\subsubsection{Activities}
+For this week, we met with Dr. Li to schedule a formal meeting time for Thursday of finals week, completed and signed our Design Document and began work on our Progress Report.
+
+\noindent The team all met to complete, proofread, and submit the preliminary Design Document. 
+Progress was also made to develop presentation slides for our End of Term report.
+
+\subsubsection{Problems and Solutions}
+During development of the Design Document, we ran into some issues with paper formatting in regards to viewpoints and sectioning.
+We decided to discuss viewpoints explicitly in the "Component Design" section.
+We also encountered some issues with some printouts missing figures.
+This was due to KEC printers being reset during printing.
+
+%------------------------------------------------------------------------------
+\section{Retrospective:}
+
+\begin{table}[H]
+\begin{center}
+ \begin{tabular}{ |p{0.3\textwidth-2\tabcolsep}|p{0.3\textwidth-2\tabcolsep}|p{0.3\textwidth-2\tabcolsep}|} 
+ \hline
+ \multicolumn{1}{|c|}{\textbf{Positives}} 
+ & 
+\multicolumn{1}{|c|}{\textbf{Deltas}}  & 
+\multicolumn{1}{|c|}{\textbf{Actions}}\\
+ \hline
+ 
+Was able to meet with stakeholder at moment's notice at times & Need to schedule had dates to meet with stakeholder & Will be meeting with stakeholder to hammer out a schedule for Winter term \\
+ \hline
+ 
+Was able to set up a group on Slack messenger for communication and use it to share files & Need better communication between team members with respect to meetings and assignments & Discuss better communication practices \\
+ \hline
+ 
+Properly formatted all documents and submitted them all on time & Could begin work on them earlier to allow for more time to understand assignment & Begin work ahead of schedule for assignments \\
+ \hline
+ 
+Gleaned much information from weekly TA meetings by writing up talking points prior to meetings & & \\
+ \hline
+ 
+Communicated effectively with client to arrange meetings & Needed to assign team member responsible for client communication & Elected group leader to contact client \\
+ \hline
+\end{tabular}
+\caption{A retrospective of the past ten weeks.}
+\label{table:1}
+\end{center}
+\end{table}
+\newpage
+%------------------------------------------------------------------------------
+\section{Current State of the Project:}
+As of this term, we have decided on the technologies we plan to use for developing our software.
+We have a preliminary Software Design Document written and ready for development.
+Furthermore, we are planning on developing the documentation further as we progress through the upcoming term.
+Each member has been assigned a responsibility with respect to the development of our software's components.
+This is outlined in Section 2.5.1.
+
+\noindent We have many mock-ups of our interface to refer to during development and have had them checked and accepted by our stakeholder during our meetings.
+One more meeting for this term has been scheduled for Thursday of finals week with our stakeholder to discuss meeting times during the upcoming term.
+
+\noindent Over the upcoming weeks before Winter term, we plan to take the time to further familiarize ourselves with the technologies we have chosen for the project.
+These technologies will  be applied to the solution and will help us develop the TensorFlow\texttrademark WYSIWYG Graphical user interface.
+We also plan begin development of our graphical interface during this time.
+Preliminary work will also be done for developing the code structure of our system's Block components.
+\end{document}

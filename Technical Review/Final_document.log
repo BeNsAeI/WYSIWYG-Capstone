@@ -1,0 +1,821 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  17 NOV 2016 12:33
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**Final_document
+(./Final_document.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 503.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+-- Using IEEE Computer Society mode.
+** ATTENTION: Single column mode is not typically used with IEEE publications.
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count94
+\Gm@cntv=\count95
+\c@Gm@tempcnt=\count96
+\Gm@bindingoffset=\dimen126
+\Gm@wd@mp=\dimen127
+\Gm@odd@mp=\dimen128
+\Gm@even@mp=\dimen129
+\Gm@layoutwidth=\dimen130
+\Gm@layoutheight=\dimen131
+\Gm@layouthoffset=\dimen132
+\Gm@layoutvoffset=\dimen133
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count97
+\calc@Bcount=\count98
+\calc@Adimen=\dimen134
+\calc@Bdimen=\dimen135
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count99
+\calc@Cskip=\skip46
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 96.
+)
+\Gin@req@height=\dimen136
+\Gin@req@width=\dimen137
+)
+\AM@pagewidth=\dimen138
+\AM@pageheight=\dimen139
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdfpages/ppnull.def
+File: ppnull.def 2016/04/19 v0.5f Pdfpages dummy driver (AM)
+
+
+Package pdfpages Warning: I will use a dummy \includepdf command which
+(pdfpages)                will insert empty pages instead of the actual PDF,
+(pdfpages)                because we are running in DVI mode or with
+(pdfpages)                dvips driver.
+
+))
+\AM@pagebox=\box28
+\AM@global@opts=\toks17
+\AM@toc@title=\toks18
+\c@AM@survey=\count100
+\AM@templatesizebox=\box29
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count101
+\lst@gtempboxa=\box30
+\lst@token=\toks19
+\lst@length=\count102
+\lst@currlwidth=\dimen140
+\lst@column=\count103
+\lst@pos=\count104
+\lst@lostspace=\dimen141
+\lst@width=\dimen142
+\lst@newlines=\count105
+\lst@lineno=\count106
+\lst@maxwidth=\dimen143
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count107
+\lst@skipnumbers=\count108
+\lst@framebox=\box31
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read1
+) (./minted.sty
+Package: minted 2016/10/31 v2.4.1 Yet another Pygments shim for LaTeX
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(./fvextra.sty
+Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+b
+ (./etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count109
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count110
+\FV@InFile=\read2
+\FV@TabBox=\box32
+\c@FancyVerbLine=\count111
+\FV@StepNumber=\count112
+\FV@OutFile=\write3
+) (./upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count113
+\output=\toks22
+\linenoprevgraf=\count114
+\linenumbersep=\dimen144
+\linenumberwidth=\dimen145
+\c@linenumber=\count115
+\c@pagewiselinenumber=\count116
+\c@LN@truepage=\count117
+\c@internallinenumber=\count118
+\c@internallinenumbers=\count119
+\quotelinenumbersep=\dimen146
+\bframerule=\dimen147
+\bframesep=\dimen148
+\bframebox=\box33
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count120
+\c@FV@TrueTabCounter=\count121
+\FV@TabBox@Group=\box34
+\FV@TmpLength=\skip47
+\c@FV@HighlightLinesStart=\count122
+\c@FV@HighlightLinesStop=\count123
+\FV@BreakIndent=\dimen149
+\FV@BreakSymbolSepLeft=\dimen150
+\FV@BreakSymbolSepRight=\dimen151
+\FV@BreakSymbolIndentLeft=\dimen152
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 562.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+\FV@BreakSymbolIndentRight=\dimen153
+\c@FancyVerbLineBreakLast=\count124
+\FV@LineBox=\box35
+\FV@LineIndentBox=\box36
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count125
+\float@exts=\toks23
+\float@box=\box37
+\@float@everytoks=\toks24
+\@floatcapt=\box38
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/04/29 v0.01c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape ensabled on input line 65.
+)
+(./ifplatform.sty
+Package: ifplatform 2007/11/18 v0.2 Testing for the operating system
+runsystem(echo 'write18-test-20161117753'>"Final_document.w18")...executed.
+
+\instream=\read3
+runsystem(uname -s > "Final_document.w18")...executed.
+
+\instream=\read4
+runsystem(rm -- "Final_document.w18")...executed.
+
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+)
+(./xstring.sty (./xstring.tex
+\@xs@message=\write4
+\integerpart=\count126
+\decimalpart=\count127
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+) (./framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip48
+\fb@frw=\dimen154
+\fb@frh=\dimen155
+\FrameRule=\dimen156
+\FrameSep=\dimen157
+)
+\minted@appexistsfile=\read5
+\minted@bgbox=\box39
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count128
+\c@minted@pygmentizecounter=\count129
+\@float@every@listing=\toks25
+\c@listing=\count130
+)
+runsystem(mkdir -p _minted-Final_document)...executed.
+
+runsystem(which pygmentize && touch Final_document.aex)...executed.
+
+
+
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \begin{document}
+                     
+? 
+No file Final_document.aux.
+\openout1 = `Final_document.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 13.
+
+-- Lines per column: 56 (approximate, difference = 1.76704pt).
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-18.69788pt
+* \headheight=12.0pt
+* \headsep=6.69788pt
+* \topskip=11.58327pt
+* \footskip=19.1765pt
+* \marginparwidth=20.0pt
+* \marginparsep=10.0pt
+* \columnsep=12.045pt
+* \skip\footins=10.42487pt plus 4.63322pt minus 2.3166pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box40
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvips (dvips) on input line 125.
+)
+\c@lstlisting=\count131
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 14.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 14
+.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11.04124> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.72884> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.52061> on input line 14.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 14.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 15.
+ [1]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
+
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 21.
+
+No file Final_document.toc.
+\tf@toc=\write6
+\openout6 = `Final_document.toc'.
+
+[2]
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 27.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.53561> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6.6749> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.7678> on input line 27.
+ [3]
+
+LaTeX Warning: Citation `xmlf' on page 4 undefined on input line 51.
+
+
+LaTeX Warning: Citation `xmls' on page 4 undefined on input line 56.
+
+
+LaTeX Warning: Citation `opengl' on page 4 undefined on input line 61.
+
+
+LaTeX Warning: Citation `oop' on page 4 undefined on input line 63.
+
+[4]
+\openout3 = `Final_document.pyg'.
+
+ (./_minted-Final_document/default-pyg-prefix.pygstyle)
+(./_minted-Final_document/default.pygstyle)
+(./_minted-Final_document/DD9DAEBDDDA2C533E8EC689F19E2AE4800B19CE06BB77F68B2D62
+49E21B81D6C.pygtex
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 6.
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 10.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+))
+
+LaTeX Warning: Citation `cppvar' on page 5 undefined on input line 123.
+
+\openout3 = `Final_document.pyg'.
+
+
+(./_minted-Final_document/0F091E57B9940382F47BB277938D3D56FCE49430D2EDC2253FDE9
+B552B82CD1D.pygtex [5])
+
+LaTeX Warning: Citation `javavar' on page 6 undefined on input line 159.
+
+
+LaTeX Warning: Citation `javafunction' on page 6 undefined on input line 162.
+
+\openout3 = `Final_document.pyg'.
+
+
+(./_minted-Final_document/A44340A00C0D5119B2EDB23BA6337CBB9914D910FA83875FE9A26
+3BCB80C4418.pygtex)
+
+LaTeX Warning: Citation `Pythonvar' on page 6 undefined on input line 197.
+
+
+LaTeX Warning: Citation `Pythonfunction' on page 6 undefined on input line 202.
+
+
+[6]
+
+LaTeX Warning: Citation `moody' on page 7 undefined on input line 233.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--234
+
+ []
+
+[7]
+\openout3 = `Final_document.pyg'.
+
+
+(./_minted-Final_document/9545434F56CE96C5C070CCBC397BF8CB9914D910FA83875FE9A26
+3BCB80C4418.pygtex)
+\openout3 = `Final_document.pyg'.
+
+
+(./_minted-Final_document/083DA91E7FA0DAFC4EA187C1D733E18EFCE49430D2EDC2253FDE9
+B552B82CD1D.pygtex)
+\openout3 = `Final_document.pyg'.
+
+
+(./_minted-Final_document/6E9170981A35757E080B9C6B5BBE685B00B19CE06BB77F68B2D62
+49E21B81D6C.pygtex [8])
+
+LaTeX Warning: Citation `cclass' on page 9 undefined on input line 317.
+
+
+LaTeX Warning: Citation `javaclass' on page 9 undefined on input line 318.
+
+
+LaTeX Warning: Citation `cclass' on page 9 undefined on input line 321.
+
+
+LaTeX Warning: Citation `Pythonclass' on page 9 undefined on input line 323.
+
+
+LaTeX Warning: Citation `cclass' on page 9 undefined on input line 328.
+
+
+LaTeX Warning: Citation `javaclass' on page 9 undefined on input line 328.
+
+
+LaTeX Warning: Citation `Pythonclass' on page 9 undefined on input line 337.
+
+[9]
+
+LaTeX Warning: Citation `armstrong' on page 10 undefined on input line 365.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--381
+
+ []
+
+[10]
+
+LaTeX Warning: Citation `meyers' on page 11 undefined on input line 397.
+
+
+LaTeX Warning: Citation `johnson' on page 11 undefined on input line 409.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--425
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--425
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--425
+
+ []
+
+[11]
+
+LaTeX Warning: Citation `streamprocessing' on page 12 undefined on input line 4
+30.
+
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+
+LaTeX Warning: Citation `criticalmass' on page 12 undefined on input line 444.
+
+[12]
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+ [13]
+
+LaTeX Warning: Citation `Kivy' on page 14 undefined on input line 526.
+
+
+LaTeX Warning: Citation `libavg' on page 14 undefined on input line 526.
+
+
+LaTeX Warning: Citation `wxPython' on page 14 undefined on input line 531.
+
+
+LaTeX Warning: Citation `libavg' on page 14 undefined on input line 534.
+
+
+LaTeX Warning: Citation `Kivy' on page 14 undefined on input line 537.
+
+
+LaTeX Warning: Citation `wxPython' on page 14 undefined on input line 538.
+
+[14]
+No file Final_document.bbl.
+(./Final_document.aux)
+
+LaTeX Warning: There were undefined references.
+
+runsystem(rm Final_document.pyg)...executed.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8123 strings out of 493015
+ 139338 string characters out of 6133377
+ 251020 words of memory out of 5000000
+ 11537 multiletter control sequences out of 15000+600000
+ 29779 words of font info for 78 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,6n,39p,824b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Final_document.dvi (14 pages, 52620 bytes).
