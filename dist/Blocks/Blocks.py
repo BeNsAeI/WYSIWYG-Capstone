@@ -18,6 +18,10 @@ class Block:
 		self.Size=[w,h]
 	def changePosition(self,x,y):
 		self.Position=[x,y]
+	def changeDescription(self,des):
+		self.Description=des
+	def changeAddress(self,addr):
+		self.Address=addr
 def testCase():
 	import random
 	print("Test case:")
