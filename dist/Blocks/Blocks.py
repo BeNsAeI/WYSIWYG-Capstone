@@ -1,3 +1,14 @@
+# Module detail:
+# This file describes the Block GUI class
+# Objects of such class have the following attributes:
+# - Name
+# - Type
+# - Caption
+# - ID
+# - Size
+# - Position
+# This file also contains the tests for the Block module
+
 class Block:
 	def __init__(self,name,type,caption,id,w,h,x=0,y=0):
 		self.Name=name
