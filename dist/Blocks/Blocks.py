@@ -44,6 +44,8 @@ def testCase():
 	h=random.randint(1, 10)
 	x=random.randint(1, 10)
 	y=random.randint(1, 10)
+	des="New descriptio"
+	addr="New address"
 	print("Make an object atrebutes: \""+name+"\", \""+type+"\", \""+caption+"\", "+str(id)+", "+str(w)+", "+str(h)+", "+str(x)+", "+str(y)+".")
 	a=Block(name,type,caption,id,w,h,x,y)
 	print("checking attrebutes: ")
@@ -111,5 +113,25 @@ def testCase():
 		print("self.Size[h]: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
 	else:
 		print("self.Size[h]: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	a.changePosition(x,y)
+	if (a.Position[0] == x):
+		print("self.Position[x]: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Position[x]: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	if (a.Position[1] == y):
+		print("self.Position[y]: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Position[y]: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	a.changeDescription(des);
+	if(a.Description == des):
+		print("self.Description: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Description: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+
+	a.changeAddress(addr);
+	if(a.Address == addr):
+		print("self.Address: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Address: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
 
 testCase()
