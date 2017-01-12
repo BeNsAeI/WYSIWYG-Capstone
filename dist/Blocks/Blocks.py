@@ -22,7 +22,7 @@ class Block:
 	def changeType(self,type):
 		self.Type=type
 	def changeCaption(self,caption):
-		self.Caption.caption
+		self.Caption=caption
 	def changeID(self,id):
 		self.ID=id
 	def changeSize(self,w,h):
@@ -92,4 +92,24 @@ def testCase():
 		print("self.Type: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
 	else:
 		print("self.Type: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	a.changeCaption(caption)
+	if (a.Caption == caption):
+		print("self.Caption: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Caption: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	a.changeID(id)
+	if (a.ID == id):
+		print("self.ID: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.ID: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	a.changeSize(w,h)
+	if (a.Size[0] == w):
+		print("self.Size[w]: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Size[w]: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	if (a.Size[1] == h):
+		print("self.Size[h]: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Size[h]: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+
 testCase()
