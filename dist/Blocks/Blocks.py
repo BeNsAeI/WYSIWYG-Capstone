@@ -87,4 +87,9 @@ def testCase():
 		print("self.Name: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
 	else:
 		print("self.Name: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	a.changeType(type)
+	if (a.Type == type):
+		print("self.Type: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	else:
+		print("self.Type: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
 testCase()
