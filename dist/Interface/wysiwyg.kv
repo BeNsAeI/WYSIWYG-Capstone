@@ -1,0 +1,33 @@
+<CustButton@Button>:
+    font_size: 18
+    color: 0, 0, 0, 1
+    size: 100, 20
+    background_normal: ''
+    background_down: 'square-xxl.png'
+    background_color: .88, .88, .88, 1
+
+<SampGridLayout>:
+    rows: 2
+
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        spacing: 0
+
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        CustButton:
+            text: "Open"
+            size_hint_x: None
+        CustButton:
+            text: "Save"
+            size_hint_x: None
+        CustButton:
+            text: "Extract"
+            size_hint_x: None
+
+    BoxLayout:
