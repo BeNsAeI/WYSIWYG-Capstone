@@ -4,11 +4,17 @@
 # follow the channels direction
 # add items to the list in order
 # save the data to a file
-# Formatting:
-#  __________ ____ _________
-# | Priority | ID | statues |
-#  ---------- ---- ---------
-# |     1    | 25 |  Valid  |
-#              .
-#              .
-#              .
+'''
+ Formatting example:
+  ___________ ____ _________
+ | Priority  | ID | statues |
+  ----------- ---- ---------
+ |     1     | 25 |  Valid  |
+  ----------- ---- ---------
+ |     2     | 77 | Invalid |
+  ----------- ---- ---------
+ |     3     | 13 |  Valid  |
+              .
+              .
+              .
+'''
