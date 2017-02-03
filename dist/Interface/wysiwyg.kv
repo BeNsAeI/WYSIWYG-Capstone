@@ -29,18 +29,21 @@
             Rectangle:
                 pos: self.pos
                 size: self.size
-        CustButton:
-            text: "File"
-            size: 40, 14
-            size_hint_x: None
-        CustButton:
-            text: "Edit"
-            size: 40, 14
-            size_hint_x: None
-        CustButton:
-            text: "View"
-            size: 40, 14
-            size_hint_x: None
+        DropDown:
+            Button:
+                text: "File"
+                size: 40, 14
+                size_hint_x: None
+        DropDown:
+            CustButton:
+                text: "Edit"
+                size: 40, 14
+                size_hint_x: None
+        DropDown:
+            CustButton:
+                text: "View"
+                size: 40, 14
+                size_hint_x: None
 
     BoxLayout:
         size_hint_y: None
