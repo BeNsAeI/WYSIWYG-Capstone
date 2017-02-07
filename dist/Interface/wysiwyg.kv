@@ -5,6 +5,7 @@
     background_down: 'square-xxl.png'
     background_color: 1, 1, 1, 1
 
+
 <MenuButton@ToggleButton>:
     font_size: 14
     group: 'menu'
@@ -18,32 +19,12 @@
 <SampGridLayout>:
     rows: 3
 
-    BoxLayout:
+    DocumentOptions:
         size_hint_y: None
         padding: 3
         height: 20
         spacing: 1
-        canvas:
-            Color:
-                rgba: 1, 1, 1, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        DropDown:
-            Button:
-                text: "File"
-                size: 40, 14
-                size_hint_x: None
-        DropDown:
-            CustButton:
-                text: "Edit"
-                size: 40, 14
-                size_hint_x: None
-        DropDown:
-            CustButton:
-                text: "View"
-                size: 40, 14
-                size_hint_x: None
+
 
     BoxLayout:
         size_hint_y: None
