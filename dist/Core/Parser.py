@@ -4,3 +4,7 @@
 #
 #
 #
+class Parser:
+	def __init__(self):
+def testCase():
+testCase()

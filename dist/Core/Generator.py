@@ -3,3 +3,7 @@
 #
 #
 #
+class Generator:
+	def __init__(self):
+def testCase():
+testCase()
