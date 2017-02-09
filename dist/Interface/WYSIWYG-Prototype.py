@@ -8,6 +8,7 @@ from kivy.uix.button import Button
 from kivy.lang import Builder
 
 Builder.load_file('DocumentOptions.kv')
+Builder.load_file('BlockMenu.kv')
 
 class SampGridLayout(GridLayout):
     pass

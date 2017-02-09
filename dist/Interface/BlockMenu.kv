@@ -1,0 +1,63 @@
+<MenuButton@ToggleButton>:
+    font_size: 14
+    group: 'menu'
+    size_hint_x: 1
+    size_hint_y: .1
+    color: 0, 0, 0, 1
+    background_normal: ''
+    background_down: 'square-xxl.png'
+    background_color: 0.9, 0.9, 0.9, 1
+
+
+
+<BlockMenu@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_x: 0.2
+    canvas:
+        Color:
+            rgba: 0.17, 0.47, 0.68, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        height: .5
+        orientation: 'vertical'
+        MenuButton:
+            text: "Data"
+
+        MenuButton:
+            text: "Methods"
+
+        DropDown:
+            id: dropdownClass
+            on_parent: self.dismiss()
+            size_hint_x: None
+            size_hint_y: None
+            Scatter:
+                id: testClass
+                do_rotation: 0
+                size_hint: None, None
+                size: classBlock.size
+                Widget:
+                    id: classBlock
+                    size: 100, 60
+                    canvas:
+                        Color:
+                            rgba: 0, 1, 1, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+
+        MenuButton:
+            text: "Class"
+            on_press: dropdownClass.open(self)
+
+        MenuButton:
+            text: "Layer"
+
+        MenuButton:
+            text: "Probe"
+
+        MenuButton:
+            text: "Output"

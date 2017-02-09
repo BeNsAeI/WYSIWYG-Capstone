@@ -5,17 +5,6 @@
     background_down: 'square-xxl.png'
     background_color: 1, 1, 1, 1
 
-
-<MenuButton@ToggleButton>:
-    font_size: 14
-    group: 'menu'
-    size_hint_x: .75
-    size_hint_y: .1
-    color: 0, 0, 0, 1
-    background_normal: ''
-    background_down: 'square-xxl.png'
-    background_color: 0.9, 0.9, 0.9, 1
-
 <SampGridLayout>:
     rows: 3
 
@@ -59,32 +48,7 @@
             size_hint_x: None
 
     BoxLayout:
-        BoxLayout:
-            orientation: 'vertical'
-            size_hint_x: 0.2
-            canvas:
-                Color:
-                    rgba: 0.17, 0.47, 0.68, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
-            BoxLayout:
-                height: .5
-                orientation: 'vertical'
-                MenuButton:
-                    text: "Data"
-                MenuButton:
-                    text: "Methods"
-                MenuButton:
-                    text: "Class"
-                MenuButton:
-                    text: "Layer"
-                MenuButton:
-                    text: "Probe"
-                MenuButton:
-                    text: "Output"
-            BoxLayout:
-
+        BlockMenu:
 
         BoxLayout:
             canvas:
