@@ -1,0 +1,30 @@
+<BuilderSuite@BoxLayout>:
+    size_hint_y: None
+    padding: 3
+    height: 40
+    spacing: 1
+    canvas:
+        Color:
+            rgba: .88, .88, .88, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    CustButton:
+        background_normal: 'Graphics/add-2.png'
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        text: "Save"
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        background_normal: 'Graphics/play-button-1.png'
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        text: "Stop"
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        text: "Extract"
+        size_hint_x: None

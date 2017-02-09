@@ -5,55 +5,13 @@
     background_down: 'square-xxl.png'
     background_color: 1, 1, 1, 1
 
+
 <SampGridLayout>:
     rows: 3
 
     DocumentOptions:
-        size_hint_y: None
-        padding: 3
-        height: 20
-        spacing: 1
 
+    BuilderSuite:
 
-    BoxLayout:
-        size_hint_y: None
-        padding: 3
-        height: 40
-        spacing: 1
-
-        canvas:
-            Color:
-                rgba: .88, .88, .88, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        CustButton:
-            background_normal: 'Graphics/add-2.png'
-            size: 40, 40
-            size_hint_x: None
-        CustButton:
-            text: "Save"
-            size: 40, 40
-            size_hint_x: None
-        CustButton:
-            background_normal: 'Graphics/play-button-1.png'
-            size: 40, 40
-            size_hint_x: None
-        CustButton:
-            text: "Stop"
-            size: 40, 40
-            size_hint_x: None
-        CustButton:
-            text: "Extract"
-            size_hint_x: None
-
-    BoxLayout:
-        BlockMenu:
-
-        BoxLayout:
-            canvas:
-                Color:
-                    rgba: 0.73, 0.69, 0.89, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
+    BuildSpace:
+        class_Block:

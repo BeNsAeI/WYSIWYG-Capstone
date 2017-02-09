@@ -1,0 +1,27 @@
+<BuildSpace@BoxLayout>:
+
+    scene: buildScene
+    menu: buildMenu
+
+    BlockMenu:
+        id: buildMenu
+
+    Scene:
+        id: buildScene
+        Scatter:
+            size_hint: None, None
+            size: root.size
+            do_rotation: False
+            Widget:
+                size: 200, 150
+                BoxLayout:
+                    canvas:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    TextInput:
+                        size_hint_y: None
+                        size: 100, 70
+                        pos_hint: {'center_x': .5, 'center_y': .5}
