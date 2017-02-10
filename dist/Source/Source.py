@@ -12,7 +12,7 @@ def IF(cond,funcA,funcB,parA=None,parB=None):
 
 def LOOP(count, func, par=None):
 	i = 0
-	while(i<counter):
+	while(i<count):
 		if(par):
 			func(i,par)
 		else:
