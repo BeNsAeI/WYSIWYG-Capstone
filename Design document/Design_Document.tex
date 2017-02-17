@@ -127,9 +127,10 @@ Furthermore, this document will be a reference for the developers, Capstone inst
 	\item \textbf{Abstract:}
 		A feature of a class that will turn the class from transparent to solid color in order to hide the content of the class.\\
 	\item \textbf{Layer:} 
-		An instance of a Scene. 
-		These instances could be independently implemented so that they function individually.
-		Layers can be run individually and they will generate data from input.\\
+		A group of various Block elements or classes that are abstracted together as a single element by the user.
+		These groups can be moved around as a whole within the Scene and contain their own input and output.\\
+		%An instance of a Scene. 
+		%These instances could be independently implemented so that they function individually, and will generate data from input.\\
 	\item \textbf{Channel:}
 		 A connection between inputs and outputs that display the direction of data flow and route the data from one Block to another.\\
 	\item \textbf{Probe:}
@@ -228,7 +229,7 @@ Blocks are placed in the build space and are interpreted or translated by the bu
 \caption{Layer function}
 \end{figure}
 
-\noindent Layers sit in the build space and represent chunks of code.
+\noindent Layers sit in the build space and represent chunks of Block elements.
 Their functionality is to assist in design organization.
 
 \begin{figure}[H]
@@ -472,7 +473,8 @@ Using this feature also nullifies any Probes within the drawn area.
 %-------------------------------------------------
 \subsection{Layer}
 \subsubsection{GUI element}
-\noindent The Layer component puts all the Layer elements in a visual queue for user to be able to see them. Furthermore, it allows users to interact with their "layer" level inputs and outputs.\\
+\noindent The idea of Layers is that the user may select a group of Block elements or classes to act as a single element of the program.
+%The Layer component puts all the Layer elements in a visual queue for user to be able to see them. Furthermore, it allows users to interact with their "layer" level inputs and outputs.\\
 \begin{figure}[H]
 \fbox{\includegraphics[width=\textwidth]{graphics/Layer.eps}}
 \caption{Layering system}
