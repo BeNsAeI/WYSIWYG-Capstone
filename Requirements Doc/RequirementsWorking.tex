@@ -86,11 +86,10 @@ This solution allows developers to use their implementation alongside their data
 		An object that contains multiple variables and methods (public or private).
 		Classes are represented as transparent boxes around methods and variables. This box could be abstracted away to be displayed as a solid color box.\\
 	\item \textbf{Abstract:}
-		A feature of a class that will turn the class from transparent to solid color in order to hide the content of the class.\\
+		A feature that allows the user to draw a bounding box around a set of Blocks and abstract it to simplify viewing.\\
 	\item \textbf{Layer:} 
-		An instance of a Scene. 
-		These instances could be independently implemented so that they function individually.
-		Layers can be run individually and they will generate data from input.\\
+		An instance of an Abstraction. 
+		These instances could be independently implemented so that they function individually and represent the underlying abstracted code.\\
 	\item \textbf{Channel:}
 		 A connection between inputs and outputs that display the direction of data flow and route the data from one Block to another.\\
 	\item \textbf{Probe:}
@@ -329,7 +328,7 @@ DEPEND: FR2\\
 \noindent
 \textbf{ID: FR13}\\
 TITLE: Layered builds\\
-DESC: A user should be able to create multiple layers to their software by opening multiple build spaces.\\
+DESC: A user should be able to create multiple layers to their software to abstract multiple sections of their algorithm's design.\\
 RAT: In order for the user to visualize the structure of their software.\\
 DEPEND: FR2\\
 
