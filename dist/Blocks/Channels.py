@@ -3,7 +3,8 @@
 # Objects of such class have the following attributes:
 # This file also contains the tests for the Block module
 class Channel:
-	def __init__(self,source,destination,data):
+	def __init__(self,id,source,destination,data):
+		self.ID=id;
 		self.SourceID=source
 		self.DestinationID=destination
 		self.Data=data;
@@ -24,7 +25,7 @@ def testCase():
 	print("Source ID is: "+str(source)+".")
 	print("Destination ID is: "+str(destination)+".")
 	print("Data is: "+str(data)+".")
-	C_ab=Channel(source,destination,data)
+	C_ab=Channel(0,source,destination,data)
 	if (C_ab.SourceID == source):
 		print("initial self.SourceID: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
 	else:
