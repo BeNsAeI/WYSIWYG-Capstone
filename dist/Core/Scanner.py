@@ -19,6 +19,8 @@ class Scanner:
 	def getTokens():
 		while(True):
 			handle = __getNextHandle();
+			if(handle[1] == -1):
+				print("The block with ID " + + " is of unknown type!");
 			if(handle[6]):
 				tempToken = Token(handle[0],handle[1],handle[2],handle[3],handle[4],handle[5]);
 				self.__Tokens.append(tempToken);
@@ -27,8 +29,12 @@ class Scanner:
 		return self.__Tokens;
 	def __getNextHandle():
 		out = [];
-		# ID
-		# Type
+		#append ID
+		if(False):
+			#bad block type
+			out.append(-1);
+		else:
+			# Type
 		# Name
 		# Channel ID
 		# Channel from ID
