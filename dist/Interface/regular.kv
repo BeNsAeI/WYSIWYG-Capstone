@@ -1,0 +1,34 @@
+#:kivy 1.0.9
+
+<MainWindowWidget>
+    Button:
+        text: 'press'
+        size_hint: None, None
+        size: 100, 100
+        pos: 100, 0
+
+        on_release: root.addfunction()
+
+<Scatterer>:
+    do_rotation: False
+    size_hint: None, None
+    size: self.size
+
+    canvas.after:
+        Color:
+            rgba: 1, 1, 0, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<Drawer>:
+    size: self.size
+
+    canvas:
+        Color:
+            rgba: 0, 1, 0, 0.3
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: 'Class'

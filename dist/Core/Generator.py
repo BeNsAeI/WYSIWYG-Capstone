@@ -1,8 +1,8 @@
 # This Core file generates and outputs the python file based on the data structure
 # Initiate generator using constructor (it starts the EXECUTION())
 # For each element in table of execution:
-# 1: Get the function from DB using its ID
-# 2: Get the parametters from execution table using the channel ID
+# 1: Get the function from list
+# 2: Get the parametters from execution tree using the channel ID
 # 3: generate and format the line
 # 4: Open the output file
 # 5: Add the string to the file

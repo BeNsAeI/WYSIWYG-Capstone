@@ -5,6 +5,7 @@ from kivy.app import App
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.scatter import Scatter
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
@@ -12,14 +13,20 @@ from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.lang import Builder
+from Blocks import Block
 
-Builder.load_file('cl_button.kv')
-Builder.load_file('class_Block.kv')
+#Builder.load_file('cl_button.kv')
+#Builder.load_file('class_Block.kv')
 Builder.load_file('Scene.kv')
 Builder.load_file('BuildSpace.kv')
 Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
-Builder.load_file('BlockMenu.kv')
+#Builder.load_file('BlockMenu.kv')
+class Scatterer(Scatter):
+    pass
+
+class Scene(ScatterLayout):
+    pass
 
 class cl_button(ToggleButton):
     pass
@@ -35,22 +42,34 @@ class method_Block(Widget):
 
 class variable_Block(Widget):
     pass
-
-class BuildSpace(BoxLayout):
-    scene = ObjectProperty(None)
-    menu = ObjectProperty(None)
+class output_Block(Widget):
     pass
 
-class Scene(BoxLayout):
-    pass
+class BuildSpace(FloatLayout):
+    def addBlock(self, type):
+        print(type)
+        s = Scatterer()
+        if type == "class":
+            d = class_Block()
+        elif type == "method":
+            d = method_Block()
+        elif type == "variable":
+            d = variable_Block()
+        elif type == "output":
+            d = output_Block()
+        else:
+            print("Error with request")
+
+        self.add_widget(s)
+        s.add_widget(d)
+        print("button is pressed")
+	myBlock=Block(type+"1",type,"Add Caption",0,0,0,0,0)
+	print("Name: " + myBlock.Name + ", Type: " + myBlock.Type + ", ID: " + str(myBlock.ID))
 
 class BuilderSuite(BoxLayout):
     pass
 
 class DocumentOptions(BoxLayout):
-    pass
-
-class BlockMenu(BoxLayout):
     pass
 
 class SampGridLayout(GridLayout):
@@ -61,5 +80,6 @@ class WYSIWYGApp(App):
     def build(self):
         return SampGridLayout()
 
-sample_app = WYSIWYGApp()
-sample_app.run()
+if __name__=="__main__":
+    sample_app = WYSIWYGApp()
+    sample_app.run()

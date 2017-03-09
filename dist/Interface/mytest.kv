@@ -1,0 +1,32 @@
+<myLayout>
+    Button:
+        text: 'Add widget'
+        size_hint: None, None
+        size: 100, 200
+        pos: 0, 100
+        on_release: root.addfunction()
+
+<Scatterer>:
+    do_rotation: False
+    size_hint: None, None
+    size: self.size
+
+    canvas.after:
+        Color:
+            rgba: 1, 1, 1, .5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<block_Class>:
+    size: self.size
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: 'Class'
+        color: 0, 0, 0, 1
+
