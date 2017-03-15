@@ -8,11 +8,13 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.scatter import Scatter
 from kivy.uix.widget import Widget
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
 from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.lang import Builder
+from Blocks import Block
 
 #Builder.load_file('cl_button.kv')
 #Builder.load_file('class_Block.kv')
@@ -21,6 +23,9 @@ Builder.load_file('BuildSpace.kv')
 Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
 #Builder.load_file('BlockMenu.kv')
+class modify_Screen(Screen):
+    pass
+
 class Scatterer(Scatter):
     pass
 
@@ -40,25 +45,52 @@ class method_Block(Widget):
     pass
 
 class variable_Block(Widget):
+    sm = ScreenManager()
+    sm.add_widget(modify_Screen(name='Settings'))
     pass
+
 class output_Block(Widget):
     pass
 
+
+
 class BuildSpace(FloatLayout):
+    def __init__(self,**kwargs):
+	super(BuildSpace,self).__init__(**kwargs);
+        self.methodCount=0;
+	self.classCount=0;
+	self.variableCount=0;
+	self.outputCount = 0;
+	self.blocks = [];
     def addBlock(self, type):
         print(type)
         s = Scatterer()
+
         if type == "class":
             d = class_Block()
+	    self.blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
+	    self.classCount+=1;
+
         elif type == "method":
             d = method_Block()
+            self.blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0,0,0,0,0))
+	    self.methodCount+=1;
+
         elif type == "variable":
             d = variable_Block()
+            self.blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0,0,0,0,0))
+	    self.variableCount+=1;
+
         elif type == "output":
             d = output_Block()
+            self.blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0,0,0,0,0))
+	    self.outputCount+=1;
         else:
             print("Error with request")
-
+	print("Status:");
+	for i in self.blocks:
+	    print(i.Name)
+	print("___")
         self.add_widget(s)
         s.add_widget(d)
         print("button is pressed")

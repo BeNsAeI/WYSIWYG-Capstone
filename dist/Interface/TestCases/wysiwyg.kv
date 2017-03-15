@@ -10,6 +10,13 @@
             size: self.size
             pos: self.pos
 
+<modify_Screen>:
+    BoxLayout:
+        Label:
+            text: 'Value: '
+        TextInput:
+
+
 <output_Block>:
     size: self.size
     canvas:
@@ -33,6 +40,12 @@
     Label:
         text: 'Variable'
         color: 0, 0, 0, 1
+    Button:
+        pos: 0, 0
+        text: 'Modify'
+        size: self.texture_size
+        on_release: root.sm.current = 'Settings'
+
 
 <method_Block>:
     size: self.size
@@ -45,6 +58,10 @@
     Label:
         text: 'Method'
         color: 0, 0, 0, 1
+    Button:
+        pos: 0, 0
+        text: 'Modify'
+        size: self.texture_size
 
 <class_Block>:
     size: self.size
@@ -57,6 +74,10 @@
     Label:
         text: 'Class'
         color: 0, 0, 0, 1
+    Button:
+        pos: 0, 0
+        text: 'Modify'
+        size: self.texture_size
 
 <CustButton@Button>:
     font_size: 14
