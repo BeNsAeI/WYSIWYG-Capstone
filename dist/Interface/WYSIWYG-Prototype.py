@@ -44,7 +44,6 @@ class method_Block(Widget):
 class variable_Block(Widget):
     def varButton(self, type):
         print("TEST")
-        self.textinput = TextInput(text='TEST', multiline=False)
     
 class output_Block(Widget):
     pass
