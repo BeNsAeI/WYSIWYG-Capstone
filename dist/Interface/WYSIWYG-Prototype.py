@@ -79,9 +79,9 @@ class BuildSpace(FloatLayout):
         for i in self.blocks:
             print(i.Name)
         print("___")
-            self.add_widget(s)
-            s.add_widget(d)
-            print("button is pressed")
+        self.add_widget(s)
+        s.add_widget(d)
+        print("button is pressed")
 
 class BuilderSuite(BoxLayout):
     pass
