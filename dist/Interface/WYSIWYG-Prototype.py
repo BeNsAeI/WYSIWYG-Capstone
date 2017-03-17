@@ -47,45 +47,41 @@ class output_Block(Widget):
 
 class BuildSpace(FloatLayout):
     def __init__(self,**kwargs):
-	super(BuildSpace,self).__init__(**kwargs);
+        super(BuildSpace,self).__init__(**kwargs);
         self.methodCount=0;
-	self.classCount=0;
-	self.variableCount=0;
-	self.outputCount = 0;
-	self.blocks = [];
+        self.classCount=0;
+        self.variableCount=0;
+        self.outputCount = 0;
+        self.blocks = [];
     def addBlock(self, type):
         print(type)
         s = Scatterer()
 
         if type == "class":
             d = class_Block()
-	    self.blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
-	    self.classCount+=1;
-
+            self.blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
+            self.classCount+=1;
         elif type == "method":
             d = method_Block()
             self.blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0,0,0,0,0))
-	    self.methodCount+=1;
-
+            self.methodCount+=1;
         elif type == "variable":
             d = variable_Block()
             self.blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0,0,0,0,0))
-	    self.variableCount+=1;
-
+            self.variableCount+=1;
         elif type == "output":
             d = output_Block()
             self.blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0,0,0,0,0))
-	    self.outputCount+=1;
+            self.outputCount+=1;
         else:
             print("Error with request")
-	print("Status:");
-	for i in self.blocks:
-	    print(i.Name)
-	print("___")
-        self.add_widget(s)
-        s.add_widget(d)
-        print("button is pressed")
-
+        print("Status:");
+        for i in self.blocks:
+            print(i.Name)
+        print("___")
+            self.add_widget(s)
+            s.add_widget(d)
+            print("button is pressed")
 
 class BuilderSuite(BoxLayout):
     pass
