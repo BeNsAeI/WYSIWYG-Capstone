@@ -12,6 +12,7 @@ from kivy.properties import ObjectProperty
 from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
 from Blocks import Block
 
@@ -41,7 +42,10 @@ class method_Block(Widget):
     pass
 
 class variable_Block(Widget):
-    pass
+    def varButton(self, type):
+        print("TEST")
+        self.textinput = TextInput(text='TEST', multiline=False)
+    
 class output_Block(Widget):
     pass
 
@@ -56,7 +60,6 @@ class BuildSpace(FloatLayout):
     def addBlock(self, type):
         print(type)
         s = Scatterer()
-
         if type == "class":
             d = class_Block()
             self.blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
@@ -93,7 +96,6 @@ class SampGridLayout(GridLayout):
     pass
 
 class WYSIWYGApp(App):
-
     def build(self):
         return SampGridLayout()
 

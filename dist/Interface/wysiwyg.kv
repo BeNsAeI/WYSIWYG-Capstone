@@ -30,9 +30,23 @@
         Rectangle:
             pos: self.pos
             size: self.size
-    Label:
-        text: 'Variable'
-        color: 0, 0, 0, 1
+	GridLayout:
+		rows: 2
+		cols: 2
+		Button:
+			text: 'Modify'
+			height: 25
+			width: 25
+			on_release: root.varButton(type)
+			pos: self.pos
+		TextInput:
+			textIn: ""
+			multiline: False
+			height: 25
+			width: 25
+		Label:
+			text: 'Variable'
+			color: 0, 0, 0, 1
 
 <method_Block>:
     size: self.size
