@@ -95,7 +95,6 @@ class BuildSpace(FloatLayout):
         s.add_widget(d)
         print("button is pressed")
 
-
 class BuilderSuite(BoxLayout):
     pass
 
