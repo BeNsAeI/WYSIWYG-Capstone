@@ -1,44 +1,32 @@
 # This core file has the purpose of Parsing the computer readable data into appropriate data structure
 # The input is the tokens and it generates the tree
-# Grammar:
-#	Start -> succ
-#	succ -> block succ | terminate | empty
-#	block -> <INSERT LIST OF RECOGNIZED BLOCKS>
-#	terminate -> empty
-
-from . import Token
-
-class Start:
-	def __init__(self):
-		self.sent = None
-
-class End:
-	def __init__(self):
-		self.sent = 0
 
 class Tree:
 	def __init__(self):
-		self.Right = None
-		self.Left = None
-		self.Center = None
+		self.path = ""
+		self.argList;
+		self.Next = None
 		self.Sibiling = None
-		self.Data = None
 
 class Parser:
 	def __init__(self):
 		self.hasMembers = False
-	def __BuidTree():
-		
+		self.StartNode = None;
+		self.current = self.StartNode;
+		self.numNodes = 0;
 	def __Start():
-		return (Start node)
-	def __Succ():
-		
-	def __Block():
-		
-	def __Terminate();
-		
+		self.StartNode = Tree();
+		return self.StartNode
+	def __addNode(address,argsList):
+		self.numNodes += 1;
+		self.hasMembers = True;
+		Node = Tree();
+		return Node;
+	def __Term():
+		return None;
 	def getTree():
-		
+		return self.StatNode;
+
 def testCase():
 	print("Testing: ");
 testCase()
