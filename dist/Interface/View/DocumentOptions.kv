@@ -1,0 +1,111 @@
+<DocumentOptions@BoxLayout>:
+    size_hint_y: None
+    padding: 3
+    height: 20
+    spacing: 1
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    DropDown:
+        id: dropdownFile
+        on_parent: self.dismiss()
+        size_hint_x: None
+        size_hint_y: None
+
+        CustButton:
+            text: 'New'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Save'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Open'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Extract'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+
+    CustButton:
+        text: "File"
+        size: 40, 14
+        size_hint_x: None
+        on_release: dropdownFile.open(self)
+
+    DropDown:
+        id: dropdownEdit
+        on_parent: self.dismiss()
+        size_hint_x: None
+        size_hint_y: None
+
+        CustButton:
+            text: 'New'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Save'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Open'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Extract'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+
+    CustButton:
+        text: "Edit"
+        size: 40, 14
+        size_hint_x: None
+        on_release: dropdownEdit.open(self)
+
+
+    DropDown:
+        id: dropdownView
+        on_parent: self.dismiss()
+        size_hint_x: None
+        size_hint_y: None
+
+        CustButton:
+            text: 'New'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Save'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Open'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+        CustButton:
+            text: 'Extract'
+            size_hint_y: None
+            size_hint_x: None
+            size: 40, 14
+
+    CustButton:
+        text: "View"
+        size: 40, 14
+        size_hint_x: None
+        on_release: dropdownView.open(self)
