@@ -43,6 +43,12 @@ def testCase():
 	temp = Generator()
 
 	comment = "This is a variable declearation"
+	varName = "string"
+	varValue='"Hello world!"'
+	args=[comment,varName,varValue]
+	temp.addBlock("var",II,args)
+
+	comment = "This is a variable declearation"
 	varName = "x"
 	varValue="10"
 	args=[comment,varName,varValue]
