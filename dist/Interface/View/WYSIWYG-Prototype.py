@@ -1,6 +1,5 @@
 import kivy
 kivy.require("1.9.0")
-
 from kivy.app import App
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.gridlayout import GridLayout
@@ -8,7 +7,6 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.scatter import Scatter
 from kivy.uix.widget import Widget
-from kivy.uix.label import Label
 from kivy.properties import ObjectProperty
 from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.dropdown import DropDown
@@ -16,9 +14,8 @@ from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
 import sys
-sys.path.append('../Blocks')
+sys.path.append('../../Blocks')
 from Blocks import Block
-from Channels import Channel
 
 #Builder.load_file('cl_button.kv')
 #Builder.load_file('class_Block.kv')
@@ -27,24 +24,8 @@ Builder.load_file('BuildSpace.kv')
 Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
 #Builder.load_file('BlockMenu.kv')
-class ChannelStack():
-    def __init__(self):
-        self.channelCount = 0;
-        self.channelStack = [];
-
-    def set_source(self):
-        self.channelStack.append(Channel())
-
-    def set_destination(self):
-        pass
-
 class Scatterer(Scatter):
-    def __init__(self, **kwargs):
-        super(Scatterer, self).__init__(**kwargs);
-        self.name = Block;
-
-    def set_name(self, newName):
-        self.name = newName;
+    pass
 
 class Scene(ScatterLayout):
     pass
@@ -69,20 +50,16 @@ class output_Block(Widget):
     pass
 
 class BuildSpace(FloatLayout):
-    def __init__(self, **kwargs):
-        super(BuildSpace, self).__init__(**kwargs);
-        self.methodCount = 0;
-        self.classCount = 0;
-        self.variableCount = 0;
+    def __init__(self,**kwargs):
+        super(BuildSpace,self).__init__(**kwargs);
+        self.methodCount=0;
+        self.classCount=0;
+        self.variableCount=0;
         self.outputCount = 0;
         self.blocks = [];
-        self.widgetStack = [];
-        self.channelStack = ChannelStack();
-        self.channelHolder = [];
-
     def addBlock(self, type):
-        stringLabel = " "
         print(type)
+        s = Scatterer()
         if type == "class":
             d = class_Block()
             self.blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
@@ -105,15 +82,10 @@ class BuildSpace(FloatLayout):
         for i in self.blocks:
             print(i.Name)
         print("___")
-        s = Scatterer()
         self.add_widget(s)
-        s.set_name(self.blocks[len(self.blocks)-1])
-        d.add_widget(Label(text=str(self.blocks[len(self.blocks)-1].Name)))
         s.add_widget(d)
-        self.widgetStack.append(s)
+        print("button is pressed")
 
-        for i in self.widgetStack:
-            print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
 class BuilderSuite(BoxLayout):
     pass
 
