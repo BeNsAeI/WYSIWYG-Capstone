@@ -1,4 +1,4 @@
-######################
+#########INFO#########
 #   Project Name :   #
 #  WYSIWYG Project   #
 #--------------------#
@@ -50,7 +50,7 @@ Builder.load_file('DocumentOptions.kv')
 
 #Class Deffinitions:
 
-####################################################
+#######################CLASS########################
 # Name: Channel Stack                              #
 # Purpose: Store the list of channels              #
 # Inputs: Channel objects                          #
@@ -71,7 +71,7 @@ class ChannelStack():
         pass
 
 
-####################################################
+#######################CLASS########################
 # Name: Scatter                                    #
 # Purpose: Dragable objects                        #
 # Inputs: Scatter                                  #
@@ -90,7 +90,7 @@ class Scatterer(Scatter):
         self.name = newName;
 
 
-####################################################
+#######################CLASS########################
 # Name: Scene, cl-button, method_button,           #
 #       class_block, method_block,variable_block,  #
 #       Output_block                               #
@@ -123,6 +123,16 @@ class variable_Block(Widget):
 class output_Block(Widget):
     pass
 
+
+#######################CLASS########################
+# Name: Build Space                                #
+# Purpose: Provides the GUI environment            #
+# Inputs: NA                                       #
+# Outputs: NA                                      #
+# Private Variables: NA                            #
+# Public Methods: NA                               #
+# Status: Edit tentetive                           #
+####################################################
 class BuildSpace(FloatLayout):
     def __init__(self, **kwargs):
         super(BuildSpace, self).__init__(**kwargs);
