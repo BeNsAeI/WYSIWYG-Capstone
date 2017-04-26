@@ -41,6 +41,11 @@ import sys
 sys.path.append('../Blocks')
 from Blocks import Block
 from Channels import Channel
+sys.path.append('../Core')
+from Table import ParsingTable
+from Parser import Tree
+from Parser import Parser
+from Generator import Generator
 
 # Included Builds:
 Builder.load_file('Scene.kv')
@@ -133,6 +138,7 @@ class output_Block(Widget):
 # Public Methods: NA                               #
 # Status: Edit tentetive                           #
 ####################################################
+blocks = []
 class BuildSpace(FloatLayout):
     def __init__(self, **kwargs):
         super(BuildSpace, self).__init__(**kwargs);
@@ -140,7 +146,6 @@ class BuildSpace(FloatLayout):
         self.classCount = 0;
         self.variableCount = 0;
         self.outputCount = 0;
-        self.blocks = [];
         self.widgetStack = [];
         self.channelStack = ChannelStack();
         self.channelHolder = [];
@@ -150,37 +155,44 @@ class BuildSpace(FloatLayout):
         print(type)
         if type == "class":
             d = class_Block()
-            self.blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
             self.classCount+=1;
         elif type == "method":
             d = method_Block()
-            self.blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0,0,0,0,0))
             self.methodCount+=1;
         elif type == "variable":
             d = variable_Block()
-            self.blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0,0,0,0,0))
             self.variableCount+=1;
         elif type == "output":
             d = output_Block()
-            self.blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0,0,0,0,0))
             self.outputCount+=1;
         else:
             print("Error with request")
         print("Status:");
-        for i in self.blocks:
+        for i in blocks:
             print(i.Name)
         print("___")
         s = Scatterer()
         self.add_widget(s)
-        s.set_name(self.blocks[len(self.blocks)-1])
-        d.add_widget(Label(text=str(self.blocks[len(self.blocks)-1].Name)))
+        s.set_name(blocks[len(blocks)-1])
+        d.add_widget(Label(text=str(blocks[len(blocks)-1].Name)))
         s.add_widget(d)
         self.widgetStack.append(s)
 
         for i in self.widgetStack:
             print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
+
 class BuilderSuite(BoxLayout):
-    pass
+	def __init__(self, **kwargs):
+		super(BuilderSuite, self).__init__(**kwargs);
+		print("POTATO!")
+	def extract(self):
+		print("EXTRACT: Status:");
+		for i in blocks:
+			print(i.Name)
 
 class DocumentOptions(BoxLayout):
     pass

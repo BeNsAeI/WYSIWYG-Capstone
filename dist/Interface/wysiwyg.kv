@@ -1,3 +1,31 @@
+<BuilderSuite@BoxLayout>:
+    size_hint_y: None
+    padding: 3
+    height: 40
+    spacing: 1
+    canvas:
+        Color:
+            rgba: .88, .88, .88, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    CustButton:
+        text: "Save"
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        text: "Play"
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        text: "Stop"
+        size: 40, 40
+        size_hint_x: None
+    CustButton:
+        text: "Extract"
+        size_hint_x: None
+        on_release: root.extract()
+
 <Scatterer>:
     do_rotation: False
     size_hint: None, None

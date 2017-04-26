@@ -10,13 +10,17 @@
 # de struct the program which Calls the EXECUTION()
 class Generator:
 	def __init__(self):
+		pass
 		#add import * from *
 		#add import HO from Source.py
 		#add def EXECUTION(argc,argv):
 	def generate():
+		pass
 		#Generating the code for the tool
 	def __del__(self):
+		pass
 		#add EXECUTION(len(sys.argv),sys.argv)
 
 def testCase():
+	pass
 testCase()
