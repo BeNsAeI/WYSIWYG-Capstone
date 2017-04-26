@@ -27,7 +27,7 @@ class Generator:
 		newBlock = input.read_fil(name)
 		for i in range (0,100):
 			indent = ''
-			for j in range(0,i):
+			for j in range(0,i+II):
 				indent += '\t'
 			newBlock = newBlock.replace('#'+str(i)+'#',indent)
 		for i in range(0, len(args)):
@@ -41,17 +41,26 @@ class Generator:
 def testCase():
 	II = 0;
 	temp = Generator()
+
 	comment = "This is a variable declearation"
 	varName = "x"
 	varValue="10"
 	args=[comment,varName,varValue]
 	temp.addBlock("var",II,args)
+
 	comment = "This is a comment made by Ben"
 	tempLoop = "i"
 	arrayName = "range(0,x)"
-	todoThing = "print(x)"
+	todoThing = ""
 	args=[comment,tempLoop,arrayName,todoThing]
 	temp.addBlock("for",II,args)
+
+	II+=1
+	comment = 'testing print'
+	varName = 'i'
+	args=[comment,varName]
+	temp.addBlock("print",II,args)
+
 	print(temp.spaghetti)
 	temp.release()
 	pass
