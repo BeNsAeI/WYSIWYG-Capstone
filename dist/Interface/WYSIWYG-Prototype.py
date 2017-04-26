@@ -1,3 +1,25 @@
+######################
+#   Project Name :   #
+#  WYSIWYG Project   #
+#--------------------#
+# Class instructors: #
+#   Kevin Mcgrath    #
+#   Kirsten Winters  #
+#--------------------#
+#      Authors :     #
+#   Behnam  Saeedi   #
+#   Conner Sedwick   #
+#   Collin Dorsett   #
+#--------------------#
+#  Project Manager : #
+#     John Dodge     #
+#--------------------#
+#       Client :     #
+# Professor Fuxin Li #
+######################
+
+
+# imaports:
 import kivy
 kivy.require("1.9.0")
 
@@ -20,13 +42,23 @@ sys.path.append('../Blocks')
 from Blocks import Block
 from Channels import Channel
 
-#Builder.load_file('cl_button.kv')
-#Builder.load_file('class_Block.kv')
+# Included Builds:
 Builder.load_file('Scene.kv')
 Builder.load_file('BuildSpace.kv')
 Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
-#Builder.load_file('BlockMenu.kv')
+
+#Class Deffinitions:
+
+####################################################
+# Name: Channel Stack                              #
+# Purpose: Store the list of channels              #
+# Inputs: Channel objects                          #
+# Outputs: List                                    #
+# Private Variables: channelCount , channelStack   #
+# Public Methods: set_source , set_destination     #
+# Status: Edit tentetive                           #
+####################################################
 class ChannelStack():
     def __init__(self):
         self.channelCount = 0;
@@ -38,6 +70,17 @@ class ChannelStack():
     def set_destination(self):
         pass
 
+
+####################################################
+# Name: Scatter                                    #
+# Purpose: Dragable objects                        #
+# Inputs: Scatter                                  #
+# Outputs: Visual outputs                          #
+# Private Variables: NA                            #
+# Public Methods: NA                               #
+# Status: FINISHED                                 #
+####################################################
+
 class Scatterer(Scatter):
     def __init__(self, **kwargs):
         super(Scatterer, self).__init__(**kwargs);
@@ -46,6 +89,18 @@ class Scatterer(Scatter):
     def set_name(self, newName):
         self.name = newName;
 
+
+####################################################
+# Name: Scene, cl-button, method_button,           #
+#       class_block, method_block,variable_block,  #
+#       Output_block                               #
+# Purpose: Offer the dragable space                #
+# Inputs: NA                                       #
+# Outputs: Visual Output                           #
+# Private Variables: NA                            #
+# Public Methods: NA                               #
+# Status: FINISHED                                 #
+####################################################
 class Scene(ScatterLayout):
     pass
 

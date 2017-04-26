@@ -6,3 +6,4 @@ class ParsingTable:
 		self.__Table = []
 	def addChannel(_id,_from,_to):
 		self.__Table.append([_id,_from,_to]);
+
