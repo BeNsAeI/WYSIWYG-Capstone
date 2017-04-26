@@ -13,10 +13,10 @@ class fileIO:
 			data =data+ myfile.read().replace('\n', '\n')
 		return data;
 
-	def writefil(self):
-		with open(self.pathName+"/"+name+self.extention, 'w') as myfile:
-			myfile.write().replace('\n', '\n')
-		return data;
+	def writefil(self,outstring):
+		with open("Output"+".py", 'w') as myfile:
+			myfile.write(outstring)
+		myfile.close()
 
 if __name__ == '__main__':
     temp = fileIO("testCase");

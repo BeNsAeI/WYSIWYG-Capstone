@@ -1,0 +1,7 @@
+# Generate with Tensorflow WYSIWYG GUI
+'''This is a variable declearation'''
+x=10
+'''This is a comment made by Ben'''
+for i in range(0,x):
+	print(x)
+
