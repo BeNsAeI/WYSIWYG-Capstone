@@ -50,7 +50,7 @@ from Generator import Generator
 # Included Builds:
 Builder.load_file('Scene.kv')
 Builder.load_file('BuildSpace.kv')
-Builder.load_file('ProgramBuilderSuite.kv')
+#Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
 
 #Class Deffinitions:
@@ -68,12 +68,19 @@ class ChannelStack():
     def __init__(self):
         self.channelCount = 0;
         self.channelStack = [];
+        self.parserTable = ParsingTable();
 
-    def set_source(self):
-        self.channelStack.append(Channel())
+    def set_source(self, sourceBlk):
+        self.channelStack.append(Channel());
+        self.channelCount += 1;
+        self.channelStack[len(channelStack)-1].changeSourceID(sourceBlk);
 
-    def set_destination(self):
-        pass
+    def set_destination(self, destBlk):
+        self.channelStack[len(channelStack)-1].changeDestinationID(destBlk);
+
+    def updateList(self):
+        self.parsingTable.addChannel(self.channelStack)
+
 
 
 #######################CLASS########################
@@ -171,10 +178,11 @@ class BuildSpace(FloatLayout):
             self.outputCount+=1;
         else:
             print("Error with request")
-        print("Status:");
-        for i in blocks:
-            print(i.Name)
-        print("___")
+            pass
+        #print("Status:");
+        #for i in blocks:
+            #print(i.Name)
+        #print("___")
         s = Scatterer()
         self.add_widget(s)
         s.set_name(blocks[len(blocks)-1])
@@ -184,6 +192,20 @@ class BuildSpace(FloatLayout):
 
         for i in self.widgetStack:
             print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
+
+    def ChannelDraw(self, block):
+        self.channelHolder.append(block);
+        if len(channelHolder) == 2:
+            self.channelStack.set_source(channelHolder[0].name)
+            self.channelStack.set_destination(channelHolder[1].name)
+            self.channelHolder.pop();
+            self.channelHolder.pop();
+            self.channelStack.updateList()
+
+    def getBlock(self, widget):
+        for i in self.widgetStack:
+            if i.name.Name == widget.name.Name:
+                self.ChannelDraw(i.name)
 
 class BuilderSuite(BoxLayout):
 	def __init__(self, **kwargs):
