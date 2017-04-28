@@ -46,6 +46,8 @@ from Table import ParsingTable
 from Parser import Tree
 from Parser import Parser
 from Generator import Generator
+sys.path.append('../Debugger')
+from errorHandler import errorHandler
 
 # Included Builds:
 Builder.load_file('Scene.kv')
@@ -213,9 +215,30 @@ class BuilderSuite(BoxLayout):
 		print("POTATO!")
 	def extract(self):
 		print("EXTRACT: Status:");
+		temp = Generator()
+		II = 0
 		for i in blocks:
-			print(i.Name)
-
+			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
+			comment = "Code for "+i.Name+" block; "+i.Caption+":"
+			if(i.Type == "variable"):
+				genType = "var"
+				arg1 = "var"+str(i.ID)
+				arg2 = '"Hello World!"'#i.Value
+				args=[comment,arg1,arg2]
+			if(i.Type == "method"):
+				pass
+			if(i.Type == "class"):
+				pass
+			if(i.Type == "output"):
+				genType="print"
+				arg1 = "var0"#i.Value
+				args=[comment,arg1]
+			temp.addBlock(genType,II,args)
+		print(temp.spaghetti)
+		temp.release()
+		myHandler=errorHandler("Output.py")
+		myHandler.Monitor()
+		myHandler.makeReport()
 class DocumentOptions(BoxLayout):
     pass
 

@@ -13,6 +13,7 @@ class Block:
 		self.Type=type
 		self.Caption=caption
 		self.ID=id
+		slef.Value
 	def changeName(self,name):
 		self.Name=name
 	def changeType(self,type):
