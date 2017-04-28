@@ -25,13 +25,16 @@ class errorHandler:
 		self.command = "python ./"+o
 		self.flag = f
 		result = "No results"
+		self.err = "No errors"
 	def Monitor(self):
 		print("Command: "+self.command+" "+self.flag)
 		p = subprocess.Popen([self.command, self.flag], stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
-		self.result, err = p.communicate()
+		self.result, self.err = p.communicate()
 	def makeReport(self):
-		print("Print: ")
+		print("Result: ")
 		print(self.result)
+		print("Error: ")
+		print(self.err)
 	def logToFile(self):
 		pass
 def testcase():
