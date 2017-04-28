@@ -8,3 +8,6 @@ class errorHandler:
 		pass
 	def logToFile(self):
 		pass
+def testcase:
+	pass
+testcase()
