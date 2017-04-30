@@ -17,17 +17,21 @@ class Channel:
 	def Out(self):
 		return self.Data
 
-def MatchSrc(list,ID):
+def MatchSrc(Clist,Blist,ID):
 	result = []
-	for i in list:
+	for i in Clist:
 		if i.SourceID == ID:
-			result.appen(i)
+			for j in Blist:
+				if j.ID == i.SourceID:
+					result.appen(j)
 	return result
-def MatchDst(list,ID):
+def MatchDst(Clist,Blist,ID):
 	result = []
-	for i in list:
+	for i in Clist:
 		if i.DestinationID == ID:
-			result.appen(i)
+			for j in Blist:
+				if j.ID == i.DestinationID:
+					result.appen(j)
 	return result
 def testCase():
 	import random

@@ -324,8 +324,8 @@ class BuilderSuite(BoxLayout):
 				pass
 			if(i.Type == "output"):
 				genType="print"
-				
-				arg1 = str(i.Value)
+				items = MatchDst(channelStack,Blocks,i.ID)
+				arg1 = str(items[0].Name)
 				args=[comment,arg1]
 			temp.addBlock(genType,II,args)
 		print(temp.spaghetti)
