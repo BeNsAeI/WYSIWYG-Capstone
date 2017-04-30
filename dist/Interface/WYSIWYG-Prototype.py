@@ -248,22 +248,22 @@ class BuildSpace(FloatLayout):
         stringLabel = " "
         print(type)
         if type == "class":
-            blocks.append(Block(type+str(self.classCount),type,"Add Caption",self.classCount,0))
+            blocks.append(Block(type+str(self.classCount),type,"Add Caption",self.classCount,0,0))
             self.classCount+=1;
             d = class_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "method":
-            blocks.append(Block(type+str(self.methodCount),type,"Add Caption",self.methodCount,0))
+            blocks.append(Block(type+str(self.methodCount),type,"Add Caption",self.methodCount,0,0))
             self.methodCount+=1;
             d = method_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "variable":
-            blocks.append(Block(type+str(self.variableCount),type,"Add Caption",self.variableCount,0))
+            blocks.append(Block(type+str(self.variableCount),type,"Add Caption",self.variableCount,0,0))
             self.variableCount+=1;
             d = variable_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "output":
-            blocks.append(Block(type+str(self.outputCount),type,"Add Caption",self.outputCount,0))
+            blocks.append(Block(type+str(self.outputCount),type,"Add Caption",self.outputCount,0,0))
             self.outputCount+=1;
             d = output_Block(self);
             d.set_name(blocks[len(blocks)-1]);
