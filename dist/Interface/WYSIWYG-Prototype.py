@@ -80,19 +80,17 @@ def createDirectory():
         os.makedirs(directory)
 
 def is_number(s):
-    try:
-        float(s)
-        return True
-    except ValueError:
-        pass
- 
-    try:
-        import unicodedata
-        unicodedata.numeric(s)
-        return True
-    except (TypeError, ValueError):
-        pass
- 
+	try:
+		float(s)
+		return True
+	except ValueError:
+pass
+	try:
+		import unicodedata
+		unicodedata.numeric(s)
+		return True
+	except (TypeError, ValueError):
+		pass
 return False
 #Class Definitions:
 
@@ -309,7 +307,7 @@ class BuilderSuite(BoxLayout):
 		temp = Generator()
 		II = 0
 		for i in blocks:
-			if NOT is_number(i.Value):
+			if is_number(i.Value)==false:
 				i.Value = '"'+i.Value+'"'
 			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
 			comment = "Code for "+i.Name+" block; "+i.Caption+":"
