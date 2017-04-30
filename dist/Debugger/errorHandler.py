@@ -22,7 +22,7 @@ import sys
 '''
 class errorHandler:
 	def __init__(self,o,f=''):
-		self.command = "python ./"+o
+		self.command = "python "+o
 		self.flag = f
 		result = "No results"
 		self.err = "No errors"
