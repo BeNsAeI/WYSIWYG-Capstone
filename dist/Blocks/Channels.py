@@ -16,6 +16,19 @@ class Channel:
 		self.Data=data
 	def Out(self):
 		return self.Data
+
+def MatchSrc(list,ID):
+	result = []
+	for i in list:
+		if i.SourceID == ID:
+			result.appen(i)
+	return result
+def MatchDst(list,ID):
+	result = []
+	for i in list:
+		if i.DestinationID == ID:
+			result.appen(i)
+	return result
 def testCase():
 	import random
 	print("Test case:")
