@@ -91,7 +91,7 @@ def is_number(s):
 		return True
 	except (TypeError, ValueError):
 		pass
-return False
+	return False
 #Class Definitions:
 
 #######################CLASS########################
