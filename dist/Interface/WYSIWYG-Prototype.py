@@ -294,6 +294,7 @@ class BuilderSuite(BoxLayout):
 		temp = Generator()
 		II = 0
 		for i in blocks:
+			print("*** TEST: "+str(i.Value))
 			i.Value='"potato"'
 			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
 			comment = "Code for "+i.Name+" block; "+i.Caption+":"
