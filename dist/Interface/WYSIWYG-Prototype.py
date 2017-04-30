@@ -293,8 +293,8 @@ class BuilderSuite(BoxLayout):
 		print("EXTRACT: Status:");
 		temp = Generator()
 		II = 0
-		i.Value = 0
 		for i in blocks:
+			i.Value='"potato"'
 			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
 			comment = "Code for "+i.Name+" block; "+i.Caption+":"
 			if(i.Type == "variable"):
