@@ -22,6 +22,8 @@
 # imaports:
 import kivy
 kivy.require("1.9.0")
+from kivy.config import Config
+Config.set("input", "mouse", "mouse, disable_multitouch")
 
 from kivy.app import App
 from kivy.uix.togglebutton import ToggleButton
