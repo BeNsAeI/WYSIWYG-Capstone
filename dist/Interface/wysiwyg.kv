@@ -85,7 +85,7 @@
     do_scale: False
     do_resize: False
     size_hint: None, None
-    size: self.size
+    size: 150,150
 
     canvas.after:
         Color:
@@ -96,7 +96,7 @@
 
 
 <output_Block>:
-    size: self.size
+    size: 150,150
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -113,7 +113,7 @@
 
 <variable_Block>:
     id: variable
-    size: self.size
+    size: 150,150
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -148,7 +148,7 @@
                 on_active: root.channel_dr()
 				
 <method_Block>:
-    size: self.size
+    size: 150,150
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -163,7 +163,7 @@
         on_active: root.channel_dr()
 
 <class_Block>:
-    size: self.size
+    size: 150,150
     canvas:
         Color:
             rgba: 0, 0, 0, 1
