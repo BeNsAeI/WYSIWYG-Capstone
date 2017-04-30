@@ -84,7 +84,7 @@ def is_number(s):
 		float(s)
 		return True
 	except ValueError:
-pass
+		pass
 	try:
 		import unicodedata
 		unicodedata.numeric(s)
@@ -221,7 +221,7 @@ class variable_Block(Widget):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelDraw(i, self.build)
-    
+
 class output_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
         super(output_Block, self).__init__(**kwargs);
