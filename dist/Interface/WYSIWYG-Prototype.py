@@ -309,7 +309,7 @@ class BuilderSuite(BoxLayout):
 		temp = Generator()
 		II = 0
 		for i in blocks:
-			if !is_number(i.Value):
+			if NOT is_number(i.Value):
 				i.Value = '"'+i.Value+'"'
 			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
 			comment = "Code for "+i.Name+" block; "+i.Caption+":"
