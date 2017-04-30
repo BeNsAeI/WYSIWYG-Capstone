@@ -313,7 +313,7 @@ class BuilderSuite(BoxLayout):
 			comment = "Code for "+i.Name+" block; "+i.Caption+":"
 			if(i.Type == "variable"):
 				genType = "var"
-				arg1 = "var"+str(i.ID)
+				arg1 = i.Name
 				arg2 = str(i.Value)
 				args=[comment,arg1,arg2]
 			if(i.Type == "method"):
@@ -324,6 +324,7 @@ class BuilderSuite(BoxLayout):
 				pass
 			if(i.Type == "output"):
 				genType="print"
+				
 				arg1 = str(i.Value)
 				args=[comment,arg1]
 			temp.addBlock(genType,II,args)
