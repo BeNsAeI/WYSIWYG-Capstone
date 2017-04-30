@@ -11,6 +11,8 @@ echo "Done."
 echo "adding kivy to apt repo"
 sudo add-apt-repository ppa:kivy-team/kivy
 echo "installing kivy"
+pip install cython
+sudo pip install kivy
 sudo apt-get install python-kivy
 echo "Done."
 echo "installing kivy examples"
