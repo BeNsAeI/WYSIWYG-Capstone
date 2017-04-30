@@ -23,15 +23,15 @@ def MatchSrc(Clist,Blist,ID):
 		if i.SourceID.ID == ID:
 			for j in Blist:
 				if j.ID == i.SourceID.ID:
-					result.appen(j)
+					result.append(j)
 	return result
 def MatchDst(Clist,Blist,ID):
 	result = []
 	for i in Clist:
 		if i.DestinationID.ID == ID:
 			for j in Blist:
-				if j.ID == i.DestinationID.ID:
-					result.appen(j)
+				if j.ID == i.DestinationID.IDa:
+					result.append(j)
 	return result
 def testCase():
 	import random
