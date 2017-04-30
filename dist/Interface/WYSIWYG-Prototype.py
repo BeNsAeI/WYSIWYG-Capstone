@@ -105,7 +105,7 @@ def is_number(s):
 # Public Methods: set_source , set_destination     #
 # Status: Edit tentetive                           #
 ####################################################
-class ChannelStack():
+'''class ChannelStack():
     def __init__(self):
         self.channelCount = 0;
         self.channelStack = [];
@@ -120,7 +120,7 @@ class ChannelStack():
     def updateList(self):
         self.parsingTable.addChannel(self.channelStack)
 
-
+'''
 def ChannelDraw(scatter, build):
     if len(channelHolder) == 2:
         channelHolder.pop();
@@ -326,10 +326,8 @@ class BuilderSuite(BoxLayout):
 				pass
 			if(i.Type == "output"):
 				genType="print"
-				for item in channelStack:
-					print(channelStack.DestinationID)
 				items = MatchDst(channelStack,blocks,i.ID)
-				arg1 = str(items[0].Name)
+				arg1 = str(items.Name)
 				args=[comment,arg1]
 			temp.addBlock(genType,II,args)
 		print(temp.spaghetti)
