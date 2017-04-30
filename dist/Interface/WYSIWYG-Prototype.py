@@ -200,6 +200,10 @@ class variable_Block(Widget):
     def set_name(self, newName):
         self.name = newName;
 
+    def takeValue(self, text):
+        self.name.Value = text;
+        print(self.name.Value)
+
     def channel_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
@@ -311,6 +315,7 @@ class BuilderSuite(BoxLayout):
 		myHandler=errorHandler("Output.py")
 		myHandler.Monitor()
 		myHandler.makeReport()
+
 class DocumentOptions(BoxLayout):
     pass
 

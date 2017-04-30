@@ -112,6 +112,7 @@
 
 
 <variable_Block>:
+    id: variable
     size: self.size
     canvas:
         Color:
@@ -125,19 +126,26 @@
 			##width: 25
 			##on_release: root.varButton(type)
 			##pos: self.pos
-	BoxLayout:
+	GridLayout:
+	    rows: 3
 		orientation: 'vertical'
 		BoxLayout:
 			Label:
 				text: 'Value'
 				color: 255, 0, 0, 1
 			TextInput:
+			    id: value
 				text: ""
 				multiline: False
 				font_size: 10
-	    CheckBox:
-            size: sp(32), sp(32)
-            on_active: root.channel_dr()
+			Button:
+			    on_release: root.takeValue(value.text)
+			    text: "Push"
+
+	    BoxLayout:
+	        CheckBox:
+                size: sp(32), sp(32)
+                on_active: root.channel_dr()
 				
 <method_Block>:
     size: self.size
