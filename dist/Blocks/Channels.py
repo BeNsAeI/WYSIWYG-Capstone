@@ -30,7 +30,7 @@ def MatchDst(Clist,Blist,ID):
 	for i in Clist:
 		if i.DestinationID.ID == ID:
 			for j in Blist:
-				if j.ID == i.DestinationID.IDa:
+				if j.ID == i.DestinationID.ID:
 					result.append(j)
 	return result
 def testCase():
