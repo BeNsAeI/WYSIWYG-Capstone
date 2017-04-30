@@ -100,6 +100,9 @@ class ChannelStack():
 
 
 def ChannelDraw(scatter, build):
+    if len(channelHolder) == 2:
+        channelHolder.pop();
+        channelHolder.pop();
     channelHolder.append(scatter);
     if len(channelHolder) == 2:
         channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name))
@@ -110,10 +113,9 @@ def ChannelDraw(scatter, build):
         with build.canvas:
             # Line(points=[self.blocks[self.i - 1].x, self.blocks[self.i - 1].y, self.blocks[self.i].x, self.blocks[self.i].y], width=10)
             Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
-        channelHolder.pop();
-        channelHolder.pop();
-        parsingTable.addChannel(channelStack)
 
+        parsingTable.addChannel(channelStack)
+        parsingTable.printTable()
 
 
 #######################CLASS########################

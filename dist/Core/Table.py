@@ -5,4 +5,7 @@ class ParsingTable:
 		self.__Table = []
 	def addChannel(self, channelStack):
 		self.__Table = list(channelStack);
+	def printTable(self):
+		for i in self.__Table:
+			print("Source:" + i.SourceID.Type + ", Destination: " + i.DestinationID.Type);
 
