@@ -85,8 +85,7 @@
     do_scale: False
     do_resize: False
     size_hint: None, None
-    size: 150,150
-
+    size: 150,100
     canvas.after:
         Color:
             rgba: 1, 1, 1, .5
@@ -96,7 +95,7 @@
 
 
 <output_Block>:
-    size: 150,150
+    size: 150,100
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -112,43 +111,53 @@
 
 
 <variable_Block>:
-    id: variable
-    size: 150,150
-    canvas:
-        Color:
-            rgba: 0, 0, 0, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-		##Button:
-			##text: 'Modify'
-			##height: 25
-			##width: 25
-			##on_release: root.varButton(type)
-			##pos: self.pos
-	GridLayout:
-	    rows: 3
-		orientation: 'vertical'
-		BoxLayout:
-			Label:
-				text: 'Value'
-				color: 255, 0, 0, 1
-			TextInput:
-			    id: value
-				text: ""
-				multiline: False
-				font_size: 10
-			Button:
-			    on_release: root.takeValue(value.text)
-			    text: "Push"
-
+    BoxLayout:
+        id: variable
+        size: 150,100
+        canvas:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 	    BoxLayout:
-	        CheckBox:
-                size: sp(32), sp(32)
-                on_active: root.channel_dr()
+		    orientation: 'vertical'
+		    BoxLayout:
+		        orientation: 'horizontal'
+		        Label:
+		            size_hint_x: 0.3
+				    text: 'Name: '
+				    color: 255, 0, 0, 1
+			    TextInput:
+			        size_hint_x: 0.4
+			        id: name
+				    text: ""
+				    multiline: False
+				    font_size: 10
+			    Button:
+			        size_hint_x: 0.3
+			        on_release: root.takeName(name.text)
+			        text: "Push"
+	        BoxLayout:
+	            orientation: 'horizontal'
+	            Label:
+				    text: 'Value'
+				    color: 255, 0, 0, 1
+			    TextInput:
+			        id: value
+				    text: ""
+				    multiline: False
+				    font_size: 10
+			    Button:
+			        on_release: root.takeValue(value.text)
+			        text: "Push"
+	        BoxLayout:
+	            CheckBox:
+                    size: sp(32), sp(32)
+                    on_active: root.channel_dr()
 				
 <method_Block>:
-    size: 150,150
+    size: 150,100
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -163,7 +172,7 @@
         on_active: root.channel_dr()
 
 <class_Block>:
-    size: 150,150
+    size: 150,100
     canvas:
         Color:
             rgba: 0, 0, 0, 1

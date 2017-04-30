@@ -217,7 +217,12 @@ class variable_Block(Widget):
 
     def takeValue(self, text):
         self.name.Value = text;
-        print(self.name.Value)
+        print("Value: " + self.name.Value)
+
+    def takeName(self, text):
+        self.name.Name = text;
+        print("Name: " + self.name.Name)
+
 
     def channel_dr(self):
         for i in scatterStack:
