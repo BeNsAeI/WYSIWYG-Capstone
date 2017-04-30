@@ -8,12 +8,12 @@
 # This file also contains the tests for the Block module
 
 class Block:
-	def __init__(self,name,type,caption,id):
+	def __init__(self,name,type,caption,id,value):
 		self.Name=name
 		self.Type=type
 		self.Caption=caption
 		self.ID=id
-		slef.Value
+		slef.Value=value
 	def changeName(self,name):
 		self.Name=name
 	def changeType(self,type):
@@ -34,7 +34,7 @@ def testCase():
 	des="New descriptio"
 	addr="New address"
 	print("Make an object atrebutes: \""+name+"\", \""+type+"\", \""+caption+"\", "+str(id)+".")
-	a=Block(name,type,caption,id)
+	a=Block(name,type,caption,id,0)
 	print("checking attrebutes: ")
 	if (a.Name == name):
 		print("self.Name: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')

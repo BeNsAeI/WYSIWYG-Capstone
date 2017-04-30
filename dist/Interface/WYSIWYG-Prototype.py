@@ -244,22 +244,22 @@ class BuildSpace(FloatLayout):
         stringLabel = " "
         print(type)
         if type == "class":
-            blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.classCount),type,"Add Caption",0))
             self.classCount+=1;
             d = class_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "method":
-            blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0))
             self.methodCount+=1;
             d = method_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "variable":
-            blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0))
             self.variableCount+=1;
             d = variable_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "output":
-            blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0,0,0,0,0))
+            blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0))
             self.outputCount+=1;
             d = output_Block(self);
             d.set_name(blocks[len(blocks)-1]);
@@ -295,7 +295,7 @@ class BuilderSuite(BoxLayout):
 			if(i.Type == "variable"):
 				genType = "var"
 				arg1 = "var"+str(i.ID)
-				arg2 = '"Hello World!"'#i.Value
+				arg2 = i.Value
 				args=[comment,arg1,arg2]
 			if(i.Type == "method"):
 				pass
@@ -303,7 +303,7 @@ class BuilderSuite(BoxLayout):
 				pass
 			if(i.Type == "output"):
 				genType="print"
-				arg1 = "var0"#i.Value
+				arg1 = i.Value
 				args=[comment,arg1]
 			temp.addBlock(genType,II,args)
 		print(temp.spaghetti)
