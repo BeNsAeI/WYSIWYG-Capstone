@@ -49,6 +49,8 @@ import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
 from Channels import Channel
+from Channels import MatchDst
+from Channels import MatchSrc
 sys.path.append('../Core')
 from Table import ParsingTable
 from Parser import Tree
