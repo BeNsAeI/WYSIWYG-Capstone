@@ -327,7 +327,7 @@ class BuilderSuite(BoxLayout):
 			if(i.Type == "output"):
 				genType="print"
 				for i in channelStack:
-					print(i.SourceID)
+					print(i.SourceID.ID)
 				items = MatchDst(channelStack,blocks,i.ID)
 				arg1 = str(items.Name)
 				args=[comment,arg1]
