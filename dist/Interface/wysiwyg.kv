@@ -1,3 +1,13 @@
+<MenuButton@Button>:
+    font_size: 14
+    group: 'menu'
+    size_hint_x: .1
+    size_hint_y: .1
+    color: 0, 0, 0, 1
+    background_normal: ''
+    background_down: 'square-xxl.png'
+    background_color: 0.9, 0.9, 0.9, 1
+
 <BuilderSuite@BoxLayout>:
     size_hint_y: None
     padding: 3
@@ -26,6 +36,50 @@
         size_hint_x: None
         on_release: root.extract()
 
+<BuildSpace>
+    id: buildSpc
+    orientation: 'horizontal'
+    size_hint_x: 0.2
+    canvas:
+        Color:
+            rgba: 0.17, 0.47, 0.68, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        canvas:
+            Color:
+                rgba: 0.73, 0.69, 0.89, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    BoxLayout:
+        height: .5
+        orientation: 'vertical'
+        MenuButton:
+            text: "Variable"
+            on_release: root.addBlock("variable")
+
+        MenuButton:
+            text: "Methods"
+            on_release: root.addBlock("method")
+
+        MenuButton:
+            text: "Class"
+            on_release: root.addBlock("class")
+
+        MenuButton:
+            text: "Layer"
+
+        MenuButton:
+            text: "Probe"
+
+        MenuButton:
+            text: "Output"
+            on_release: root.addBlock("output")
+
 <Scatterer>:
     do_rotation: False
     size_hint: None, None
@@ -52,13 +106,14 @@
         ##color: 0, 0, 0, 1
     CheckBox:
         size: sp(32), sp(32)
+        on_active: root.channel_dr()
 
 
 <variable_Block>:
     size: self.size
     canvas:
         Color:
-            rgba: 1, 1, 1, 1
+            rgba: 0, 0, 0, 1
         Rectangle:
             pos: self.pos
             size: self.size
@@ -98,30 +153,39 @@
 				text: ""
 				multiline: False
 				font_size: 10
+	    CheckBox:
+            size: sp(32), sp(32)
+            on_active: root.channel_dr()
 				
 <method_Block>:
     size: self.size
     canvas:
         Color:
-            rgba: 1, 1, 1, 1
+            rgba: 0, 0, 0, 1
         Rectangle:
             pos: self.pos
             size: self.size
-    Label:
-        text: 'Method'
-        color: 0, 0, 0, 1
+    ##Label:
+      ##  text: 'Method'
+      ##  color: 0, 0, 0, 1
+    CheckBox:
+        size: sp(32), sp(32)
+        on_active: root.channel_dr()
 
 <class_Block>:
     size: self.size
     canvas:
         Color:
-            rgba: 1, 1, 1, 1
+            rgba: 0, 0, 0, 1
         Rectangle:
             pos: self.pos
             size: self.size
-    Label:
-        text: 'Class'
-        color: 0, 0, 0, 1
+    ##Label:
+      ##  text: 'Class'
+      ##  color: 0, 0, 0, 1
+    CheckBox:
+        size: sp(32), sp(32)
+        on_active: root.channel_dr()
 
 <CustButton@Button>:
     font_size: 14

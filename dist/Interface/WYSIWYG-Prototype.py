@@ -31,13 +31,14 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.scatter import Scatter
 from kivy.uix.widget import Widget
 from kivy.uix.label import Label
+from kivy.graphics.vertex_instructions import Line
 from kivy.properties import ObjectProperty
 from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
-import sys
+import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
 from Channels import Channel
@@ -51,11 +52,27 @@ from errorHandler import errorHandler
 
 # Included Builds:
 Builder.load_file('Scene.kv')
-Builder.load_file('BuildSpace.kv')
+#Builder.load_file('BuildSpace.kv')
 #Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
 
-#Class Deffinitions:
+parsingTable = ParsingTable();
+blocks = []
+channelHolder = [];
+scatterStack = [];
+widgetStack = [];
+channelStack = [];
+channelCount = 0;
+widgetCount = 0;
+scatterCount = 0;
+
+def createDirectory():
+    directory = os.getcwd();
+    directory = directory + '../MyFolder'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+#Class Definitions:
 
 #######################CLASS########################
 # Name: Channel Stack                              #
@@ -72,16 +89,30 @@ class ChannelStack():
         self.channelStack = [];
         self.parserTable = ParsingTable();
 
-    def set_source(self, sourceBlk):
-        self.channelStack.append(Channel());
+    def create_Channel(self, sourceBlk, destinationBlk):
         self.channelCount += 1;
-        self.channelStack[len(channelStack)-1].changeSourceID(sourceBlk);
+        self.channelStack.append(Channel(self.channelCount, sourceBlk, destinationBlk));
+        #self.channelStack[len(channelStack)-1].changeSourceID(sourceBlk);
 
-    def set_destination(self, destBlk):
-        self.channelStack[len(channelStack)-1].changeDestinationID(destBlk);
 
     def updateList(self):
         self.parsingTable.addChannel(self.channelStack)
+
+
+def ChannelDraw(scatter, build):
+    channelHolder.append(scatter);
+    if len(channelHolder) == 2:
+        channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name))
+        previous_X = channelHolder[0].center_x;
+        current_X = channelHolder[1].center_x;
+        previous_Y = channelHolder[0].center_y;
+        current_Y = channelHolder[1].center_y;
+        with build.canvas:
+            # Line(points=[self.blocks[self.i - 1].x, self.blocks[self.i - 1].y, self.blocks[self.i].x, self.blocks[self.i].y], width=10)
+            Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
+        channelHolder.pop();
+        channelHolder.pop();
+        parsingTable.addChannel(channelStack)
 
 
 
@@ -103,6 +134,8 @@ class Scatterer(Scatter):
     def set_name(self, newName):
         self.name = newName;
 
+    def get_name(self):
+        return self.name;
 
 #######################CLASS########################
 # Name: Scene, cl-button, method_button,           #
@@ -125,18 +158,56 @@ class method_button(ToggleButton):
     pass
 
 class class_Block(Widget):
-    pass
+    def __init__(self, buildSpc,**kwargs):
+        super(class_Block, self).__init__(**kwargs);
+        self.name = Block;
+        self.build = buildSpc;
+    def set_name(self, newName):
+        self.name = newName;
+
+    def channel_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelDraw(i, self.build)
 
 class method_Block(Widget):
-    pass
+    def __init__(self, buildSpc,**kwargs):
+        super(method_Block, self).__init__(**kwargs);
+        self.name = Block;
+        self.build = buildSpc;
+    def set_name(self, newName):
+        self.name = newName;
+
+    def channel_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelDraw(i, self.build)
 
 class variable_Block(Widget):
-    def varButton(self, type):
-        print("TEST")
+    def __init__(self, buildSpc,**kwargs):
+        super(variable_Block, self).__init__(**kwargs);
+        self.name = Block;
+        self.build = buildSpc;
+    def set_name(self, newName):
+        self.name = newName;
+
+    def channel_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelDraw(i, self.build)
     
 class output_Block(Widget):
-    pass
+    def __init__(self, buildSpc,**kwargs):
+        super(output_Block, self).__init__(**kwargs);
+        self.name = Block;
+        self.build = buildSpc;
+    def set_name(self, newName):
+        self.name = newName;
 
+    def channel_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelDraw(i, self.build)
 
 #######################CLASS########################
 # Name: Build Space                                #
@@ -147,7 +218,7 @@ class output_Block(Widget):
 # Public Methods: NA                               #
 # Status: Edit tentetive                           #
 ####################################################
-blocks = []
+
 class BuildSpace(FloatLayout):
     def __init__(self, **kwargs):
         super(BuildSpace, self).__init__(**kwargs);
@@ -155,29 +226,34 @@ class BuildSpace(FloatLayout):
         self.classCount = 0;
         self.variableCount = 0;
         self.outputCount = 0;
-        self.widgetStack = [];
-        self.channelStack = ChannelStack();
-        self.channelHolder = [];
+        self.directory = os.getcwd();
+        self.directory = self.directory + '/../../MyProjectFolder'
+        if not os.path.exists(self.directory):
+            os.makedirs(self.directory)
 
     def addBlock(self, type):
         stringLabel = " "
         print(type)
         if type == "class":
-            d = class_Block()
             blocks.append(Block(type+str(self.classCount),type,"Add Caption",0,0,0,0,0))
             self.classCount+=1;
+            d = class_Block(self);
+            d.set_name(blocks[len(blocks)-1]);
         elif type == "method":
-            d = method_Block()
             blocks.append(Block(type+str(self.methodCount),type,"Add Caption",0,0,0,0,0))
             self.methodCount+=1;
+            d = method_Block(self);
+            d.set_name(blocks[len(blocks)-1]);
         elif type == "variable":
-            d = variable_Block()
             blocks.append(Block(type+str(self.variableCount),type,"Add Caption",0,0,0,0,0))
             self.variableCount+=1;
+            d = variable_Block(self);
+            d.set_name(blocks[len(blocks)-1]);
         elif type == "output":
-            d = output_Block()
             blocks.append(Block(type+str(self.outputCount),type,"Add Caption",0,0,0,0,0))
             self.outputCount+=1;
+            d = output_Block(self);
+            d.set_name(blocks[len(blocks)-1]);
         else:
             print("Error with request")
             pass
@@ -190,29 +266,16 @@ class BuildSpace(FloatLayout):
         s.set_name(blocks[len(blocks)-1])
         d.add_widget(Label(text=str(blocks[len(blocks)-1].Name)))
         s.add_widget(d)
-        self.widgetStack.append(s)
+        scatterStack.append(s)
+        widgetStack.append(d)
 
-        for i in self.widgetStack:
+        for i in scatterStack:
             print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
-
-    def ChannelDraw(self, block):
-        self.channelHolder.append(block);
-        if len(channelHolder) == 2:
-            self.channelStack.set_source(channelHolder[0].name)
-            self.channelStack.set_destination(channelHolder[1].name)
-            self.channelHolder.pop();
-            self.channelHolder.pop();
-            self.channelStack.updateList()
-
-    def getBlock(self, widget):
-        for i in self.widgetStack:
-            if i.name.Name == widget.name.Name:
-                self.ChannelDraw(i.name)
 
 class BuilderSuite(BoxLayout):
 	def __init__(self, **kwargs):
 		super(BuilderSuite, self).__init__(**kwargs);
-		print("POTATO!")
+
 	def extract(self):
 		print("EXTRACT: Status:");
 		temp = Generator()

@@ -3,11 +3,11 @@
 # Objects of such class have the following attributes:
 # This file also contains the tests for the Block module
 class Channel:
-	def __init__(self,id,source,destination,data):
+	def __init__(self,id,source,destination):
 		self.ID=id;
 		self.SourceID=source
 		self.DestinationID=destination
-		self.Data=data;
+		#self.Data=data;
 	def changeSourceID(self,source):
 		self.SourceID=source
 	def changeDestinationID(self,destination):
@@ -24,8 +24,8 @@ def testCase():
 	data=random.randint(1,10)
 	print("Source ID is: "+str(source)+".")
 	print("Destination ID is: "+str(destination)+".")
-	print("Data is: "+str(data)+".")
-	C_ab=Channel(0,source,destination,data)
+	#print("Data is: "+str(data)+".")
+	C_ab=Channel(0,source,destination)
 	if (C_ab.SourceID == source):
 		print("initial self.SourceID: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
 	else:
@@ -34,10 +34,10 @@ def testCase():
 		print("initial self.DestinationID: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
 	else:
 		print("initial self.DestinationID: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
-	if (C_ab.Data == data):
-		print("initial self.Data: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
-	else:
-		print("initial self.Data: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
+	#if (C_ab.Data == data):
+	#	print("initial self.Data: "+"\t"+'\033[1;32m'+"Pass"+'\033[1;m')
+	#else:
+	#	print("initial self.Data: "+"\t"+'\033[1;31m'+"Fail"+'\033[1;m')
 	print("___")
 	print("Testing the change functions")
 	C_ab.changeSourceID(random.randint(11, 100))
