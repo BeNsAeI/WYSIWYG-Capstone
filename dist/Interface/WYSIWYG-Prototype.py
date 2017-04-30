@@ -302,8 +302,10 @@ class BuilderSuite(BoxLayout):
 				arg2 = i.Value
 				args=[comment,arg1,arg2]
 			if(i.Type == "method"):
+				genType = "method"
 				pass
 			if(i.Type == "class"):
+				genType = "class"
 				pass
 			if(i.Type == "output"):
 				genType="print"
