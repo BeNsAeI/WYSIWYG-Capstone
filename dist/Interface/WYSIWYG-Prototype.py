@@ -294,14 +294,12 @@ class BuilderSuite(BoxLayout):
 		temp = Generator()
 		II = 0
 		for i in blocks:
-			print("*** TEST: "+str(i.Value))
-			i.Value='"potato"'
 			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
 			comment = "Code for "+i.Name+" block; "+i.Caption+":"
 			if(i.Type == "variable"):
 				genType = "var"
 				arg1 = "var"+str(i.ID)
-				arg2 = i.Value
+				arg2 = str(i.Value)
 				args=[comment,arg1,arg2]
 			if(i.Type == "method"):
 				genType = "method"
@@ -311,7 +309,7 @@ class BuilderSuite(BoxLayout):
 				pass
 			if(i.Type == "output"):
 				genType="print"
-				arg1 = i.Value
+				arg1 = str(i.Value)
 				args=[comment,arg1]
 			temp.addBlock(genType,II,args)
 		print(temp.spaghetti)
