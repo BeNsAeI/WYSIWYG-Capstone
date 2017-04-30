@@ -20,6 +20,11 @@
 
 
 # imaports:
+import os
+os.environ['KIVY_TEXT'] = 'sdl2'
+os.environ['KIVY_WINDOW'] = 'sdl2'
+os.environ['KIVY_IMAGE'] = 'sdl2'
+
 import kivy
 kivy.require("1.9.0")
 from kivy.config import Config
