@@ -1,3 +1,5 @@
-*.pyc
-
+Generator.pyc
+Parser.pyc
+Table.pyc
+TemplateHandler.pyc
 Output.py
