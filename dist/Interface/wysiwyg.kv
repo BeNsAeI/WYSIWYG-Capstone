@@ -1,3 +1,7 @@
+#:set BLOCK_SIZE_X 200
+#:set BLOCK_SIZE_Y 150
+#:set LINK_BUTTON_SIZE 35
+
 <MenuButton@Button>:
     font_size: 14
     group: 'menu'
@@ -85,7 +89,7 @@
     do_scale: False
     do_resize: False
     size_hint: None, None
-    size: 150,100
+    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
     canvas.after:
         Color:
             rgba: 1, 1, 1, .5
@@ -93,9 +97,9 @@
             size: self.size
             pos: self.pos
 
-
+			
 <output_Block>:
-    size: 150,100
+    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -105,7 +109,7 @@
 	Button:
 		on_release: root.channel_dr()
 		text: "Link"
-		size: 35,35
+		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
     ##Label:
         ##text: 'Output'
         ##color: 0, 0, 0, 1
@@ -117,7 +121,7 @@
 <variable_Block>:
     BoxLayout:
         id: variable
-        size: 150,100
+		size: BLOCK_SIZE_X,BLOCK_SIZE_Y
         canvas:
             Color:
                 rgba: 0, 0, 0, 1
@@ -158,20 +162,18 @@
 	        BoxLayout:
 				Label:
 				    text: ''
-				    color: 255, 0, 0, 1
 				Label:
 				    text: ''
-				    color: 255, 0, 0, 1
 				Button:
 					on_release: root.channel_dr()
 					text: "Link"
-					size: 35,35
+					size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	            ##CheckBox:
                     ##size: sp(32), sp(32)
                     ##on_active: root.channel_dr()
 				
 <method_Block>:
-    size: 150,100
+    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -184,13 +186,13 @@
     Button:
 		on_release: root.channel_dr()
 		text: "Link"
-		size: 35,35
+		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	##CheckBox:
 		##size: sp(32), sp(32)
 		##on_active: root.channel_dr()
 
 <class_Block>:
-    size: 150,100
+    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
     canvas:
         Color:
             rgba: 0, 0, 0, 1
@@ -203,7 +205,7 @@
     Button:
 		on_release: root.channel_dr()
 		text: "Link"
-		size: 35,35
+		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	##CheckBox:
 		##size: sp(32), sp(32)
 		##on_active: root.channel_dr()
