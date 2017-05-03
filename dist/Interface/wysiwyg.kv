@@ -102,12 +102,13 @@
         Rectangle:
             pos: self.pos
             size: self.size
+	Button:
+		on_release: root.channel_dr()
+		text: "Link"
+		size: 35,35
     ##Label:
         ##text: 'Output'
         ##color: 0, 0, 0, 1
-    Button:
-		on_release: root.channel_dr()
-		text: "Connect"
 	##CheckBox:
 		##size: sp(32), sp(32)
 		##on_active: root.channel_dr()
@@ -155,9 +156,16 @@
 			        on_release: root.takeValue(value.text)
 			        text: "Push"
 	        BoxLayout:
+				Label:
+				    text: ''
+				    color: 255, 0, 0, 1
+				Label:
+				    text: ''
+				    color: 255, 0, 0, 1
 				Button:
-			        on_release: root.channel_dr()
-			        text: "Connect"
+					on_release: root.channel_dr()
+					text: "Link"
+					size: 35,35
 	            ##CheckBox:
                     ##size: sp(32), sp(32)
                     ##on_active: root.channel_dr()
@@ -173,9 +181,13 @@
     ##Label:
       ##  text: 'Method'
       ##  color: 0, 0, 0, 1
-    CheckBox:
-        size: sp(32), sp(32)
-        on_active: root.channel_dr()
+    Button:
+		on_release: root.channel_dr()
+		text: "Link"
+		size: 35,35
+	##CheckBox:
+		##size: sp(32), sp(32)
+		##on_active: root.channel_dr()
 
 <class_Block>:
     size: 150,100
@@ -188,9 +200,13 @@
     ##Label:
       ##  text: 'Class'
       ##  color: 0, 0, 0, 1
-    CheckBox:
-        size: sp(32), sp(32)
-        on_active: root.channel_dr()
+    Button:
+		on_release: root.channel_dr()
+		text: "Link"
+		size: 35,35
+	##CheckBox:
+		##size: sp(32), sp(32)
+		##on_active: root.channel_dr()
 
 <CustButton@Button>:
     font_size: 14

@@ -1,6 +1,11 @@
 # Generate with Tensorflow WYSIWYG GUI
-'''Code for test block; Add Caption:'''
-test=1
-'''Code for output0 block; Add Caption:'''
-print(test);
+'''This is a variable declearation'''
+string="Hello world!"
+'''This is a variable declearation'''
+x=10
+'''This is a comment made by Ben'''
+for i in range(0,x):
+	
+	'''testing print'''
+	print(i);
 
