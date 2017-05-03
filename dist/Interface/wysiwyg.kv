@@ -105,9 +105,12 @@
     ##Label:
         ##text: 'Output'
         ##color: 0, 0, 0, 1
-    CheckBox:
-        size: sp(32), sp(32)
-        on_active: root.channel_dr()
+    Button:
+		on_release: root.channel_dr()
+		text: "Connect"
+	##CheckBox:
+		##size: sp(32), sp(32)
+		##on_active: root.channel_dr()
 
 
 <variable_Block>:
@@ -152,9 +155,12 @@
 			        on_release: root.takeValue(value.text)
 			        text: "Push"
 	        BoxLayout:
-	            CheckBox:
-                    size: sp(32), sp(32)
-                    on_active: root.channel_dr()
+				Button:
+			        on_release: root.channel_dr()
+			        text: "Connect"
+	            ##CheckBox:
+                    ##size: sp(32), sp(32)
+                    ##on_active: root.channel_dr()
 				
 <method_Block>:
     size: 150,100
