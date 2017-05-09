@@ -18,8 +18,8 @@
     background_normal: ''
     background_down: 'square-xxl.png'
     background_color: 1, 1, 1, 1
-    size_hint_y: None
     size_hint_x: None
+    size_hint_y: None
 
 <BuilderSuite@BoxLayout>:
     size_hint_y: None
@@ -47,6 +47,7 @@
     CustButton:
         text: "Extract"
         size_hint_x: None
+        size: 60, 40
         on_release: root.extract()
 
 <BuildSpace>
