@@ -200,8 +200,13 @@ class method_Block(Widget):
         super(method_Block, self).__init__(**kwargs);
         self.name = Block;
         self.build = buildSpc;
+        self.method = '';
     def set_name(self, newName):
         self.name = newName;
+
+    def set_method(self, methodType):
+        self.method = methodType;
+        print(self.method)
 
     def channel_dr(self):
         for i in scatterStack:
@@ -298,7 +303,7 @@ class BuildSpace(FloatLayout):
         s = Scatterer()
         self.add_widget(s)
         s.set_name(blocks[len(blocks)-1])
-        d.add_widget(Label(text=str(blocks[len(blocks)-1].Name)))
+        #d.add_widget(Label(text=str(blocks[len(blocks)-1].Name)))
         s.add_widget(d)
         scatterStack.append(s)
         widgetStack.append(d)
