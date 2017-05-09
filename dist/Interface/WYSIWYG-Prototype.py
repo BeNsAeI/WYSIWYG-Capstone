@@ -138,7 +138,8 @@ def ChannelDraw(scatter, build):
 
         parsingTable.addChannel(channelStack)
         parsingTable.printTable()
-
+        for i in channelStack:
+            print("Source:" + i.SourceID.Name + ", Destination:" + i.DestinationID.Name)
 
 #######################CLASS########################
 # Name: Scatter                                    #
