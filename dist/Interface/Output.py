@@ -1,12 +1,10 @@
 # Generate with Tensorflow WYSIWYG GUI
-'''Code for tes1 block; Add Caption:'''
-tes1=15
+'''Code for test block; Add Caption:'''
+test=13+4
 '''Code for test2 block; Add Caption:'''
-test2=tes1
+test2=test
 '''Code for test3 block; Add Caption:'''
-test3=test2
+test3=test2-test
 '''Code for output0 block; Add Caption:'''
 print(test3);
-'''Code for output1 block; Add Caption:'''
-print(test2);
 

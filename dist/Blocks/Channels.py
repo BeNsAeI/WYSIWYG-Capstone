@@ -3,10 +3,11 @@
 # Objects of such class have the following attributes:
 # This file also contains the tests for the Block module
 class Channel:
-	def __init__(self,id,source,destination):
+	def __init__(self,id,source,destination,argn=None):
 		self.ID=id;
 		self.SourceID=source
 		self.DestinationID=destination
+		self.ArgN=argn
 		#self.Data=data;
 	def changeSourceID(self,source):
 		self.SourceID=source
