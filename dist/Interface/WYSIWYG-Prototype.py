@@ -49,8 +49,7 @@ import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
 from Channels import Channel
-from Channels import MatchDst
-from Channels import MatchSrc
+from Channels import FindSrc
 sys.path.append('../Core')
 from Table import ParsingTable
 from Parser import Tree
@@ -121,7 +120,7 @@ def is_number(s):
         self.parsingTable.addChannel(self.channelStack)
 
 '''
-def ChannelDraw(scatter, build):
+def ChannelInDraw(scatter, build):
     if len(channelHolder) == 2:
         channelHolder.pop();
         channelHolder.pop();
@@ -140,7 +139,25 @@ def ChannelDraw(scatter, build):
         parsingTable.printTable()
         for i in channelStack:
             print("Source:" + i.SourceID.Name + ", Destination:" + i.DestinationID.Name)
+def ChannelOutDraw(scatter, build):
+    if len(channelHolder) == 2:
+        channelHolder.pop();
+        channelHolder.pop();
+    channelHolder.append(scatter);
+    if len(channelHolder) == 2:
+        channelStack.append(Channel(channelCount, channelHolder[1].name, channelHolder[0].name))
+        previous_X = channelHolder[0].center_x;
+        current_X = channelHolder[1].center_x;
+        previous_Y = channelHolder[0].center_y;
+        current_Y = channelHolder[1].center_y;
+        with build.canvas:
+            # Line(points=[self.blocks[self.i - 1].x, self.blocks[self.i - 1].y, self.blocks[self.i].x, self.blocks[self.i].y], width=10)
+            Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
 
+        parsingTable.addChannel(channelStack)
+        parsingTable.printTable()
+        for i in channelStack:
+            print("Source:" + i.SourceID.Name + ", Destination:" + i.DestinationID.Name)
 #######################CLASS########################
 # Name: Scatter                                    #
 # Purpose: Dragable objects                        #
@@ -190,10 +207,14 @@ class class_Block(Widget):
     def set_name(self, newName):
         self.name = newName;
 
-    def channel_dr(self):
+    def channel_out_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
-                ChannelDraw(i, self.build)
+                ChannelOutDraw(i, self.build)
+    def channel_in_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelInDraw(i, self.build)
 
 class method_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
@@ -208,10 +229,10 @@ class method_Block(Widget):
         self.method = methodType;
         print(self.method)
 
-    def channel_dr(self):
+    def channel_out_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
-                ChannelDraw(i, self.build)
+                ChannelOutDraw(i, self.build)
 
 class variable_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
@@ -230,10 +251,14 @@ class variable_Block(Widget):
         print("Name: " + self.name.Name)
 
 
-    def channel_dr(self):
+    def channel_out_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
-                ChannelDraw(i, self.build)
+                ChannelOutDraw(i, self.build)
+    def channel_in_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelInDraw(i, self.build)
 
 class output_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
@@ -243,10 +268,10 @@ class output_Block(Widget):
     def set_name(self, newName):
         self.name = newName;
 
-    def channel_dr(self):
+    def channel_in_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
-                ChannelDraw(i, self.build)
+                ChannelInDraw(i, self.build)
 
 #######################CLASS########################
 # Name: Build Space                                #
@@ -327,7 +352,11 @@ class BuilderSuite(BoxLayout):
 			if(i.Type == "variable"):
 				genType = "var"
 				arg1 = i.Name
-				arg2 = str(i.Value)
+				items = FindSrc(channelStack,blocks,i.Name)
+				if(channelStack and items):
+					arg2 = str(items[0].Name)
+				else:
+					arg2 = str(i.Value)
 				args=[comment,arg1,arg2]
 			if(i.Type == "method"):
 				genType = "method"
@@ -337,7 +366,7 @@ class BuilderSuite(BoxLayout):
 				pass
 			if(i.Type == "output"):
 				genType="print"
-				items = MatchDst(channelStack,blocks,i.ID)
+				items = FindSrc(channelStack,blocks,i.Name)
 				arg1 = str(items[0].Name)
 				args=[comment,arg1]
 			temp.addBlock(genType,II,args)

@@ -17,21 +17,12 @@ class Channel:
 	def Out(self):
 		return self.Data
 
-def MatchSrc(Clist,Blist,ID):
+def FindSrc(Clist,Blist,name): #we are destination
 	result = []
 	for i in Clist:
-		if i.SourceID.ID == ID:
+		if i.DestinationID.Name == name:
 			for j in Blist:
-				if j.ID == i.SourceID.ID:
-					result.append(j)
-	return result
-
-def MatchDst(Clist,Blist,ID):
-	result = []
-	for i in Clist:
-		if i.DestinationID.ID == ID:
-			for j in Blist:
-				if j.ID == i.SourceID.ID:
+				if j.Name == i.SourceID.Name:
 					result.append(j)
 	return result
 

@@ -117,15 +117,9 @@
             pos: self.pos
             size: self.size
 	Button:
-		on_release: root.channel_dr()
+		on_release: root.channel_in_dr()
 		text: "Link"
 		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
-    ##Label:
-        ##text: 'Output'
-        ##color: 0, 0, 0, 1
-	##CheckBox:
-		##size: sp(32), sp(32)
-		##on_active: root.channel_dr()
 
 
 <variable_Block>:
@@ -147,12 +141,12 @@
 			Label:
 			    text: ''
 	        Button:
-				on_release: root.channel_dr()
+				on_release: root.channel_in_dr()
 				text: "In"
 				##size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	            ##CheckBox:
                     ##size: sp(32), sp(32)
-                    ##on_active: root.channel_dr()
+                    ##on_active: root.channel_out_dr()
 			Label:
 			    text: ''
             Label:
@@ -186,12 +180,12 @@
 			Label:
 			    text: ''
 			Button:
-				on_release: root.channel_dr()
+				on_release: root.channel_out_dr()
 				text: "Out"
 				##size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	            ##CheckBox:
                     ##size: sp(32), sp(32)
-                    ##on_active: root.channel_dr()
+                    ##on_active: root.channel_out_dr()
 			Label:
 			    text: ''
 
@@ -214,7 +208,7 @@
             id: type
             text: ' '
         Button:
-		    on_release: root.channel_dr()
+		    on_release: root.channel_out_dr()
 		    text: "Link"
 		    size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 		Button:
@@ -547,12 +541,12 @@
       ##  text: 'Class'
       ##  color: 0, 0, 0, 1
     Button:
-		on_release: root.channel_dr()
+		on_release: root.channel_out_dr()
 		text: "Link"
 		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	##CheckBox:
 		##size: sp(32), sp(32)
-		##on_active: root.channel_dr()
+		##on_active: root.channel_out_dr()
 
 
 
