@@ -140,11 +140,22 @@
                 size: self.size
 	    GridLayout:
 	        cols: 3
-	        rows: 3
+	        rows: 4
 		    ##orientation: 'vertical'
 		    ##BoxLayout:
 		        ##orientation: 'horizontal'
-		    Label:
+			Label:
+			    text: ''
+	        Button:
+				on_release: root.channel_dr()
+				text: "In"
+				##size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
+	            ##CheckBox:
+                    ##size: sp(32), sp(32)
+                    ##on_active: root.channel_dr()
+			Label:
+			    text: ''
+            Label:
 		        size_hint_x: 0.3
 				text: 'Name: '
 				color: 255, 0, 0, 1
@@ -172,18 +183,19 @@
 			    on_release: root.takeValue(value.text)
 			    text: "Push"
 	        ##BoxLayout:
-	        Label:
-				text: ''
 			Label:
 			    text: ''
 			Button:
 				on_release: root.channel_dr()
-				text: "Link"
-				size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
+				text: "Out"
+				##size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 	            ##CheckBox:
                     ##size: sp(32), sp(32)
                     ##on_active: root.channel_dr()
-				
+			Label:
+			    text: ''
+
+
 <method_Block>:
     GridLayout:
         cols: 2
