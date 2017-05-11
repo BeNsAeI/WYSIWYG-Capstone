@@ -216,7 +216,7 @@ class class_Block(Widget):
             if i.name.Name == self.name.Name:
                 ChannelInDraw(i, self.build)
 
-class method_Block(Widget):
+'''class method_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
         super(method_Block, self).__init__(**kwargs);
         self.name = Block;
@@ -233,6 +233,58 @@ class method_Block(Widget):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelOutDraw(i, self.build)
+'''
+class method_Block(GridLayout):
+    def __init__(self, buildSpc,**kwargs):
+        super(method_Block, self).__init__(**kwargs);
+        self.name = Block;
+        self.build = buildSpc;
+        self.method = '';
+    def set_name(self, newName):
+        self.name = newName;
+
+    def set_method(self, methodType):
+        self.method = methodType;
+        print(self.method)
+
+    def tailorMethod(self, argN, methodType):
+        p=0;
+        if (argN == 4):
+            while p < argN:
+                p += 1
+                self.add_widget(Button(text="Arg" + str(p)));
+        if(argN == 3):
+            while p < argN:
+                p+=1
+                self.add_widget(Button(text="Arg" + str(p)));
+        elif(argN == 2):
+            self.add_widget(Button(text="Arg1"));
+            self.add_widget(Label(text=''))
+            self.add_widget(Button(text="Arg2"));
+        elif(argN == 1):
+            self.add_widget(Label(text=''))
+            self.add_widget(Button(text="Arg1"));
+            self.add_widget(Label(text=''))
+        else:
+            print("Error with call")
+        self.add_widget(Label(text=''))
+        self.add_widget(Label(text=str(methodType)))
+        self.add_widget(Label(text=''))
+        self.add_widget(Label(text=''))
+        self.add_widget(Button(text="Output"))
+        if argN != 4:
+            self.add_widget(Label(text=''))
+
+
+    def channel_out_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelOutDraw(i, self.build)
+
+    def channel_in_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelInDraw(i, self.build)
 
 class variable_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
@@ -255,6 +307,7 @@ class variable_Block(Widget):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelOutDraw(i, self.build)
+
     def channel_in_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
@@ -295,9 +348,9 @@ class BuildSpace(FloatLayout):
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
 
-    def addBlock(self, type):
-        stringLabel = " "
+    def addBlock(self, type, argN, methodType):
         print(type)
+        p = 0
         if type == "class":
             blocks.append(Block(type+str(self.classCount),type,"Add Caption",self.classCount,0))
             self.classCount+=1;
@@ -321,15 +374,13 @@ class BuildSpace(FloatLayout):
         else:
             print("Error with request")
             pass
-        #print("Status:");
-        #for i in blocks:
-            #print(i.Name)
-        #print("___")
+
         s = Scatterer()
         self.add_widget(s)
         s.set_name(blocks[len(blocks)-1])
-        #d.add_widget(Label(text=str(blocks[len(blocks)-1].Name)))
         s.add_widget(d)
+        if type == "method":
+            d.tailorMethod(argN, methodType)
         scatterStack.append(s)
         widgetStack.append(d)
 

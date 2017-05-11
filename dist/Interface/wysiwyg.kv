@@ -60,6 +60,458 @@
         Rectangle:
             pos: self.pos
             size: self.size
+    ScrollView:
+        DropDown:
+            auto_width: False
+            id: dropdownMeth
+            on_parent: self.dismiss()
+            size_hint_x: None
+            size_hint_y: None
+            width: 125
+            CustButton:
+                text: 'if'
+                size: 80, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'while'
+                size: 80, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'for'
+                size: 80, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.abs'
+                size: 80, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.accumulate_n'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.acos'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.add'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.add_n'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.argmax'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.argmin'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.asin'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.atan'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.betainc'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.ceil'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.cholesky'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.cholesky_solve'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.complex'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.conji'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.cos'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.count_nonzero'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.cross'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.cumprod'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.cumsum'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.diag'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.diag_part'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.diagamma'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.div'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.divide'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.edit_distance'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.einsum'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.erf'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.erfc'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.exp'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.expm1'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.eye'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.floor'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.floor_div'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.floormod'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.floordiv'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.igamma'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.igammac'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.imag'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.invert_permutation'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.lbeta'
+                size: 100, 20
+                on_release: root.addBlock("method",1,self.text)
+            CustButton:
+                text: 'tf.lgamma'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.log'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.log1p'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.matmul'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.matrix_band_part'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.matrix_determinant'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.matrix_diag'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.matrix_diag_part'
+                size: 100, 20
+                on_release: root.addBlock("method",1,self.text)
+            CustButton:
+                text: 'tf.matrix_inverse'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.matrix_set_diag'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.matrix_solve'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.matrix_solve_ls'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.matrix_transpose'
+                size: 100, 20
+                on_release: root.addBlock("method",1,self.text)
+            CustButton:
+                text: 'tf.matrix_triangular_solve'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.maximum'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.minimum'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.mod'
+                size: 100, 20
+                on_release: root.addBlock("method",1,self.text)
+            CustButton:
+                text: 'tf.multiply'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.negative'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.norm'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.polygamma'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.pow'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.qr'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.real'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.realdiv'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.reciprocal'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_all'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_any'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_logsumexp'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_max'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_mean'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_min'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_prod'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.reduce_sum'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.rint'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.round'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.rsqrt'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.scalar_mul'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.segment_max'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.segment_mean'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.segment_min'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.segment_prod'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.segment_sum'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.self_adjoint_eig'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.self_adjoint_eigvals'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.setdiff1d'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.sign'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.sin'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.sparse_segment_mean'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.sparse_segment_sqrt_n'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.sparse_segment_sum'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.sqrt'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.square'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.squared_difference'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.subtract'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.svd'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.tan'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.tensordot'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.trace'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.transpose'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.truediv'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.truncatediv'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.truncatemod'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
+            CustButton:
+                text: 'tf.unique'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.unsorted_segment_sum'
+                size: 100, 20
+                on_release: root.addBlock("method",4,self.text)
+            CustButton:
+                text: 'tf.where'
+                size: 100, 20
+                on_release: root.addBlock("method",2,self.text)
+            CustButton:
+                text: 'tf.zeta'
+                size: 100, 20
+                on_release: root.addBlock("method",3,self.text)
 
     BoxLayout:
         canvas:
@@ -74,15 +526,16 @@
         orientation: 'vertical'
         MenuButton:
             text: "Variable"
-            on_release: root.addBlock("variable")
+            on_release: root.addBlock("variable",0,0)
 
         MenuButton:
             text: "Methods"
-            on_release: root.addBlock("method")
+            ##on_release: root.addBlock("method")
+            on_release: dropdownMeth.open(self)
 
         MenuButton:
             text: "Class"
-            on_release: root.addBlock("class")
+            on_release: root.addBlock("class",0,0)
 
         MenuButton:
             text: "Layer"
@@ -92,7 +545,7 @@
 
         MenuButton:
             text: "Output"
-            on_release: root.addBlock("output")
+            on_release: root.addBlock("output",0,0)
 
 <Scatterer>:
     do_rotation: False
@@ -191,343 +644,16 @@
 
 
 <method_Block>:
-    GridLayout:
-        cols: 2
-        rows: 3
-        size: BLOCK_SIZE_X,BLOCK_SIZE_Y
-        canvas:
-            Color:
-                rgba: 0, 0, 0, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        Label:
-            text: 'Method:'
-            color: 1, 1, 1, 1
-        Label:
-            id: type
-            text: ' '
-        Button:
-		    on_release: root.channel_out_dr()
-		    text: "Link"
-		    size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
-		Button:
-		    on_release: dropdownMeth.open(self)
-		    text: "Method Select"
+    cols: 3
+    rows: 3
+    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
-		ScrollView:
-	        DropDown:
-	            auto_width: False
-                id: dropdownMeth
-                on_parent: self.dismiss()
-                size_hint_x: None
-                size_hint_y: None
-                width: 125
-                CustButton:
-                    text: 'if'
-                    size: 80, 20
-                    on_press: type.text='if'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'while'
-                    size: 80, 20
-                    on_press: type.text='while'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'do-while'
-                    size: 80, 20
-                    on_press: type.text='do-while'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'for'
-                    size: 80, 20
-                    on_press: type.text='for'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.abs'
-                    size: 80, 20
-                    on_press: type.text='tf.abs'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.accumulate_n'
-                    size: 100, 20
-                    on_press: type.text='tf.accumulate_n'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.acos'
-                    size: 100, 20
-                    on_press: type.text='tf.acos'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.add'
-                    size: 100, 20
-                    on_press: type.text='tf.add'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.add_n'
-                    size: 100, 20
-                    on_press: type.text='tf.add_n'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.argmax'
-                    size: 100, 20
-                    on_press: type.text='tf.argmax'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.argmin'
-                    size: 100, 20
-                    on_press: type.text='tf.argmin'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.asin'
-                    size: 100, 20
-                    on_press: type.text='tf.asin'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.atan'
-                    size: 100, 20
-                    on_press: type.text='tf.atan'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.betainc'
-                    size: 100, 20
-                    on_press: type.text='tf.betainc'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.ceil'
-                    size: 100, 20
-                    on_press: type.text='tf.ceil'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.cholesky'
-                    size: 100, 20
-                    on_press: type.text='tf.cholesky'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.cholesky_solve'
-                    size: 100, 20
-                    on_press: type.text='tf.cholesky_solve'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.complex'
-                    size: 100, 20
-                    on_press: type.text='tf.complex'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.conji'
-                    size: 100, 20
-                    on_press: type.text='tf.conji'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.cos'
-                    size: 100, 20
-                    on_press: type.text='tf.cos'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.count_nonzero'
-                    size: 100, 20
-                    on_press: type.text='tf.count_nonzero'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.cross'
-                    size: 100, 20
-                    on_press: type.text='tf.cross'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.cumprod'
-                    size: 100, 20
-                    on_press: type.text='tf.cumprod'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.cumsum'
-                    size: 100, 20
-                    on_press: type.text='tf.cumsum'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.diag'
-                    size: 100, 20
-                    on_press: type.text='tf.diag'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.diag_part'
-                    size: 100, 20
-                    on_press: type.text='tf.diag_part'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.diagamma'
-                    size: 100, 20
-                    on_press: type.text='tf.diagamma'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.div'
-                    size: 100, 20
-                    on_press: type.text='tf.div'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.divide'
-                    size: 100, 20
-                    on_press: type.text='tf.divide'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.edit_distance'
-                    size: 100, 20
-                    on_press: type.text='tf.edit_distance'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.einsum'
-                    size: 100, 20
-                    on_press: type.text='tf.einsum'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.erf'
-                    size: 100, 20
-                    on_press: type.text='tf.erf'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.erfc'
-                    size: 100, 20
-                    on_press: type.text='tf.erfc'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.exp'
-                    size: 100, 20
-                    on_press: type.text='tf.exp'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.expm1'
-                    size: 100, 20
-                    on_press: type.text='tf.expm1'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.eye'
-                    size: 100, 20
-                    on_press: type.text='tf.eye'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.floor'
-                    size: 100, 20
-                    on_press: type.text='tf.floor'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.floor_div'
-                    size: 100, 20
-                    on_press: type.text='tf.floor_div'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.floormod'
-                    size: 100, 20
-                    on_press: type.text='tf.floormod'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.floordiv'
-                    size: 100, 20
-                    on_press: type.text='tf.floordiv'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.igamma'
-                    size: 100, 20
-                    on_press: type.text='tf.igamma'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.igammac'
-                    size: 100, 20
-                    on_press: type.text='tf.igammac'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.imag'
-                    size: 100, 20
-                    on_press: type.text='tf.imag'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.invert_permutation'
-                    size: 100, 20
-                    on_press: type.text='tf.invert_permutation'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.lbeta'
-                    size: 100, 20
-                    on_press: type.text='tf.lbeta'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.lgamma'
-                    size: 100, 20
-                    on_press: type.text='tf.lgamma'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.log'
-                    size: 100, 20
-                    on_press: type.text='tf.log'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.log1p'
-                    size: 100, 20
-                    on_press: type.text='tf.log1p'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matmul'
-                    size: 100, 20
-                    on_press: type.text='tf.matmul'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_band_part'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_band_part'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_determinant'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_determinant'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_diag'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_diag'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_inverse'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_inverse'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_set_diag'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_set_diag'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_solve'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_solve'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_solve_ls'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_solve_ls'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_transpose'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_transpose'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.matrix_triangular'
-                    size: 100, 20
-                    on_press: type.text='tf.matrix_triangular'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.maximum'
-                    size: 100, 20
-                    on_press: type.text='tf.maximum'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.minimum'
-                    size: 100, 20
-                    on_press: type.text='tf.minimum'
-                    on_release: root.set_method(self.text)
-                CustButton:
-                    text: 'tf.mod'
-                    size: 100, 20
-                    on_press: type.text='tf.mod'
-                    on_release: root.set_method(self.text)
 
 <class_Block>:
     size: BLOCK_SIZE_X,BLOCK_SIZE_Y
