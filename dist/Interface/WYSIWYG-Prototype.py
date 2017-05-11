@@ -252,18 +252,18 @@ class method_Block(GridLayout):
         if (argN == 4):
             while p < argN:
                 p += 1
-                self.add_widget(Button(text="Arg" + str(p)));
+                self.add_widget(Button(text="Arg" + str(p), on_release=self.channel_in_dr));
         if(argN == 3):
             while p < argN:
                 p+=1
-                self.add_widget(Button(text="Arg" + str(p)));
+                self.add_widget(Button(text="Arg" + str(p), on_release=self.channel_in_dr));
         elif(argN == 2):
-            self.add_widget(Button(text="Arg1"));
+            self.add_widget(Button(text="Arg1", on_release=self.channel_in_dr));
             self.add_widget(Label(text=''))
-            self.add_widget(Button(text="Arg2"));
+            self.add_widget(Button(text="Arg2", on_release=self.channel_in_dr));
         elif(argN == 1):
             self.add_widget(Label(text=''))
-            self.add_widget(Button(text="Arg1"));
+            self.add_widget(Button(text="Arg1", on_release=self.channel_in_dr));
             self.add_widget(Label(text=''))
         else:
             print("Error with call")
@@ -271,17 +271,17 @@ class method_Block(GridLayout):
         self.add_widget(Label(text=str(methodType)))
         self.add_widget(Label(text=''))
         self.add_widget(Label(text=''))
-        self.add_widget(Button(text="Output"))
+        self.add_widget(Button(text="Output", on_release=self.channel_out_dr))
         if argN != 4:
             self.add_widget(Label(text=''))
 
 
-    def channel_out_dr(self):
+    def channel_out_dr(self, rand):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelOutDraw(i, self.build)
 
-    def channel_in_dr(self):
+    def channel_in_dr(self, rand):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelInDraw(i, self.build)
