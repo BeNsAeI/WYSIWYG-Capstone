@@ -21,6 +21,17 @@
     size_hint_x: None
     size_hint_y: None
 
+<CornerRectangleWidget@Widget>
+	canvas:
+		Color:
+			rgba: 0, 0, 0, 0
+		Rectangle:
+			pos: (self.width/10),0
+			size: (self.width*19)/20, self.height / 5
+##	Label:
+##		id: DLW
+##		pos: self.width+80,0
+##		text: root.update_rect()
 <BuilderSuite@BoxLayout>:
     size_hint_y: None
     padding: 3
@@ -512,7 +523,7 @@
                 text: 'tf.zeta'
                 size: 100, 20
                 on_release: root.addBlock("method",3,self.text)
-
+    
     BoxLayout:
         canvas:
             Color:
@@ -546,6 +557,9 @@
         MenuButton:
             text: "Output"
             on_release: root.addBlock("output",0,0)
+
+    CornerRectangleWidget:
+        id: debugBanner
 
 <Scatterer>:
     do_rotation: False
@@ -686,3 +700,4 @@
 
     BuildSpace:
 
+##    CornerRectangleWidget:

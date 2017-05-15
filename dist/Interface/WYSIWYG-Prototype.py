@@ -30,6 +30,9 @@ kivy.require("1.9.0")
 from kivy.config import Config
 Config.set("input", "mouse", "mouse, disable_multitouch")
 
+from kivy.uix.scrollview import ScrollView
+from kivy.event import EventDispatcher
+from kivy.properties import StringProperty
 from kivy.app import App
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.gridlayout import GridLayout
@@ -45,6 +48,8 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
+from kivy.graphics import Rectangle, Color
+from kivy.clock import Clock
 import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
@@ -73,6 +78,7 @@ channelStack = [];
 channelCount = 0;
 widgetCount = 0;
 scatterCount = 0;
+debugText="Debugger View"
 
 def createDirectory():
     directory = os.getcwd();
@@ -190,6 +196,23 @@ class Scatterer(Scatter):
 # Public Methods: NA                               #
 # Status: FINISHED                                 #
 ####################################################
+class CornerRectangleWidget(Widget):
+	#DLW = StringProperty(debugText)
+	def __init__(self, **kwargs):
+		self.log=debugText
+		super(CornerRectangleWidget, self).__init__(**kwargs)
+		with self.canvas:
+			pass
+		#self.bind(DLW=self.update_rect)
+		Clock.schedule_interval(self.update_rect,0.1)
+		self.myLabel = Label(text = "", pos=(self.width+100,0))
+		self.add_widget(self.myLabel)
+	def update_rect(self, *args):
+		print("CALLED: \n"+debugText)
+		self.log=debugText
+		self.myLabel.text=self.log
+		self.myLabel.size_hint_y=None
+
 class Scene(ScatterLayout):
     pass
 
@@ -426,6 +449,8 @@ class BuilderSuite(BoxLayout):
 		myHandler=errorHandler("Output.py")
 		myHandler.Monitor()
 		myHandler.makeReport()
+		global debugText
+		debugText="Error: \n"+myHandler.err+"\n"
 
 class DocumentOptions(BoxLayout):
     pass
