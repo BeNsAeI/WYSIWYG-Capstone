@@ -205,10 +205,9 @@ class CornerRectangleWidget(Widget):
 			pass
 		#self.bind(DLW=self.update_rect)
 		Clock.schedule_interval(self.update_rect,0.1)
-		self.myLabel = Label(text = "", pos=(self.width+100,0))
+		self.myLabel = Label(text = "", pos=(self.width+200,0))
 		self.add_widget(self.myLabel)
 	def update_rect(self, *args):
-		print("CALLED: \n"+debugText)
 		self.log=debugText
 		self.myLabel.text=self.log
 		self.myLabel.size_hint_y=None
