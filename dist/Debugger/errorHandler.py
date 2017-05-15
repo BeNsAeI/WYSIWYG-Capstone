@@ -31,10 +31,16 @@ class errorHandler:
 		p = subprocess.Popen([self.command, self.flag], stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
 		self.result, self.err = p.communicate()
 	def makeReport(self):
-		print("Result: ")
-		print(self.result)
+		if self.err == "":
+			self.err = "No errors"
+		print("\t\t+---------------------+")
+		print("\t\t|  Execution results  |")
+		print("\t\t+---------------------+")
 		print("Error: ")
 		print(self.err)
+		print("=====================================")
+		print("Result: ")
+		print(self.result)
 	def logToFile(self):
 		pass
 def testcase():
