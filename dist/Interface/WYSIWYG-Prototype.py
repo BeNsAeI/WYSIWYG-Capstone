@@ -102,6 +102,11 @@ def is_number(s):
 	return False
 #Class Definitions:
 
+class LineData():
+    def __init__(self, scatter1, scatter2):
+        self.scatt1 = scatter1;
+        self.scatt2 = scatter2;
+
 #######################CLASS########################
 # Name: Channel Stack                              #
 # Purpose: Store the list of channels              #
@@ -134,22 +139,23 @@ def ChannelInDraw(scatter, build):
     channelHolder.append(scatter);
     if len(channelHolder) == 2:
         channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name))
-        previous_X = channelHolder[0].center_x;
-        current_X = channelHolder[1].center_x;
-        previous_Y = channelHolder[0].center_y;
-        current_Y = channelHolder[1].center_y;
         for x in scatterStack:
-            if x.name == channelHolder[0].name
+            if x.name == channelHolder[0].name:
                 for i in scatterStack:
-                    if i.name == channelHolder[1].name
-                        lineStack.append(Line(points=(x.center_x, x.center_y, i.center_x, i.center_y)))
+                    if i.name == channelHolder[1].name:
+                        lineStack.append(LineData(x, i));
 
         with build.canvas:
-            lineStack[len(lineStack-1)]
-            #Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
-        
-        
-        
+            Line(points=(lineStack[len(lineStack)-1].scatt1.center_x, lineStack[len(lineStack)-1].scatt1.center_y,
+                         lineStack[len(lineStack)-1].scatt2.center_x, lineStack[len(lineStack)-1].scatt2.center_y), width=3)
+
+        if len(channelStack) > 1:
+            for x in channelStack:
+                if x == channelStack[len(channelStack)-1]:
+                    break
+                if x == channelStack[len(channelStack)-1]:
+                    channelStack.pop()
+
         parsingTable.addChannel(channelStack)
         parsingTable.printTable()
         for i in channelStack:
@@ -162,19 +168,23 @@ def ChannelOutDraw(scatter, build):
     channelHolder.append(scatter);
     if len(channelHolder) == 2:
         channelStack.append(Channel(channelCount, channelHolder[1].name, channelHolder[0].name))
-        previous_X = channelHolder[0].center_x;
-        current_X = channelHolder[1].center_x;
-        previous_Y = channelHolder[0].center_y;
-        current_Y = channelHolder[1].center_y;
         for x in scatterStack:
-            if x.name == channelHolder[1].name
+            if x.name == channelHolder[0].name:
                 for i in scatterStack:
-                    if i.name == channelHolder[0].name
-                        lineStack.append(Line(points=(x.center_x, x.center_y, i.center_x, i.center_y)))
+                    if i.name == channelHolder[1].name:
+                        lineStack.append(LineData(x, i));
 
         with build.canvas:
-            lineStack[len(lineStack-1)]
-            #Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
+            Line(points=(lineStack[len(lineStack) - 1].scatt1.center_x, lineStack[len(lineStack) - 1].scatt1.center_y,
+                         lineStack[len(lineStack) - 1].scatt2.center_x, lineStack[len(lineStack) - 1].scatt2.center_y),
+                 width=3)
+
+        if len(channelStack) > 1:
+            for x in channelStack:
+                if x == channelStack[len(channelStack)-1]:
+                    break
+                if x == channelStack[len(channelStack)-1]:
+                    channelStack.pop()
 
         parsingTable.addChannel(channelStack)
         parsingTable.printTable()
