@@ -2,11 +2,14 @@
 # The input is the tokens and it generates the tree
 
 class Tree:
-	def __init__(self):
-		self.path = ""
-		self.argList;
+	def __init__(self,curr):
+		self.Curr = curr
 		self.Next = None
-		self.Sibiling = None
+		self.Prev = None
+	def N(self,tmp):
+		self.Next = tmp
+	def P(self,tmp):
+		self.Prev = tmp
 
 class Parser:
 	def __init__(self):

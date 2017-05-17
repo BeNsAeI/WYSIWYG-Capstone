@@ -3,11 +3,11 @@
 # Objects of such class have the following attributes:
 # This file also contains the tests for the Block module
 class Channel:
-	def __init__(self,id,source,destination,argn=None):
+	def __init__(self,id,source,destination,argN=None):
 		self.ID=id;
 		self.SourceID=source
 		self.DestinationID=destination
-		self.ArgN=argn
+		self.ArgN=argN
 		#self.Data=data;
 	def changeSourceID(self,source):
 		self.SourceID=source
@@ -18,13 +18,19 @@ class Channel:
 	def Out(self):
 		return self.Data
 
-def FindSrc(Clist,Blist,name): #we are destination
+def FindSrc(Clist,Blist,name,argN=None): #we are destination
 	result = []
 	for i in Clist:
 		if i.DestinationID.Name == name:
 			for j in Blist:
 				if j.Name == i.SourceID.Name:
-					result.append(j)
+					if argN != None:
+						if(argN == i.ArgN):
+							result.append(j)
+						else:
+							print("FindSrc: "+str(argN)+", " +str(i.ArgN))
+					else:
+						result.append(j)
 	return result
 
 def testCase():

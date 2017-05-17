@@ -50,6 +50,7 @@ from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
 from kivy.graphics import Rectangle, Color
 from kivy.clock import Clock
+from functools import partial
 import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
@@ -62,6 +63,19 @@ from Parser import Parser
 from Generator import Generator
 sys.path.append('../Debugger')
 from errorHandler import errorHandler
+
+def getArgNum(type):
+	from TemplateHandler import fileIO
+	input = fileIO("python")
+	src = input.read_fil(type)
+	print("*** getArgNum -> "+type+"\n"+src)
+	h = 0
+	for i in range(0,50):
+		mystr = "<<ARG"+str(i)+">>"
+		if mystr in src:
+			h = i
+			print(mystr)
+	return h
 
 # Included Builds:
 Builder.load_file('Scene.kv')
@@ -116,29 +130,13 @@ class LineData():
 # Public Methods: set_source , set_destination     #
 # Status: Edit tentetive                           #
 ####################################################
-'''class ChannelStack():
-    def __init__(self):
-        self.channelCount = 0;
-        self.channelStack = [];
-        self.parserTable = ParsingTable();
-
-    def create_Channel(self, sourceBlk, destinationBlk):
-        self.channelCount += 1;
-        self.channelStack.append(Channel(self.channelCount, sourceBlk, destinationBlk));
-        #self.channelStack[len(channelStack)-1].changeSourceID(sourceBlk);
-
-
-    def updateList(self):
-        self.parsingTable.addChannel(self.channelStack)
-
-'''
-def ChannelInDraw(scatter, build):
+def ChannelInDraw(scatter, build,argn=None):
     if len(channelHolder) == 2:
         channelHolder.pop();
         channelHolder.pop();
     channelHolder.append(scatter);
     if len(channelHolder) == 2:
-        channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name))
+        channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name,argN=argn))
         for x in scatterStack:
             if x.name == channelHolder[0].name:
                 for i in scatterStack:
@@ -264,54 +262,46 @@ class class_Block(Widget):
             if i.name.Name == self.name.Name:
                 ChannelInDraw(i, self.build)
 
-'''class method_Block(Widget):
-    def __init__(self, buildSpc,**kwargs):
-        super(method_Block, self).__init__(**kwargs);
-        self.name = Block;
-        self.build = buildSpc;
-        self.method = '';
-    def set_name(self, newName):
-        self.name = newName;
-
-    def set_method(self, methodType):
-        self.method = methodType;
-        print(self.method)
-
-    def channel_out_dr(self):
-        for i in scatterStack:
-            if i.name.Name == self.name.Name:
-                ChannelOutDraw(i, self.build)
-'''
 class method_Block(GridLayout):
     def __init__(self, buildSpc,**kwargs):
         super(method_Block, self).__init__(**kwargs);
         self.name = Block;
         self.build = buildSpc;
         self.method = '';
+        self.argN = 0;
+        self.CID = []
     def set_name(self, newName):
         self.name = newName;
 
     def set_method(self, methodType):
         self.method = methodType;
         print(self.method)
-
-    def tailorMethod(self, argN, methodType):
+    def tailorMethod(self, argn, methodType):
         p=0;
-        if (argN == 4):
-            while p < argN:
+        if (argn == 4):
+            while p < argn:
                 p += 1
-                self.add_widget(Button(text="Arg" + str(p), on_release=self.channel_in_dr));
-        if(argN == 3):
-            while p < argN:
+                self.argN = p
+                self.add_widget(Button(text="Arg" + str(p), on_release=partial(self.channel_in_dr,argN=p)));
+                self.argN = 0
+        if(argn == 3):
+            while p < argn:
                 p+=1
-                self.add_widget(Button(text="Arg" + str(p), on_release=self.channel_in_dr));
-        elif(argN == 2):
-            self.add_widget(Button(text="Arg1", on_release=self.channel_in_dr));
+                self.argN = p
+                self.add_widget(Button(text="Arg" + str(p), on_release=partial(self.channel_in_dr,argN=p)));
+                self.argN = 0
+        elif(argn == 2):
+            self.argN = 1
+            self.add_widget(Button(text="Arg1", on_release=partial(self.channel_in_dr,argN=1)));
             self.add_widget(Label(text=''))
-            self.add_widget(Button(text="Arg2", on_release=self.channel_in_dr));
-        elif(argN == 1):
+            self.argN = 2
+            self.add_widget(Button(text="Arg2", on_release=partial(self.channel_in_dr,argN=2)));
+            self.argN = 0
+        elif(argn == 1):
             self.add_widget(Label(text=''))
-            self.add_widget(Button(text="Arg1", on_release=self.channel_in_dr));
+            self.argN = 1
+            self.add_widget(Button(text="Arg1", on_release=partial(self.channel_in_dr,argN=1)));
+            self.argN = 0
             self.add_widget(Label(text=''))
         else:
             print("Error with call")
@@ -320,19 +310,19 @@ class method_Block(GridLayout):
         self.add_widget(Label(text=''))
         self.add_widget(Label(text=''))
         self.add_widget(Button(text="Output", on_release=self.channel_out_dr))
-        if argN != 4:
+        if argn != 4:
             self.add_widget(Label(text=''))
 
 
-    def channel_out_dr(self, rand):
+    def channel_out_dr(self,rand):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelOutDraw(i, self.build)
 
-    def channel_in_dr(self, rand):
+    def channel_in_dr(self,rand,argN=0):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
-                ChannelInDraw(i, self.build)
+                ChannelInDraw(i, self.build,argn=argN)
 
 class variable_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
@@ -396,7 +386,7 @@ class BuildSpace(FloatLayout):
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
 
-    def addBlock(self, type, argN, methodType):
+    def addBlock(self, type, argN=0, methodType=None):
         print(type)
         p = 0
         if type == "class":
@@ -405,7 +395,7 @@ class BuildSpace(FloatLayout):
             d = class_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "method":
-            blocks.append(Block(type+str(self.methodCount),type,"Add Caption",self.methodCount,0))
+            blocks.append(Block(methodType+str(self.methodCount),type,"Add Caption",self.methodCount,0))
             self.methodCount+=1;
             d = method_Block(self);
             d.set_name(blocks[len(blocks)-1]);
@@ -438,12 +428,35 @@ class BuildSpace(FloatLayout):
 class BuilderSuite(BoxLayout):
 	def __init__(self, **kwargs):
 		super(BuilderSuite, self).__init__(**kwargs);
-
 	def extract(self):
+		# Parsing blocks:
+		tmpblocks=[]
+		for i in blocks:
+			from copy import deepcopy, _deepcopy_dispatch
+			tmp = deepcopy(i)
+			tmpblocks.append(tmp)
+		orderedBlock=[]
+		counter = len(tmpblocks)
+		while (counter>0):
+			for ord in tmpblocks:
+				print("-> at:"+ord.Name)
+				item = FindSrc(channelStack,tmpblocks,ord.Name)
+				if len(item) == 0:
+					from copy import deepcopy, _deepcopy_dispatch
+					if ord.Name != "processed":
+						orderedBlock+= [deepcopy(ord)]
+					ord.Name = "processed"
+					counter -= 1
+					print("-> parsed: "+ord.Name)
+					print("len:"+str(len(item)))
+					print(counter)
+		for i in orderedBlock:
+			print(i.Name)
+		# Generating
 		print("EXTRACT: Status:");
 		temp = Generator()
 		II = 0
-		for i in blocks:
+		for i in orderedBlock:
 #			if is_number(i.Value)==False:
 #				i.Value = '"'+i.Value+'"'
 			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
@@ -458,10 +471,32 @@ class BuilderSuite(BoxLayout):
 					arg2 = str(i.Value)
 				args=[comment,arg1,arg2]
 			if(i.Type == "method"):
-				genType = "method"
+				genType = i.Name
+				genType = genType[:-1]
+				argNum = getArgNum(genType)
+				args=[comment]
+				print("****->"+str(getArgNum(genType))+", "+str(argNum)+ ", " +str(args))
+				if argNum == 1:
+					items = FindSrc(channelStack,blocks,i.Name)
+					args.append(str(items[0].Name))
+				if argNum > 1:
+					for j in range (1,argNum+1):
+						items = FindSrc(channelStack,blocks,i.Name,argN=j)
+						if len(items) > 0:
+							if((genType == "while" or genType == "if") and j > 1):
+								if items[0].Type == "variable":
+									args.append("print("+str(items[0].Name)+")")
+								if items[0].Type == "method":
+									args.append(str(items[0].Name)+"()")
+							elif((genType == "for") and j > 2):
+								args.append("print("+str(items[0].Name)+")")
+							else:
+								args.append(str(items[0].Name))
+				print("****->"+str(getArgNum(genType))+", "+str(argNum)+ ", " +str(args))
 				pass
 			if(i.Type == "class"):
 				genType = "class"
+				args=[comment]
 				pass
 			if(i.Type == "output"):
 				genType="print"
