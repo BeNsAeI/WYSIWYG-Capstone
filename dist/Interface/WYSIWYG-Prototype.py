@@ -70,7 +70,8 @@ Builder.load_file('Scene.kv')
 Builder.load_file('DocumentOptions.kv')
 
 parsingTable = ParsingTable();
-blocks = []
+lineStack = [];
+blocks = [];
 channelHolder = [];
 scatterStack = [];
 widgetStack = [];
@@ -137,14 +138,23 @@ def ChannelInDraw(scatter, build):
         current_X = channelHolder[1].center_x;
         previous_Y = channelHolder[0].center_y;
         current_Y = channelHolder[1].center_y;
-        with build.canvas:
-            # Line(points=[self.blocks[self.i - 1].x, self.blocks[self.i - 1].y, self.blocks[self.i].x, self.blocks[self.i].y], width=10)
-            Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
+        for x in scatterStack:
+            if x.name == channelHolder[0].name
+                for i in scatterStack:
+                    if i.name == channelHolder[1].name
+                        lineStack.append(Line(points=(x.center_x, x.center_y, i.center_x, i.center_y)))
 
+        with build.canvas:
+            lineStack[len(lineStack-1)]
+            #Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
+        
+        
+        
         parsingTable.addChannel(channelStack)
         parsingTable.printTable()
         for i in channelStack:
             print("Source:" + i.SourceID.Name + ", Destination:" + i.DestinationID.Name)
+            
 def ChannelOutDraw(scatter, build):
     if len(channelHolder) == 2:
         channelHolder.pop();
@@ -156,9 +166,15 @@ def ChannelOutDraw(scatter, build):
         current_X = channelHolder[1].center_x;
         previous_Y = channelHolder[0].center_y;
         current_Y = channelHolder[1].center_y;
+        for x in scatterStack:
+            if x.name == channelHolder[1].name
+                for i in scatterStack:
+                    if i.name == channelHolder[0].name
+                        lineStack.append(Line(points=(x.center_x, x.center_y, i.center_x, i.center_y)))
+
         with build.canvas:
-            # Line(points=[self.blocks[self.i - 1].x, self.blocks[self.i - 1].y, self.blocks[self.i].x, self.blocks[self.i].y], width=10)
-            Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
+            lineStack[len(lineStack-1)]
+            #Line(points=(previous_X, previous_Y, current_X, current_Y), width=3)
 
         parsingTable.addChannel(channelStack)
         parsingTable.printTable()
