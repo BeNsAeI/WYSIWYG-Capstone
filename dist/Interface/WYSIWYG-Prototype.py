@@ -51,6 +51,7 @@ from kivy.lang import Builder
 from kivy.graphics import Rectangle, Color
 from kivy.clock import Clock
 from functools import partial
+
 import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
@@ -64,24 +65,25 @@ from Generator import Generator
 sys.path.append('../Debugger')
 from errorHandler import errorHandler
 
-def getArgNum(type):
-	from TemplateHandler import fileIO
-	input = fileIO("python")
-	src = input.read_fil(type)
-	print("*** getArgNum -> "+type+"\n"+src)
-	h = 0
-	for i in range(0,50):
-		mystr = "<<ARG"+str(i)+">>"
-		if mystr in src:
-			h = i
-			print(mystr)
-	return h
-
 # Included Builds:
 Builder.load_file('Scene.kv')
 #Builder.load_file('BuildSpace.kv')
 #Builder.load_file('ProgramBuilderSuite.kv')
 Builder.load_file('DocumentOptions.kv')
+
+
+def getArgNum(type):
+    from TemplateHandler import fileIO
+    input = fileIO("python")
+    src = input.read_fil(type)
+    print("*** getArgNum -> "+type+"\n"+src)
+    h = 0
+    for i in range(0,50):
+        mystr = "<<ARG"+str(i)+">>"
+        if mystr in src:
+            h = i
+            print(mystr)
+    return h
 
 parsingTable = ParsingTable();
 lineStack = [];
@@ -102,18 +104,18 @@ def createDirectory():
         os.makedirs(directory)
 
 def is_number(s):
-	try:
-		float(s)
-		return True
-	except ValueError:
-		pass
-	try:
-		import unicodedata
-		unicodedata.numeric(s)
-		return True
-	except (TypeError, ValueError):
-		pass
-	return False
+    try:
+        float(s)
+        return True
+    except ValueError:
+        pass
+    try:
+        import unicodedata
+        unicodedata.numeric(s)
+        return True
+    except (TypeError, ValueError):
+        pass
+    return False
 #Class Definitions:
 
 class LineData():
@@ -130,13 +132,13 @@ class LineData():
 # Public Methods: set_source , set_destination     #
 # Status: Edit tentetive                           #
 ####################################################
-def ChannelInDraw(scatter, build,argn=None):
+def ChannelInDraw(scatter, build, argn=None):
     if len(channelHolder) == 2:
         channelHolder.pop();
         channelHolder.pop();
     channelHolder.append(scatter);
     if len(channelHolder) == 2:
-        channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name,argN=argn))
+        channelStack.append(Channel(channelCount, channelHolder[0].name, channelHolder[1].name, argN=argn))
         for x in scatterStack:
             if x.name == channelHolder[0].name:
                 for i in scatterStack:
@@ -221,20 +223,21 @@ class Scatterer(Scatter):
 # Status: FINISHED                                 #
 ####################################################
 class CornerRectangleWidget(Widget):
-	#DLW = StringProperty(debugText)
-	def __init__(self, **kwargs):
-		self.log=debugText
-		super(CornerRectangleWidget, self).__init__(**kwargs)
-		with self.canvas:
-			pass
-		#self.bind(DLW=self.update_rect)
-		Clock.schedule_interval(self.update_rect,0.1)
-		self.myLabel = Label(text = "", pos=(self.width+200,0))
-		self.add_widget(self.myLabel)
-	def update_rect(self, *args):
-		self.log=debugText
-		self.myLabel.text=self.log
-		self.myLabel.size_hint_y=None
+    #DLW = StringProperty(debugText)
+    def __init__(self, **kwargs):
+        self.log=debugText
+        super(CornerRectangleWidget, self).__init__(**kwargs)
+        with self.canvas:
+            pass
+    #self.bind(DLW=self.update_rect)
+        Clock.schedule_interval(self.update_rect,0.1)
+        self.myLabel = Label(text="", pos=(self.width+200,0))
+        self.add_widget(self.myLabel)
+
+    def update_rect(self, *args):
+        self.log = debugText
+        self.myLabel.text = self.log
+        self.myLabel.size_hint_y = None
 
 class Scene(ScatterLayout):
     pass
@@ -250,6 +253,7 @@ class class_Block(Widget):
         super(class_Block, self).__init__(**kwargs);
         self.name = Block;
         self.build = buildSpc;
+
     def set_name(self, newName):
         self.name = newName;
 
@@ -257,6 +261,7 @@ class class_Block(Widget):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelOutDraw(i, self.build)
+
     def channel_in_dr(self):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
@@ -269,38 +274,40 @@ class method_Block(GridLayout):
         self.build = buildSpc;
         self.method = '';
         self.argN = 0;
-        self.CID = []
+        self.CID = [];
+
     def set_name(self, newName):
         self.name = newName;
 
     def set_method(self, methodType):
         self.method = methodType;
         print(self.method)
+
     def tailorMethod(self, argn, methodType):
-        p=0;
+        p = 0;
         if (argn == 4):
             while p < argn:
                 p += 1
                 self.argN = p
-                self.add_widget(Button(text="Arg" + str(p), on_release=partial(self.channel_in_dr,argN=p)));
+                self.add_widget(Button(text="Arg" + str(p), on_release=partial(self.channel_in_dr, argN=p)));
                 self.argN = 0
-        if(argn == 3):
+        if (argn == 3):
             while p < argn:
-                p+=1
+                p += 1
                 self.argN = p
-                self.add_widget(Button(text="Arg" + str(p), on_release=partial(self.channel_in_dr,argN=p)));
+                self.add_widget(Button(text="Arg" + str(p), on_release=partial(self.channel_in_dr, argN=p)));
                 self.argN = 0
-        elif(argn == 2):
+        elif (argn == 2):
             self.argN = 1
-            self.add_widget(Button(text="Arg1", on_release=partial(self.channel_in_dr,argN=1)));
+            self.add_widget(Button(text="Arg1", on_release=partial(self.channel_in_dr, argN=1)));
             self.add_widget(Label(text=''))
             self.argN = 2
-            self.add_widget(Button(text="Arg2", on_release=partial(self.channel_in_dr,argN=2)));
+            self.add_widget(Button(text="Arg2", on_release=partial(self.channel_in_dr, argN=2)));
             self.argN = 0
-        elif(argn == 1):
+        elif (argn == 1):
             self.add_widget(Label(text=''))
             self.argN = 1
-            self.add_widget(Button(text="Arg1", on_release=partial(self.channel_in_dr,argN=1)));
+            self.add_widget(Button(text="Arg1", on_release=partial(self.channel_in_dr, argN=1)));
             self.argN = 0
             self.add_widget(Label(text=''))
         else:
@@ -313,22 +320,22 @@ class method_Block(GridLayout):
         if argn != 4:
             self.add_widget(Label(text=''))
 
-
-    def channel_out_dr(self,rand):
+    def channel_out_dr(self, rand):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
                 ChannelOutDraw(i, self.build)
 
-    def channel_in_dr(self,rand,argN=0):
+    def channel_in_dr(self, rand, argN=0):
         for i in scatterStack:
             if i.name.Name == self.name.Name:
-                ChannelInDraw(i, self.build,argn=argN)
+                ChannelInDraw(i, self.build, argn=argN)
 
 class variable_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
         super(variable_Block, self).__init__(**kwargs);
         self.name = Block;
         self.build = buildSpc;
+
     def set_name(self, newName):
         self.name = newName;
 
@@ -339,7 +346,6 @@ class variable_Block(Widget):
     def takeName(self, text):
         self.name.Name = text;
         print("Name: " + self.name.Name)
-
 
     def channel_out_dr(self):
         for i in scatterStack:
@@ -356,6 +362,7 @@ class output_Block(Widget):
         super(output_Block, self).__init__(**kwargs);
         self.name = Block;
         self.build = buildSpc;
+
     def set_name(self, newName):
         self.name = newName;
 
@@ -426,91 +433,90 @@ class BuildSpace(FloatLayout):
             print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
 
 class BuilderSuite(BoxLayout):
-	def __init__(self, **kwargs):
-		super(BuilderSuite, self).__init__(**kwargs);
-	def extract(self):
-		# Parsing blocks:
-		tmpblocks=[]
-		for i in blocks:
-			from copy import deepcopy, _deepcopy_dispatch
-			tmp = deepcopy(i)
-			tmpblocks.append(tmp)
-		orderedBlock=[]
-		counter = len(tmpblocks)
-		while (counter>0):
-			for ord in tmpblocks:
-				print("-> at:"+ord.Name)
-				item = FindSrc(channelStack,tmpblocks,ord.Name)
-				if len(item) == 0:
-					from copy import deepcopy, _deepcopy_dispatch
-					if ord.Name != "processed":
-						orderedBlock+= [deepcopy(ord)]
-					ord.Name = "processed"
-					counter -= 1
-					print("-> parsed: "+ord.Name)
-					print("len:"+str(len(item)))
-					print(counter)
-		for i in orderedBlock:
-			print(i.Name)
-		# Generating
-		print("EXTRACT: Status:");
-		temp = Generator()
-		II = 0
-		for i in orderedBlock:
-#			if is_number(i.Value)==False:
-#				i.Value = '"'+i.Value+'"'
-			print(i.Name+", "+i.Type+", "+i.Caption+", "+str(i.ID)+".")
-			comment = "Code for "+i.Name+" block; "+i.Caption+":"
-			if(i.Type == "variable"):
-				genType = "var"
-				arg1 = i.Name
-				items = FindSrc(channelStack,blocks,i.Name)
-				if(channelStack and items):
-					arg2 = str(items[0].Name)
-				else:
-					arg2 = str(i.Value)
-				args=[comment,arg1,arg2]
-			if(i.Type == "method"):
-				genType = i.Name
-				genType = genType[:-1]
-				argNum = getArgNum(genType)
-				args=[comment]
-				print("****->"+str(getArgNum(genType))+", "+str(argNum)+ ", " +str(args))
-				if argNum == 1:
-					items = FindSrc(channelStack,blocks,i.Name)
-					args.append(str(items[0].Name))
-				if argNum > 1:
-					for j in range (1,argNum+1):
-						items = FindSrc(channelStack,blocks,i.Name,argN=j)
-						if len(items) > 0:
-							if((genType == "while" or genType == "if") and j > 1):
-								if items[0].Type == "variable":
-									args.append("print("+str(items[0].Name)+")")
-								if items[0].Type == "method":
-									args.append(str(items[0].Name)+"()")
-							elif((genType == "for") and j > 2):
-								args.append("print("+str(items[0].Name)+")")
-							else:
-								args.append(str(items[0].Name))
-				print("****->"+str(getArgNum(genType))+", "+str(argNum)+ ", " +str(args))
-				pass
-			if(i.Type == "class"):
-				genType = "class"
-				args=[comment]
-				pass
-			if(i.Type == "output"):
-				genType="print"
-				items = FindSrc(channelStack,blocks,i.Name)
-				arg1 = str(items[0].Name)
-				args=[comment,arg1]
-			temp.addBlock(genType,II,args)
-		print(temp.spaghetti)
-		temp.release()
-		myHandler=errorHandler("Output.py")
-		myHandler.Monitor()
-		myHandler.makeReport()
-		global debugText
-		debugText="Error: \n"+myHandler.err+"\n"
+    def __init__(self, **kwargs):
+        super(BuilderSuite, self).__init__(**kwargs);
+
+    def extract(self):
+        # Parsing blocks:
+        tmpblocks = []
+        for i in blocks:
+            from copy import deepcopy, deepcopy_dispatch
+            tmp = deepcopy(i)
+            tmpblocks.append(tmp)
+        orderedBlock = []
+        counter = len(tmpblocks)
+        while (counter > 0):
+            for ord in tmpblocks:
+                print("-> at:" + ord.Name)
+                item = FindSrc(channelStack, tmpblocks, ord.Name)
+                if len(item) == 0:
+                    from copy import deepcopy, deepcopy_dispatch
+                    if ord.Name != "processed":
+                        orderedBlock += [deepcopy(ord)]
+                    ord.Name = "processed"
+                    counter -= 1
+                    print("-> parsed: " + ord.Name)
+                    print("len:" + str(len(item)))
+                    print(counter)
+        for i in orderedBlock:
+            print(i.Name)
+        # Generating
+        print("EXTRACT: Status:");
+        temp = Generator()
+        II = 0
+        for i in orderedBlock:
+            print(i.Name + ", " + i.Type + ", " + i.Caption + ", " + str(i.ID) + ".")
+            comment = "Code for " + i.Name + " block; " + i.Caption + ":"
+            if (i.Type == "variable"):
+                genType = "var"
+                arg1 = i.Name
+                items = FindSrc(channelStack, blocks, i.Name)
+                if (channelStack and items):
+                    arg2 = str(items[0].Name)
+                else:
+                    arg2 = str(i.Value)
+                args = [comment, arg1, arg2]
+            if (i.Type == "method"):
+                genType = i.Name
+                genType = genType[:-1]
+                argNum = getArgNum(genType)
+                args = [comment]
+                print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
+                if argNum == 1:
+                    items = FindSrc(channelStack, blocks, i.Name)
+                    args.append(str(items[0].Name))
+                if argNum > 1:
+                    for j in range(1, argNum + 1):
+                        items = FindSrc(channelStack, blocks, i.Name, argN=j)
+                        if len(items) > 0:
+                            if ((genType == "while" or genType == "if") and j > 1):
+                                if items[0].Type == "variable":
+                                    args.append("print(" + str(items[0].Name) + ")")
+                                if items[0].Type == "method":
+                                    args.append(str(items[0].Name) + "()")
+                            elif ((genType == "for") and j > 2):
+                                args.append("print(" + str(items[0].Name) + ")")
+                            else:
+                                args.append(str(items[0].Name))
+                print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
+                pass
+            if (i.Type == "class"):
+                genType = "class"
+                args = [comment]
+                pass
+            if (i.Type == "output"):
+                genType = "print"
+                items = FindSrc(channelStack, blocks, i.Name)
+                arg1 = str(items[0].Name)
+                args = [comment, arg1]
+            temp.addBlock(genType, II, args)
+        print(temp.spaghetti)
+        temp.release()
+        myHandler = errorHandler("Output.py")
+        myHandler.Monitor()
+        myHandler.makeReport()
+        global debugText
+        debugText = "Error: \n" + myHandler.err + "\n"
 
 class DocumentOptions(BoxLayout):
     pass
@@ -525,3 +531,7 @@ class WYSIWYGApp(App):
 if __name__=="__main__":
     sample_app = WYSIWYGApp()
     sample_app.run()
+
+#    def channelRedraw():
+#        for i in lineStack:
+#            with build.canvas:
