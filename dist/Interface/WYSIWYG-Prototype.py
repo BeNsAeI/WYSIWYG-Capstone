@@ -388,14 +388,12 @@ class BuildSpace(FloatLayout):
         self.classCount = 0;
         self.variableCount = 0;
         self.outputCount = 0;
-        self.directory = os.getcwd();
+        self.directory = os.getcwd();8
         self.directory = self.directory + '/../../MyProjectFolder'
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
 
     def addBlock(self, type, argN=0, methodType=None):
-        print(type)
-        p = 0
         if type == "class":
             blocks.append(Block(type+str(self.classCount),type,"Add Caption",self.classCount,0))
             self.classCount+=1;
@@ -436,6 +434,52 @@ class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
         super(BuilderSuite, self).__init__(**kwargs);
 
+    def getCode(self,block,II):
+        comment="Inner element"
+        temp = Generator()
+        if (block.Type == "variable"):
+            genType = "var"
+            items = FindSrc(channelStack, blocks, block.Name)
+            arg1 = block.Name
+            if (channelStack and items):
+                arg2 = str(items[0].Name)
+            else:
+                arg2 = str(block.Value)
+       	    args = [comment, arg1, arg2]
+        if (block.Type == "method"):
+            genType = block.Name
+            genType = genType[:-1]
+            argNum = getArgNum(genType)
+            args = [comment]
+            if argNum == 1:
+                items = FindSrc(channelStack, blocks, block.Name)
+                args.append(str(items[0].Name))
+            if argNum > 1:
+                for i in range(1, argNum + 1):
+                    items = FindSrc(channelStack, blocks, block.Name, argN=i)
+                    if len(items) > 0:
+                        if ((genType == "while" or genType == "if") and i > 1):
+                            args.append(self.getCode(items[0],II+1))
+                        elif ((genType == "for") and i > 2):
+                            args.append(self.getCode(items[0],II+1))
+                        elif (genType == "output"):
+                        	args.append(self.getCode(items[0],II+1))
+                        else:
+                            args.append(str(items[0].Name))
+        if (block.Type == "class"):
+            genType = "class"
+            args = [comment]
+        if (block.Type == "output"):
+            genType = "print"
+            items = FindSrc(channelStack, blocks, block.Name)
+            if len(items) > 0:
+	        arg1 = str(items[0].Name)
+	    else:
+	        arg1=""
+            args = [comment, arg1]
+        temp.addBlock(genType, II, args)
+        return temp.spaghetti
+
     def extract(self):
         # Parsing blocks:
         tmpblocks = []
@@ -453,9 +497,9 @@ class BuilderSuite(BoxLayout):
                     from copy import deepcopy
                     if ord.Name != "processed":
                         orderedBlock += [deepcopy(ord)]
-                    ord.Name = "processed"
-                    counter -= 1
-                    print("-> parsed: " + ord.Name)
+                    	ord.Name = "processed"
+                    	counter -= 1
+                    	print("-> parsed: " + ord.Name)
                     print("len:" + str(len(item)))
                     print(counter)
         for i in orderedBlock:
@@ -490,12 +534,11 @@ class BuilderSuite(BoxLayout):
                         items = FindSrc(channelStack, blocks, i.Name, argN=j)
                         if len(items) > 0:
                             if ((genType == "while" or genType == "if") and j > 1):
-                                if items[0].Type == "variable":
-                                    args.append("print(" + str(items[0].Name) + ")")
-                                if items[0].Type == "method":
-                                    args.append(str(items[0].Name) + "()")
+                                args.append(self.getCode(items[0],II+1))
                             elif ((genType == "for") and j > 2):
-                                args.append("print(" + str(items[0].Name) + ")")
+                                args.append(self.getCode(items[0],II+1))
+                            elif (genType == "output"):
+                            	args.append(self.getCode(items[0],II+1))
                             else:
                                 args.append(str(items[0].Name))
                 print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
@@ -507,7 +550,11 @@ class BuilderSuite(BoxLayout):
             if (i.Type == "output"):
                 genType = "print"
                 items = FindSrc(channelStack, blocks, i.Name)
-                arg1 = str(items[0].Name)
+                if len(items)>0:
+                    print("******-> "+str(items[0].Type))
+                    arg1 = str(items[0].Name)
+                else:
+                    arg1 = ""
                 args = [comment, arg1]
             temp.addBlock(genType, II, args)
         print(temp.spaghetti)
