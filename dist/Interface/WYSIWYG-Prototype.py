@@ -440,7 +440,7 @@ class BuilderSuite(BoxLayout):
         # Parsing blocks:
         tmpblocks = []
         for i in blocks:
-            from copy import deepcopy, deepcopy_dispatch
+            from copy import deepcopy
             tmp = deepcopy(i)
             tmpblocks.append(tmp)
         orderedBlock = []
@@ -450,7 +450,7 @@ class BuilderSuite(BoxLayout):
                 print("-> at:" + ord.Name)
                 item = FindSrc(channelStack, tmpblocks, ord.Name)
                 if len(item) == 0:
-                    from copy import deepcopy, deepcopy_dispatch
+                    from copy import deepcopy
                     if ord.Name != "processed":
                         orderedBlock += [deepcopy(ord)]
                     ord.Name = "processed"
