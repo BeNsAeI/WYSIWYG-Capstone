@@ -1,11 +1,18 @@
 # Generate with Tensorflow WYSIWYG GUI
-'''This is a variable declearation'''
-string="Hello world!"
-'''This is a variable declearation'''
-x=10
-'''This is a comment made by Ben'''
-for i in range(0,x):
-	
-	'''testing print'''
-	print(i);
+
+
+
+'''Code for c block; Add Caption:'''
+c=0
+'''Code for if0 block; Add Caption:'''
+if 0 :
+	# Generate with Tensorflow WYSIWYG GUI
+	'''Inner element'''
+	c=12
+
+else:
+	# Generate with Tensorflow WYSIWYG GUI
+	'''Inner element'''
+	c=1
+
 

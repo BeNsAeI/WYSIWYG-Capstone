@@ -18,12 +18,12 @@ class Channel:
 	def Out(self):
 		return self.Data
 
-def FindSrc(Clist,Blist,name,argN=None): #we are destination
+def FindSrc(Clist,Blist,name,id,argN=None): #we are destination
 	result = []
 	for i in Clist:
-		if i.DestinationID.Name == name:
+		if i.DestinationID.Name == name and i.DestinationID.ID == id:
 			for j in Blist:
-				if j.Name == i.SourceID.Name:
+				if j.Name == i.SourceID.Name and j.ID == i.SourceID.ID:
 					if argN != None:
 						if(argN == i.ArgN):
 							result.append(j)
@@ -32,7 +32,20 @@ def FindSrc(Clist,Blist,name,argN=None): #we are destination
 					else:
 						result.append(j)
 	return result
-
+def FindDst(Clist,Blist,name,id,argN=None): #we are destination
+	result = []
+	for i in Clist:
+		if i.SourceID.Name == name and i.SourceID.ID == id:
+			for j in Blist:
+				if j.Name == i.DestinationID.Name and j.ID == i.DestinationID.ID:
+					if argN != None:
+						if(argN == i.ArgN):
+							result.append(j)
+						else:
+							pass
+					else:
+						result.append(j)
+	return result
 def testCase():
 	import random
 	print("Test case:")

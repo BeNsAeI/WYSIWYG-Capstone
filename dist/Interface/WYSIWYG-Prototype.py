@@ -57,6 +57,7 @@ sys.path.append('../Blocks')
 from Blocks import Block
 from Channels import Channel
 from Channels import FindSrc
+from Channels import FindDst
 sys.path.append('../Core')
 from Table import ParsingTable
 from Parser import Tree
@@ -439,7 +440,7 @@ class BuilderSuite(BoxLayout):
         temp = Generator()
         if (block.Type == "variable"):
             genType = "var"
-            items = FindSrc(channelStack, blocks, block.Name)
+            items = FindSrc(channelStack, blocks, block.Name,block.ID)
             arg1 = block.Name
             if (channelStack and items):
                 arg2 = str(items[0].Name)
@@ -452,11 +453,11 @@ class BuilderSuite(BoxLayout):
             argNum = getArgNum(genType)
             args = [comment]
             if argNum == 1:
-                items = FindSrc(channelStack, blocks, block.Name)
+                items = FindSrc(channelStack, blocks, block.Name,block.ID)
                 args.append(str(items[0].Name))
             if argNum > 1:
                 for i in range(1, argNum + 1):
-                    items = FindSrc(channelStack, blocks, block.Name, argN=i)
+                    items = FindSrc(channelStack, blocks, block.Name,block.ID, argN=i)
                     if len(items) > 0:
                         if ((genType == "while" or genType == "if") and i > 1):
                             args.append(self.getCode(items[0],II+1))
@@ -465,13 +466,13 @@ class BuilderSuite(BoxLayout):
                         elif (genType == "output"):
                         	args.append(self.getCode(items[0],II+1))
                         else:
-                            args.append(str(items[0].Name))
+                            args.append(str(items[0].Value))
         if (block.Type == "class"):
             genType = "class"
             args = [comment]
         if (block.Type == "output"):
             genType = "print"
-            items = FindSrc(channelStack, blocks, block.Name)
+            items = FindSrc(channelStack, blocks, block.Name,block.ID)
             if len(items) > 0:
 	        arg1 = str(items[0].Name)
 	    else:
@@ -492,7 +493,7 @@ class BuilderSuite(BoxLayout):
         while (counter > 0):
             for ord in tmpblocks:
                 print("-> at:" + ord.Name)
-                item = FindSrc(channelStack, tmpblocks, ord.Name)
+                item = FindSrc(channelStack, tmpblocks, ord.Name,ord.ID)
                 if len(item) == 0:
                     from copy import deepcopy
                     if ord.Name != "processed":
@@ -514,11 +515,16 @@ class BuilderSuite(BoxLayout):
             if (i.Type == "variable"):
                 genType = "var"
                 arg1 = i.Name
-                items = FindSrc(channelStack, blocks, i.Name)
+                items = FindSrc(channelStack, blocks, i.Name,i.ID)
+                dst = FindDst(channelStack, blocks, i.Name,i.ID)
                 if (channelStack and items):
                     arg2 = str(items[0].Name)
                 else:
                     arg2 = str(i.Value)
+                if(len(dst)>0):
+                    if(dst[0].Type == "method"):
+                	comment = arg1=arg2=""
+                	genType = "empty"
                 args = [comment, arg1, arg2]
             if (i.Type == "method"):
                 genType = i.Name
@@ -527,11 +533,11 @@ class BuilderSuite(BoxLayout):
                 args = [comment]
                 print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
                 if argNum == 1:
-                    items = FindSrc(channelStack, blocks, i.Name)
+                    items = FindSrc(channelStack, blocks, i.Name,i.ID)
                     args.append(str(items[0].Name))
                 if argNum > 1:
                     for j in range(1, argNum + 1):
-                        items = FindSrc(channelStack, blocks, i.Name, argN=j)
+                        items = FindSrc(channelStack, blocks, i.Name,i.ID, argN=j)
                         if len(items) > 0:
                             if ((genType == "while" or genType == "if") and j > 1):
                                 args.append(self.getCode(items[0],II+1))
@@ -540,7 +546,7 @@ class BuilderSuite(BoxLayout):
                             elif (genType == "output"):
                             	args.append(self.getCode(items[0],II+1))
                             else:
-                                args.append(str(items[0].Name))
+                                args.append(str(items[0].Value))
                 print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
                 pass
             if (i.Type == "class"):
@@ -549,7 +555,7 @@ class BuilderSuite(BoxLayout):
                 pass
             if (i.Type == "output"):
                 genType = "print"
-                items = FindSrc(channelStack, blocks, i.Name)
+                items = FindSrc(channelStack, blocks, i.Name,i.ID)
                 if len(items)>0:
                     print("******-> "+str(items[0].Type))
                     arg1 = str(items[0].Name)
