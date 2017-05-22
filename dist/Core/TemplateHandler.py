@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+from projectPath import projectPath
 class fileIO:
 	def __init__(self, fileType):
 		self.fileType = fileType;
@@ -14,7 +14,8 @@ class fileIO:
 		return data;
 
 	def writefil(self,outstring):
-		with open("Output"+".py", 'w') as myfile:
+		paths = projectPath()
+		with open(paths.outputPath, 'w') as myfile:
 			myfile.write(outstring)
 		myfile.close()
 
