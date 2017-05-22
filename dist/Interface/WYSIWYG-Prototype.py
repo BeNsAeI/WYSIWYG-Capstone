@@ -65,6 +65,8 @@ from Parser import Parser
 from Generator import Generator
 sys.path.append('../Debugger')
 from errorHandler import errorHandler
+sys.path.append('../Core')
+from projectPath import projectPath
 
 # Included Builds:
 Builder.load_file('Scene.kv')
@@ -389,7 +391,7 @@ class BuildSpace(FloatLayout):
         self.classCount = 0;
         self.variableCount = 0;
         self.outputCount = 0;
-        self.directory = os.getcwd();8
+        self.directory = os.getcwd();
         self.directory = self.directory + '/../../MyProjectFolder'
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
@@ -434,7 +436,12 @@ class BuildSpace(FloatLayout):
 class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
         super(BuilderSuite, self).__init__(**kwargs);
-
+        self.projectPath = projectPath()
+		
+    def updatePathname(self, text):
+        self.projectPath.updatePath(text)
+        print(self.projectPath.getPath())
+		
     def getCode(self,block,II):
         comment="Inner element"
         temp = Generator()
@@ -571,6 +578,8 @@ class BuilderSuite(BoxLayout):
         global debugText
         debugText = "Error: \n" + myHandler.err + "\n"
 
+
+		
 class DocumentOptions(BoxLayout):
     pass
 

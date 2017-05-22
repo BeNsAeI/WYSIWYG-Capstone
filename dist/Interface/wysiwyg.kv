@@ -56,6 +56,12 @@
         size_hint_x: None
         size: 60, 40
         on_release: root.extract()
+	TextInput:
+		size_hint_x: 0.4
+		id: outputpath
+		hint_text: "Output Path"
+		multiline: False
+		on_text: root.updatePathname(self.text)
 
 <BuildSpace>
     id: buildSpc
