@@ -11,7 +11,7 @@
 from TemplateHandler import fileIO
 class Generator:
 	def __init__(self):
-		self.spaghetti = '# Generate with Tensorflow WYSIWYG GUI\n'
+		self.spaghetti = '# Generate with Tensorflow WYSIWYG GUI\nimport tensorflow as tf\n'
 		pass
 		#add import * from *
 		#add import HO from Source.py
@@ -31,9 +31,10 @@ class Generator:
 				indent += '\t'
 			newBlock = newBlock.replace('#'+str(i)+'#',indent)
 		for i in range(0, len(args)):
-			newBlock = newBlock.replace('<<ARG'+str(i)+'>>',args[i])
+			word = args[i]
+			word = word.replace('.','_')
+			newBlock = newBlock.replace('<<ARG'+str(i)+'>>',word)
 		newBlock = newBlock.replace('<<COM>>',comment)
-		newBlock = newBlock.replace('tf.','')
 		self.spaghetti += newBlock
 	def release(self):
 		self.spaghetti += '\n'

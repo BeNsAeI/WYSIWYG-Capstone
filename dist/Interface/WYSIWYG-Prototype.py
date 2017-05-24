@@ -566,7 +566,8 @@ class BuilderSuite(BoxLayout):
                 args = [i.Name]
                 if argNum == 1:
                     items = FindSrc(channelStack, blocks, i.Name,i.ID)
-                    args.append(str(items[0].Name))
+                    if len(items)>0:
+	                    args.append(str(items[0].Name))
                 if argNum > 1:
                     for j in range(1, argNum + 1):
                         items = FindSrc(channelStack, blocks, i.Name,i.ID, argN=j)

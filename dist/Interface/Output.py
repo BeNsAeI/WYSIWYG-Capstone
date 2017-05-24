@@ -1,11 +1,9 @@
 # Generate with Tensorflow WYSIWYG GUI
-'''This is a variable declearation'''
-"Hello world!"=<<ARG2>>
-'''This is a variable declearation'''
-10=<<ARG2>>
-'''This is a comment made by Ben'''
-for range(0,x) in :
-	<<ARG3>>
-	'''testing print'''
-	print(<<ARG1>>);
+import tensorflow as tf
+'''Code for variable0 block; Add Caption:'''
+variable0=[[2,1],[1,2]]
+'''Code for tf.abs0 block; Add Caption:, Name could be None'''
+tf_abs0=tf.abs(variable0)
+'''Code for output0 block; Add Caption:'''
+print(tf_abs0);
 
