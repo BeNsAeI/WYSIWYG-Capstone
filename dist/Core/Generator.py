@@ -10,8 +10,10 @@
 # de struct the program which Calls the EXECUTION()
 from TemplateHandler import fileIO
 class Generator:
-	def __init__(self):
-		self.spaghetti = '# Generate with Tensorflow WYSIWYG GUI\nimport tensorflow as tf\nimport numpy as np\nimport matplotlib.pyplot as plt\n'
+	def __init__(self,first=False):
+		self.spaghetti = ''
+		if first:
+			self.spaghetti = '# Generate with Tensorflow WYSIWYG GUI\nimport tensorflow as tf\nimport numpy as np\nimport matplotlib.pyplot as plt\n'
 		pass
 		#add import * from *
 		#add import HO from Source.py

@@ -163,7 +163,7 @@ def ChannelInDraw(scatter, build, argn=None):
         parsingTable.printTable()
         for i in channelStack:
             print("Source:" + i.SourceID.Name + ", Destination:" + i.DestinationID.Name)
-            
+
 def ChannelOutDraw(scatter, build):
     if len(channelHolder) == 2:
         channelHolder.pop();
@@ -540,7 +540,7 @@ class BuilderSuite(BoxLayout):
             print(i.Name)
         # Generating
         print("EXTRACT: Status:");
-        temp = Generator()
+        temp = Generator(first=True)
         II = 0
         for i in orderedBlock:
             print(i.Name + ", " + i.Type + ", " + i.Caption + ", " + str(i.ID) + ".")
@@ -551,7 +551,10 @@ class BuilderSuite(BoxLayout):
                 items = FindSrc(channelStack, blocks, i.Name,i.ID)
                 dst = FindDst(channelStack, blocks, i.Name,i.ID)
                 if (channelStack and items):
-                    arg2 = str(items[0].Name)
+                    if items[0].Type=="method" and (items[0].Name[0:2] == "if" or items[0].Name[0:3] == "for" or items[0].Name[0:5] == "while"):
+	                    arg2 = str(i.Value)
+	            else:
+	            	    arg2 = str(items[0].Name)
                 else:
                     arg2 = str(i.Value)
                 if(len(dst)>0):
