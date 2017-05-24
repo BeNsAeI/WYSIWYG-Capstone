@@ -251,6 +251,26 @@ class cl_button(ToggleButton):
 class method_button(ToggleButton):
     pass
 
+class probe_Block(Widget):
+    def __init__(self, buildSpc, **kwargs):
+        super(probe_Block, self).__init__(**kwargs);
+        self.val = None;
+        self.build = buildSpc;
+
+    def set_Value(self, newValue):
+        self.val = newValue;
+
+    def channel_out_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelOutDraw(i, self.build)
+
+    def channel_in_dr(self):
+        for i in scatterStack:
+            if i.name.Name == self.name.Name:
+                ChannelInDraw(i, self.build)
+
+
 class class_Block(Widget):
     def __init__(self, buildSpc,**kwargs):
         super(class_Block, self).__init__(**kwargs);
@@ -391,6 +411,7 @@ class BuildSpace(FloatLayout):
         self.classCount = 0;
         self.variableCount = 0;
         self.outputCount = 0;
+        self.probeCount = 0;
         self.directory = os.getcwd();
         self.directory = self.directory + '/../../MyProjectFolder'
         if not os.path.exists(self.directory):
@@ -417,6 +438,11 @@ class BuildSpace(FloatLayout):
             self.outputCount+=1;
             d = output_Block(self);
             d.set_name(blocks[len(blocks)-1]);
+        elif type == "probe":
+            blocks.append(Block(type + str(self.probeCount), type, "Add Caption", self.probeCount, 0))
+            self.probeCount += 1;
+            d = probe_Block(self);
+            d.set_Value(blocks[len(blocks) - 1]);
         else:
             print("Error with request")
             pass

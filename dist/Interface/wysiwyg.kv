@@ -554,6 +554,7 @@
 
         MenuButton:
             text: "Probe"
+            on_release: root.addBlock("probe")
 
         MenuButton:
             text: "Output"
@@ -574,6 +575,22 @@
         Rectangle:
             size: self.size
             pos: self.pos
+
+<probe_Block>:
+    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        id: val
+    TextInput:
+	Button:
+		on_release: root.channel_in_dr()
+		text: "Link"
+		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 
 			
 <output_Block>:

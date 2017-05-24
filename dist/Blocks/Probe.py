@@ -10,4 +10,4 @@ class Probe:
 		self.text = str(var)
 	def inject(probes,id):
 		tmpText = "print(\"Probe["+str(id)+"]: "+probes[id]+"\")\n"
-		retun tmpText
+		return tmpText
