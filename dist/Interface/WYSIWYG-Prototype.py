@@ -555,7 +555,7 @@ class BuilderSuite(BoxLayout):
                 else:
                     arg2 = str(i.Value)
                 if(len(dst)>0):
-                    if(dst[0].Type == "method"):
+                    if(dst[0].Type == "method" and dst[0].Name[0] != 't'):
                 	comment = arg1=arg2=""
                 	genType = "empty"
                 args = [i.Name, arg1, arg2]
@@ -564,7 +564,6 @@ class BuilderSuite(BoxLayout):
                 genType = genType[:-1]
                 argNum = getArgNum(genType)
                 args = [i.Name]
-                print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
                 if argNum == 1:
                     items = FindSrc(channelStack, blocks, i.Name,i.ID)
                     args.append(str(items[0].Name))
@@ -580,7 +579,6 @@ class BuilderSuite(BoxLayout):
                             	args.append(self.getCode(items[0],II+1))
                             else:
                                 args.append(str(items[0].Value))
-                print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
                 pass
             if (i.Type == "class"):
                 genType = "class"
@@ -605,7 +603,6 @@ class BuilderSuite(BoxLayout):
         debugText = "Error: \n" + myHandler.err + "\n"
 
 
-		
 class DocumentOptions(BoxLayout):
     pass
 

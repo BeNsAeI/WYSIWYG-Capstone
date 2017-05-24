@@ -1,8 +1,11 @@
 # Generate with Tensorflow WYSIWYG GUI
-'''Code for add0 block; Add Caption:, Name could be None'''
-add0=add(<<ARG1>>,<<ARG2>> )
-'''Code for add_n1 block; Add Caption:, Name could be None'''
-add_n1=add_n(<<ARG1>>,name=<<ARG2>>)
-'''Code for atan2 block; Add Caption:, Name could be None'''
-atan2=atan(<<ARG1>>,name=<<ARG2>>)
+'''This is a variable declearation'''
+"Hello world!"=<<ARG2>>
+'''This is a variable declearation'''
+10=<<ARG2>>
+'''This is a comment made by Ben'''
+for range(0,x) in :
+	<<ARG3>>
+	'''testing print'''
+	print(<<ARG1>>);
 
