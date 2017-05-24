@@ -11,7 +11,7 @@
 from TemplateHandler import fileIO
 class Generator:
 	def __init__(self):
-		self.spaghetti = '# Generate with Tensorflow WYSIWYG GUI\nimport tensorflow as tf\n'
+		self.spaghetti = '# Generate with Tensorflow WYSIWYG GUI\nimport tensorflow as tf\nimport numpy as np\nimport matplotlib.pyplot as plt\n'
 		pass
 		#add import * from *
 		#add import HO from Source.py
