@@ -213,7 +213,7 @@ class Scatterer(Scatter):
 
     def get_name(self):
         return self.name;
-
+3
 #######################CLASS########################
 # Name: Scene, cl-button, method_button,           #
 #       class_block, method_block,variable_block,  #
@@ -437,11 +437,11 @@ class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
         super(BuilderSuite, self).__init__(**kwargs);
         self.projectPath = projectPath()
-		
+
     def updatePathname(self, text):
         self.projectPath.updatePath(text)
         print(self.projectPath.getPath())
-		
+
     def getCode(self,block,II):
         comment="Inner element"
         temp = Generator()
@@ -453,12 +453,12 @@ class BuilderSuite(BoxLayout):
                 arg2 = str(items[0].Name)
             else:
                 arg2 = str(block.Value)
-       	    args = [comment, arg1, arg2]
+       	    args = [block.Name, arg1, arg2]
         if (block.Type == "method"):
             genType = block.Name
             genType = genType[:-1]
             argNum = getArgNum(genType)
-            args = [comment]
+            args = [block.Name]
             if argNum == 1:
                 items = FindSrc(channelStack, blocks, block.Name,block.ID)
                 args.append(str(items[0].Name))
@@ -476,7 +476,7 @@ class BuilderSuite(BoxLayout):
                             args.append(str(items[0].Value))
         if (block.Type == "class"):
             genType = "class"
-            args = [comment]
+            args = [block.Name]
         if (block.Type == "output"):
             genType = "print"
             items = FindSrc(channelStack, blocks, block.Name,block.ID)
@@ -484,8 +484,8 @@ class BuilderSuite(BoxLayout):
 	        arg1 = str(items[0].Name)
 	    else:
 	        arg1=""
-            args = [comment, arg1]
-        temp.addBlock(genType, II, args)
+            args = [block.Name, arg1]
+        temp.addBlock(genType, II, args,comment)
         return temp.spaghetti
 
     def extract(self):
@@ -532,12 +532,12 @@ class BuilderSuite(BoxLayout):
                     if(dst[0].Type == "method"):
                 	comment = arg1=arg2=""
                 	genType = "empty"
-                args = [comment, arg1, arg2]
+                args = [i.Name, arg1, arg2]
             if (i.Type == "method"):
                 genType = i.Name
                 genType = genType[:-1]
                 argNum = getArgNum(genType)
-                args = [comment]
+                args = [i.Name]
                 print("****->" + str(getArgNum(genType)) + ", " + str(argNum) + ", " + str(args))
                 if argNum == 1:
                     items = FindSrc(channelStack, blocks, i.Name,i.ID)
@@ -558,7 +558,7 @@ class BuilderSuite(BoxLayout):
                 pass
             if (i.Type == "class"):
                 genType = "class"
-                args = [comment]
+                args = [i.Name]
                 pass
             if (i.Type == "output"):
                 genType = "print"
@@ -568,8 +568,8 @@ class BuilderSuite(BoxLayout):
                     arg1 = str(items[0].Name)
                 else:
                     arg1 = ""
-                args = [comment, arg1]
-            temp.addBlock(genType, II, args)
+                args = [i.Name, arg1]
+            temp.addBlock(genType, II, args,comment)
         print(temp.spaghetti)
         temp.release()
         myHandler = errorHandler("Output.py")

@@ -22,7 +22,7 @@ class Generator:
 	def __del__(self):
 		pass
 		#add EXECUTION(len(sys.argv),sys.argv)
-	def addBlock(self,name,II,args):
+	def addBlock(self,name,II,args,comment):
 		input = fileIO("python")
 		newBlock = input.read_fil(name)
 		for i in range (0,100):
@@ -32,6 +32,8 @@ class Generator:
 			newBlock = newBlock.replace('#'+str(i)+'#',indent)
 		for i in range(0, len(args)):
 			newBlock = newBlock.replace('<<ARG'+str(i)+'>>',args[i])
+		newBlock = newBlock.replace('<<COM>>',comment)
+		newBlock = newBlock.replace('tf.','')
 		self.spaghetti += newBlock
 	def release(self):
 		self.spaghetti += '\n'
@@ -45,27 +47,27 @@ def testCase():
 	comment = "This is a variable declearation"
 	varName = "string"
 	varValue='"Hello world!"'
-	args=[comment,varName,varValue]
-	temp.addBlock("var",II,args)
+	args=[varName,varValue]
+	temp.addBlock("var",II,args,comment)
 
 	comment = "This is a variable declearation"
 	varName = "x"
 	varValue="10"
-	args=[comment,varName,varValue]
-	temp.addBlock("var",II,args)
+	args=[varName,varValue]
+	temp.addBlock("var",II,args,comment)
 
 	comment = "This is a comment made by Ben"
 	tempLoop = "i"
 	arrayName = "range(0,x)"
 	todoThing = ""
-	args=[comment,tempLoop,arrayName,todoThing]
-	temp.addBlock("for",II,args)
+	args=[tempLoop,arrayName,todoThing]
+	temp.addBlock("for",II,args,comment)
 
 	II+=1
 	comment = 'testing print'
 	varName = 'i'
-	args=[comment,varName]
-	temp.addBlock("print",II,args)
+	args=[varName]
+	temp.addBlock("print",II,args,comment)
 
 	print(temp.spaghetti)
 	temp.release()
