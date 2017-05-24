@@ -577,20 +577,34 @@
             pos: self.pos
 
 <probe_Block>:
-    size: BLOCK_SIZE_X,BLOCK_SIZE_Y
-    canvas:
-        Color:
-            rgba: 0, 0, 0, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    Label:
-        id: val
-    TextInput:
-	Button:
-		on_release: root.channel_in_dr()
-		text: "Link"
-		size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
+	BoxLayout:
+		id: probe
+		size: BLOCK_SIZE_X,BLOCK_SIZE_Y
+		canvas:
+			Color:
+				rgba: 0, 0, 0, 1
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		GridLayout:
+			cols: 2
+			rows: 2
+			Label:
+				size_hint_x: 0.3
+				text: 'Value: '
+				color: 255, 0, 0, 1
+			TextInput:
+				size_hint_x: 0.4
+				id: val
+				text: ""
+				multiline: False
+				font_size: 10	
+			Label:
+			    text: ''	
+			Button:
+				on_release: root.channel_in_dr()
+				text: "Link"
+				size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 
 			
 <output_Block>:
