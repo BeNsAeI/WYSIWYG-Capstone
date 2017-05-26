@@ -29,6 +29,7 @@
 			pos: (self.width/10),0
 			size: (self.width*19)/20, self.height / 5
 <BuilderSuite@BoxLayout>:
+    id: BuilderSuite
     size_hint_y: None
     padding: 3
     height: 40
@@ -62,6 +63,19 @@
 		hint_text: "Output Path"
 		multiline: False
 		on_text: root.updatePathname(self.text)
+	CustButton:
+        text: "Layers"
+        size_hint_x: None
+        size: 60, 40
+        on_release: LayerDrop.open(self)
+    ScrollView:
+        LayersDropDown:
+            auto_width: False
+            id: LayerDrop
+            on_parent: self.dismiss()
+            size_hint_x: None
+            size_hint_y: None
+            width: 125
 
 <BuildSpace>
     id: buildSpc
@@ -551,6 +565,7 @@
 
         MenuButton:
             text: "Layer"
+            on_release: root.extractLayer()
 
         MenuButton:
             text: "Probe"
@@ -576,37 +591,7 @@
             size: self.size
             pos: self.pos
 
-<probe_Block>:
-	BoxLayout:
-		id: probe
-		size: BLOCK_SIZE_X,BLOCK_SIZE_Y
-		canvas:
-			Color:
-				rgba: 0, 0, 0, 1
-			Rectangle:
-				pos: self.pos
-				size: self.size
-		GridLayout:
-			cols: 2
-			rows: 2
-			Label:
-				size_hint_x: 0.3
-				text: 'Value: '
-				color: 255, 0, 0, 1
-			TextInput:
-				size_hint_x: 0.4
-				id: val
-				text: ""
-				multiline: False
-				font_size: 10	
-			Label:
-			    text: ''	
-			Button:
-				on_release: root.channel_in_dr()
-				text: "Link"
-				size: LINK_BUTTON_SIZE,LINK_BUTTON_SIZE
 
-			
 <output_Block>:
     size: BLOCK_SIZE_X,BLOCK_SIZE_Y
     canvas:
@@ -699,6 +684,20 @@
         Rectangle:
             pos: self.pos
             size: self.size
+
+
+<probe_Block>:
+	cols: 2
+	rows: 2
+	id: probe
+	size: BLOCK_SIZE_X,BLOCK_SIZE_Y
+	canvas:
+		Color:
+			rgba: 0, 0, 0, 1
+		Rectangle:
+			pos: self.pos
+			size: self.size
+
 
 
 <class_Block>:

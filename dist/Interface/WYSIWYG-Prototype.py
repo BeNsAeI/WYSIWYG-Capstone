@@ -55,6 +55,7 @@ from functools import partial
 import os, sys
 sys.path.append('../Blocks')
 from Blocks import Block
+from Probe import Probe
 from Channels import Channel
 from Channels import FindSrc
 from Channels import FindDst
@@ -251,14 +252,30 @@ class cl_button(ToggleButton):
 class method_button(ToggleButton):
     pass
 
-class probe_Block(Widget):
+class LayersDropDown(DropDown):
+    def __init__(self, **kwargs):
+        super(LayersDropDown, self).__init__(**kwargs);
+        self.Layers = []
+
+    def updateLayers(self, layername):
+        self.Layers.append(layername)
+        self.add_widget(Label(text=layername))
+
+
+class probe_Block(GridLayout):
     def __init__(self, buildSpc, **kwargs):
         super(probe_Block, self).__init__(**kwargs);
         self.val = None;
         self.build = buildSpc;
 
-    def set_Value(self, newValue):
-        self.val = newValue;
+    def spawnProbe(self):
+        self.add_widget(Label(text='Value:'))
+        self.val = Label(text='')
+        self.add_widget(self.val)
+        self.add_widget(Button(text='Link', on_release=self.probeLink))
+
+    def probeLink(self, rand):
+        pass
 
     def channel_out_dr(self):
         for i in scatterStack:
@@ -439,10 +456,9 @@ class BuildSpace(FloatLayout):
             d = output_Block(self);
             d.set_name(blocks[len(blocks)-1]);
         elif type == "probe":
-            blocks.append(Block(type + str(self.probeCount), type, "Add Caption", self.probeCount, 0))
+            blocks.append(Probe())
             self.probeCount += 1;
             d = probe_Block(self);
-            d.set_Value(blocks[len(blocks) - 1]);
         else:
             print("Error with request")
             pass
@@ -453,11 +469,15 @@ class BuildSpace(FloatLayout):
         s.add_widget(d)
         if type == "method":
             d.tailorMethod(argN, methodType)
+        elif type == "probe":
+            d.spawnProbe()
         scatterStack.append(s)
         widgetStack.append(d)
 
-        for i in scatterStack:
-            print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
+#        for i in scatterStack:
+#            print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
+    def extractLayer(self):
+        pass
 
 class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
