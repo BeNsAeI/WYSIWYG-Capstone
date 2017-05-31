@@ -38,10 +38,10 @@ class Generator:
 			newBlock = newBlock.replace('<<ARG'+str(i)+'>>',word)
 		newBlock = newBlock.replace('<<COM>>',comment)
 		self.spaghetti += newBlock
-	def release(self):
+	def release(self,path="Output.py"):
 		self.spaghetti += '\n'
 		output = fileIO("python")
-		output.writefil(self.spaghetti)
+		output.writefil(self.spaghetti,path)
 
 def testCase():
 	II = 0;

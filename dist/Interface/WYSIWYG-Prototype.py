@@ -101,7 +101,7 @@ channelCount = 0;
 widgetCount = 0;
 scatterCount = 0;
 debugText="Debugger View"
-
+PATH = "Output.py"
 def createDirectory():
     directory = os.getcwd();
     directory = directory + '../MyFolder'
@@ -498,6 +498,8 @@ class BuilderSuite(BoxLayout):
 
     def updatePathname(self, text):
         self.projectPath.updatePath(text)
+        global PATH
+        PATH = self.projectPath.getPath()
         print(self.projectPath.getPath())
 
     def getCode(self,block,II):
@@ -631,8 +633,8 @@ class BuilderSuite(BoxLayout):
                 args = [i.Name, arg1]
             temp.addBlock(genType, II, args,comment)
         print(temp.spaghetti)
-        temp.release()
-        myHandler = errorHandler("Output.py")
+        temp.release(path=PATH)
+        myHandler = errorHandler(PATH)
         myHandler.Monitor()
         myHandler.makeReport()
         global debugText

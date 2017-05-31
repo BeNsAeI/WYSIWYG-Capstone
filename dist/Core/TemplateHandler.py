@@ -1,11 +1,12 @@
 #!/usr/bin/python
 from projectPath import projectPath
 class fileIO:
-	def __init__(self, fileType):
+	def __init__(self, fileType,p="Output.py"):
 		self.fileType = fileType;
 		self.extractedTempCode = '';
 		self.pathName = '../Templates';
 		self.extention = '.template.py';
+		self.Path=p
 
 	def read_fil(self,name):
 		data = ''
@@ -13,9 +14,8 @@ class fileIO:
 			data =data+ myfile.read().replace('\n', '\n')
 		return data;
 
-	def writefil(self,outstring):
-		paths = projectPath()
-		with open(paths.outputPath, 'w') as myfile:
+	def writefil(self,outstring,p="Output.py"):
+		with open(p, 'w') as myfile:
 			myfile.write(outstring)
 		myfile.close()
 
