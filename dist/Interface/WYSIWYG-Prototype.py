@@ -653,7 +653,10 @@ class BuilderSuite(BoxLayout):
         	temp.release(path=(PATH[:-9]+"layer"+str(layerCount)+".py"))
         else:
         	temp.release(path=PATH)
-        myHandler = errorHandler(PATH)
+        if isLayer:
+        	myHandler = errorHandler((PATH[:-9]+"layer"+str(layerCount)+".py"))
+        else:
+        	myHandler = errorHandler(PATH)
         myHandler.Monitor()
         myHandler.makeReport()
         global debugText
