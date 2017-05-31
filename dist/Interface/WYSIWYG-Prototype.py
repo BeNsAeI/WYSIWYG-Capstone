@@ -89,6 +89,7 @@ def getArgNum(type):
             print(mystr)
     return h
 
+buildSpaceRef = None
 parsingTable = ParsingTable();
 lineStack = [];
 blocks = [];
@@ -379,6 +380,9 @@ class variable_Block(Widget):
     def set_name(self, newName):
         self.name = newName;
 
+    def delete_self(self):
+        self.build.remove_widget(self)
+
     def takeValue(self, text):
         self.name.Value = text;
         print("Value: " + self.name.Value)
@@ -435,6 +439,7 @@ class BuildSpace(FloatLayout):
             os.makedirs(self.directory)
 
     def addBlock(self, type, argN=0, methodType=None):
+        buildSpaceRef = self
         if type == "class":
             blocks.append(Block(type+str(self.classCount),type,"Add Caption",self.classCount,0))
             self.classCount+=1;
@@ -466,18 +471,25 @@ class BuildSpace(FloatLayout):
         s = Scatterer()
         self.add_widget(s)
         s.set_name(blocks[len(blocks)-1])
-        s.add_widget(d)
         if type == "method":
             d.tailorMethod(argN, methodType)
         elif type == "probe":
             d.spawnProbe()
         scatterStack.append(s)
         widgetStack.append(d)
+        s.add_widget(d)
 
+    def delete_widgets(self):
+        for i in scatterStack:
+            self.remove_widget(i)
+        while len(widgetStack) != 0:
+            widgetStack.pop()
+        while len(scatterStack) != 0:
+            scatterStack.pop()
+
+        print(widgetStack)
 #        for i in scatterStack:
 #            print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
-    def extractLayer(self):
-        pass
 
 class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
@@ -626,6 +638,15 @@ class BuilderSuite(BoxLayout):
         global debugText
         debugText = "Error: \n" + myHandler.err + "\n"
 
+    def clear_Space(self):
+        for i in widgetStack:
+            i.remove_widget(i)
+            print(widgetStack)
+
+
+    def extractLayer(self):
+        self.extract()
+        self.clear_Space()
 
 class DocumentOptions(BoxLayout):
     pass

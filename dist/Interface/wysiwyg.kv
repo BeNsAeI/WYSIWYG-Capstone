@@ -5,8 +5,8 @@
 <MenuButton@Button>:
     font_size: 14
     group: 'menu'
-    size_hint_x: .1
-    size_hint_y: .1
+    size_hint_x: .09
+    size_hint_y: .09
     color: 0, 0, 0, 1
     background_normal: ''
     background_down: 'square-xxl.png'
@@ -57,17 +57,26 @@
         size_hint_x: None
         size: 60, 40
         on_release: root.extract()
-	TextInput:
-		size_hint_x: 0.4
-		id: outputpath
-		hint_text: "Output Path"
-		multiline: False
-		on_text: root.updatePathname(self.text)
+
+    CustButton:
+        text: "Make Layer"
+        size_hint_x: None
+        size: 100, 40
+        on_release: root.extractLayer()
+
 	CustButton:
         text: "Layers"
         size_hint_x: None
         size: 60, 40
         on_release: LayerDrop.open(self)
+
+	TextInput:
+		size_hint_x: 10
+		id: outputpath
+		hint_text: "Output Path"
+		multiline: False
+		on_text: root.updatePathname(self.text)
+
     ScrollView:
         LayersDropDown:
             auto_width: False
@@ -564,16 +573,16 @@
             on_release: root.addBlock("class")
 
         MenuButton:
-            text: "Layer"
-            on_release: root.extractLayer()
-
-        MenuButton:
             text: "Probe"
             on_release: root.addBlock("probe")
 
         MenuButton:
             text: "Output"
             on_release: root.addBlock("output")
+
+        MenuButton:
+            text: "Delete"
+            on_release: root.delete_widgets()
 
     CornerRectangleWidget:
         id: debugBanner
@@ -631,8 +640,9 @@
 	            ##CheckBox:
                     ##size: sp(32), sp(32)
                     ##on_active: root.channel_out_dr()
-			Label:
-			    text: ''
+			Button:
+			    text: 'X'
+			    on_release: root.deleteSelf()
             Label:
 		        size_hint_x: 0.3
 				text: 'Name: '
