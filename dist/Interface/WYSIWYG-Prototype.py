@@ -103,6 +103,7 @@ scatterCount = 0;
 debugText="Debugger View"
 PATH = "Output.py"
 layerCount = 0
+
 def createDirectory():
     directory = os.getcwd();
     directory = directory + '../MyFolder'
@@ -440,7 +441,6 @@ class BuildSpace(FloatLayout):
             os.makedirs(self.directory)
 
     def addBlock(self, type, argN=0, methodType=None):
-        buildSpaceRef = self
         if type == "class":
             blocks.append(Block(type+str(self.classCount),type,"Add Caption",self.classCount,0))
             self.classCount+=1;
@@ -650,7 +650,7 @@ class BuilderSuite(BoxLayout):
         print(temp.spaghetti)
         if isLayer:
         	global layerCount
-        	temp.release(path=(PATHr[:-9]+"layer"+str(layerCount)+".py"))
+        	temp.release(path=(PATH[:-9]+"layer"+str(layerCount)+".py"))
         else:
         	temp.release(path=PATH)
         myHandler = errorHandler(PATH)
@@ -659,20 +659,16 @@ class BuilderSuite(BoxLayout):
         global debugText
         debugText = "Error: \n" + myHandler.err + "\n"
 
-    def clear_Space(self):
-        for i in widgetStack:
-            i.remove_widget(i)
-            print(widgetStack)
+    def make_layer(self):
+        self.extract(isLayer=True)
+        
 
-
-    def extractLayer(self):
-        self.extract()
-        self.clear_Space()
 
 class DocumentOptions(BoxLayout):
     pass
 
 class SampGridLayout(GridLayout):
+    buildSpaceRef = BuildSpace
     pass
 
 class WYSIWYGApp(App):

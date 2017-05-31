@@ -28,6 +28,7 @@
 		Rectangle:
 			pos: (self.width/10),0
 			size: (self.width*19)/20, self.height / 5
+
 <BuilderSuite@BoxLayout>:
     id: BuilderSuite
     size_hint_y: None
@@ -62,7 +63,7 @@
         text: "Make Layer"
         size_hint_x: None
         size: 100, 40
-        on_release: root.extractLayer()
+        on_release: root.make_layer()
 
 	CustButton:
         text: "Layers"
