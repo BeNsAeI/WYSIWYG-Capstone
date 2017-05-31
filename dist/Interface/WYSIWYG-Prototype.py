@@ -102,6 +102,7 @@ widgetCount = 0;
 scatterCount = 0;
 debugText="Debugger View"
 PATH = "Output.py"
+layerCount = 0
 def createDirectory():
     directory = os.getcwd();
     directory = directory + '../MyFolder'
@@ -562,7 +563,7 @@ class BuilderSuite(BoxLayout):
         temp.addBlock(genType, II, args,comment)
         return temp.spaghetti
 
-    def extract(self):
+    def extract(self,isLayer=False):
         # Parsing blocks:
         tmpblocks = []
         for i in blocks:
@@ -647,7 +648,11 @@ class BuilderSuite(BoxLayout):
                 args = [i.Name, arg1]
             temp.addBlock(genType, II, args,comment)
         print(temp.spaghetti)
-        temp.release(path=PATH)
+        if isLayer:
+        	global layerCount
+        	temp.release(path=(PATHr[:-9]+"layer"+str(layerCount)+".py"))
+        else:
+        	temp.release(path=PATH)
         myHandler = errorHandler(PATH)
         myHandler.Monitor()
         myHandler.makeReport()
