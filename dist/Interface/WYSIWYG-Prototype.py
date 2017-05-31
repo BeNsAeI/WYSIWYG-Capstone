@@ -484,7 +484,11 @@ class BuildSpace(FloatLayout):
         print("scatterStack: " + str(scatterStack))
         print("widgetStack: " + str(widgetStack))
         print("blocks: " + str(blocks))
-
+        self.methodCount = 0
+        self.variableCount = 0
+        self.outputCount = 0
+        self.probeCount = 0
+        self.classCount = 0
         for i in scatterStack:
             self.remove_widget(i)
         while len(widgetStack) != 0:
