@@ -483,6 +483,8 @@ class BuildSpace(FloatLayout):
         print("channelStack: " + str(channelStack))
         print("scatterStack: " + str(scatterStack))
         print("widgetStack: " + str(widgetStack))
+        print("blocks: " + str(blocks))
+
         for i in scatterStack:
             self.remove_widget(i)
         while len(widgetStack) != 0:
@@ -491,9 +493,13 @@ class BuildSpace(FloatLayout):
             scatterStack.pop()
         while len(channelStack) != 0:
             channelStack.pop()
+        while len(blocks) != 0:
+            blocks.pop()
         print("channelStack: " + str(channelStack))
         print("scatterStack: " + str(scatterStack))
         print("widgetStack: " + str(widgetStack))
+        print("blocks: " + str(blocks))
+
 
 class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
