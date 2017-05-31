@@ -480,16 +480,20 @@ class BuildSpace(FloatLayout):
         s.add_widget(d)
 
     def delete_widgets(self):
+        print("channelStack: " + str(channelStack))
+        print("scatterStack: " + str(scatterStack))
+        print("widgetStack: " + str(widgetStack))
         for i in scatterStack:
             self.remove_widget(i)
         while len(widgetStack) != 0:
             widgetStack.pop()
         while len(scatterStack) != 0:
             scatterStack.pop()
-
-        print(widgetStack)
-#        for i in scatterStack:
-#            print("button is pressed " + "ScatterLabel:" + i.name.Name + "Scatter type: " + i.name.Type)
+        while len(channelStack) != 0:
+            channelStack.pop()
+        print("channelStack: " + str(channelStack))
+        print("scatterStack: " + str(scatterStack))
+        print("widgetStack: " + str(widgetStack))
 
 class BuilderSuite(BoxLayout):
     def __init__(self, **kwargs):
